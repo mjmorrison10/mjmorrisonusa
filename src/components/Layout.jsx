@@ -9,6 +9,23 @@ const navLinks = [
   { path: '/flipping', label: 'Flipping' },
 ];
 
+// Define which links show for each route
+const routeNavMap = {
+  '/': navLinks, // Home shows everything
+  '/webdev': [
+    { path: '/', label: 'Home' },
+    { path: '/webdev', label: 'Web Dev' },
+  ],
+  '/smma': [
+    { path: '/', label: 'Home' },
+    { path: '/smma', label: 'SMMA' },
+  ],
+  '/flipping': [
+    { path: '/', label: 'Home' },
+    { path: '/flipping', label: 'Flipping' },
+  ],
+};
+
 const bibleVerses = [
   { verse: 'Philippians 4:13', text: '"I can do all things through Christ who strengthens me."' },
   { verse: 'Proverbs 3:5-6', text: '"Trust in the Lord with all your heart and lean not on your own understanding."' },
@@ -23,6 +40,9 @@ export default function Layout({ children }) {
   const { isDark, toggleTheme } = useTheme();
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  
+  // Get current route's nav links
+  const currentNavLinks = routeNavMap[location.pathname] || routeNavMap['/'];
   
   // Get a "random" verse based on the day
   const dayOfYear = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
@@ -51,7 +71,7 @@ export default function Layout({ children }) {
 
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center gap-1">
-              {navLinks.map((link) => (
+              {currentNavLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
@@ -94,7 +114,7 @@ export default function Layout({ children }) {
           {mobileMenuOpen && (
             <div className="md:hidden py-4 border-t border-gray-200 dark:border-gray-800">
               <div className="flex flex-col gap-2">
-                {navLinks.map((link) => (
+                {currentNavLinks.map((link) => (
                   <Link
                     key={link.path}
                     to={link.path}
