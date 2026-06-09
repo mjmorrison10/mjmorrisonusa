@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 
@@ -9,7 +9,7 @@ const navLinks = [
   { path: '/flipping', label: 'Flipping' },
 ];
 
-// Define which links show for each route (when locked)
+// Define which links show for each route
 const routeNavMap = {
   '/': navLinks, // Home shows everything
   '/webdev': [
@@ -40,23 +40,9 @@ export default function Layout({ children }) {
   const { isDark, toggleTheme } = useTheme();
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isUnlocked, setIsUnlocked] = useState(false);
   
-  // Check if user came from homepage (has full access)
-  useEffect(() => {
-    // If they're on the homepage, unlock everything
-    if (location.pathname === '/') {
-      sessionStorage.setItem('unlocked', 'true');
-      setIsUnlocked(true);
-    } else {
-      // Check if they were previously unlocked
-      const unlocked = sessionStorage.getItem('unlocked') === 'true';
-      setIsUnlocked(unlocked);
-    }
-  }, [location.pathname]);
-  
-  // Get current route's nav links based on unlock status
-  const currentNavLinks = isUnlocked ? navLinks : (routeNavMap[location.pathname] || routeNavMap['/']);
+  // Get current route's nav links
+  const currentNavLinks = routeNavMap[location.pathname] || routeNavMap['/'];
   
   // Get a "random" verse based on the day
   const dayOfYear = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
