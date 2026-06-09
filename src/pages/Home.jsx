@@ -45,6 +45,15 @@ export default function Home() {
         }} />
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          {/* Profile Picture */}
+          <div className="mb-8">
+            <img 
+              src={import.meta.env.BASE_URL + 'profile.png'} 
+              alt="Michael Morrison"
+              className="w-40 h-40 rounded-full object-cover border-4 border-white dark:border-gray-800 shadow-xl mx-auto"
+            />
+          </div>
+
           {/* Subtle heritage badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200 dark:border-gray-700 mb-8">
             <span className="text-xs text-gray-500 dark:text-gray-400">🏴󠁧󠁢󠁳󠁣󠁴󠁿 🇮🇹 🇵🇭</span>
@@ -171,6 +180,14 @@ export default function Home() {
               </div>
             </div>
             <div className="relative">
+              {/* Profile image */}
+              <div className="mb-6 flex justify-center">
+                <img 
+                  src={import.meta.env.BASE_URL + 'profile.png'} 
+                  alt="Michael Morrison"
+                  className="w-48 h-48 rounded-2xl object-cover border-4 border-white dark:border-gray-900 shadow-xl"
+                />
+              </div>
               <div className="bg-gradient-to-br from-blue-600 to-blue-400 rounded-2xl p-1">
                 <div className="bg-white dark:bg-gray-900 rounded-xl p-8">
                   <div className="space-y-4">
