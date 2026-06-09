@@ -5,7 +5,7 @@ const platforms = [
   { name: 'YouTube', followers: '34.5K', views: '1-2K/2wk', status: 'Banned', icon: '🎬' },
   { name: 'Facebook', followers: '34K+', views: '1-2.5K/2wk', status: 'Banned', icon: '👥' },
   { name: 'TikTok', followers: '39.7K', views: 'Viral', status: 'Banned', icon: '🎵' },
-  { name: 'Snapchat', followers: '175K+', views: 'Active', status: 'Active', icon: '👻' },
+  { name: 'Snapchat', followers: '168.7K', views: 'Active', status: 'Active', icon: '👻' },
 ];
 
 const milestones = [
@@ -214,7 +214,7 @@ export default function SMMA() {
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 text-center">
                   📸 Screenshots Before the Bans
                 </h3>
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
                   <div>
                     <img 
                       src={import.meta.env.BASE_URL + 'instagram-screenshot.jpg'} 
@@ -253,6 +253,21 @@ export default function SMMA() {
                     />
                     <p className="text-xs text-gray-400 dark:text-gray-500 text-center mt-2">
                       TikTok — 39.7K followers
+                    </p>
+                  </div>
+                  <div>
+                    <div className="relative">
+                      <img 
+                        src={import.meta.env.BASE_URL + 'snapchat-screenshot.png'} 
+                        alt="Snapchat 168.7K followers screenshot"
+                        className="rounded-xl border-2 border-green-500 dark:border-green-400 shadow-lg w-full"
+                      />
+                      <span className="absolute top-2 right-2 px-2 py-0.5 bg-green-500 text-white text-xs font-bold rounded-full">
+                        LIVE
+                      </span>
+                    </div>
+                    <p className="text-xs text-green-600 dark:text-green-400 text-center mt-2 font-medium">
+                      Snapchat — 168.7K followers ✓ Active
                     </p>
                   </div>
                 </div>
