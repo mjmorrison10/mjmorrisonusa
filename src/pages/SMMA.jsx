@@ -4,7 +4,7 @@ const platforms = [
   { name: 'Instagram', followers: '37.4K', views: '2.4M/mo', status: 'Banned', icon: '📸' },
   { name: 'YouTube', followers: '34.5K', views: '1-2K/2wk', status: 'Banned', icon: '🎬' },
   { name: 'Facebook', followers: '34K+', views: '1-2.5K/2wk', status: 'Banned', icon: '👥' },
-  { name: 'TikTok', followers: '75K+', views: 'Viral', status: 'Banned', icon: '🎵' },
+  { name: 'TikTok', followers: '39.7K', views: 'Viral', status: 'Banned', icon: '🎵' },
   { name: 'Snapchat', followers: '175K+', views: 'Active', status: 'Active', icon: '👻' },
 ];
 
@@ -214,7 +214,7 @@ export default function SMMA() {
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 text-center">
                   📸 Screenshots Before the Bans
                 </h3>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
                   <div>
                     <img 
                       src={import.meta.env.BASE_URL + 'instagram-screenshot.jpg'} 
@@ -243,6 +243,16 @@ export default function SMMA() {
                     />
                     <p className="text-xs text-gray-400 dark:text-gray-500 text-center mt-2">
                       Facebook — 34K+ followers
+                    </p>
+                  </div>
+                  <div>
+                    <img 
+                      src={import.meta.env.BASE_URL + 'tiktok-screenshot.jpg'} 
+                      alt="TikTok 39.7K followers screenshot"
+                      className="rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg w-full"
+                    />
+                    <p className="text-xs text-gray-400 dark:text-gray-500 text-center mt-2">
+                      TikTok — 39.7K followers
                     </p>
                   </div>
                 </div>
