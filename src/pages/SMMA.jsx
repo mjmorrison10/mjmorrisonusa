@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 const platforms = [
   { name: 'Instagram', followers: '65K+', views: '2-5M/mo', status: 'Banned', icon: '📸' },
-  { name: 'YouTube', followers: '40K+', views: '1-2K/2wk', status: 'Active', icon: '🎬' },
+  { name: 'YouTube', followers: '34.5K', views: '1-2K/2wk', status: 'Banned', icon: '🎬' },
   { name: 'Facebook', followers: '80K+', views: '1-2.5K/2wk', status: 'Banned', icon: '👥' },
   { name: 'TikTok', followers: '75K+', views: 'Viral', status: 'Banned', icon: '🎵' },
   { name: 'Snapchat', followers: '175K+', views: 'Active', status: 'Active', icon: '👻' },
@@ -175,37 +175,56 @@ export default function SMMA() {
 
           {/* Platforms Tab */}
           {activeTab === 'platforms' && (
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {platforms.map((platform, index) => (
-                <div
-                  key={index}
-                  className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700"
-                >
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="text-3xl">{platform.icon}</span>
-                    <div>
-                      <h3 className="font-semibold text-gray-900 dark:text-white">{platform.name}</h3>
-                      <span className={`text-xs px-2 py-0.5 rounded-full ${
-                        platform.status === 'Active' 
-                          ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300'
-                          : 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300'
-                      }`}>
-                        {platform.status}
-                      </span>
+            <div>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+                {platforms.map((platform, index) => (
+                  <div
+                    key={index}
+                    className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700"
+                  >
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="text-3xl">{platform.icon}</span>
+                      <div>
+                        <h3 className="font-semibold text-gray-900 dark:text-white">{platform.name}</h3>
+                        <span className={`text-xs px-2 py-0.5 rounded-full ${
+                          platform.status === 'Active' 
+                            ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300'
+                            : 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300'
+                        }`}>
+                          {platform.status}
+                        </span>
+                      </div>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="flex justify-between text-sm">
+                        <span className="text-gray-500 dark:text-gray-400">Followers</span>
+                        <span className="font-medium text-gray-900 dark:text-white">{platform.followers}</span>
+                      </div>
+                      <div className="flex justify-between text-sm">
+                        <span className="text-gray-500 dark:text-gray-400">Performance</span>
+                        <span className="font-medium text-gray-900 dark:text-white">{platform.views}</span>
+                      </div>
                     </div>
                   </div>
-                  <div className="space-y-2">
-                    <div className="flex justify-between text-sm">
-                      <span className="text-gray-500 dark:text-gray-400">Followers</span>
-                      <span className="font-medium text-gray-900 dark:text-white">{platform.followers}</span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-gray-500 dark:text-gray-400">Performance</span>
-                      <span className="font-medium text-gray-900 dark:text-white">{platform.views}</span>
-                    </div>
-                  </div>
+                ))}
+              </div>
+
+              {/* YouTube Screenshot Proof */}
+              <div className="mt-10">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 text-center">
+                  📸 YouTube Proof — 34.5K Subscribers
+                </h3>
+                <div className="max-w-md mx-auto">
+                  <img 
+                    src={import.meta.env.BASE_URL + 'youtube-screenshot.jpg'} 
+                    alt="YouTube 34.5K subscribers screenshot"
+                    className="rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg w-full"
+                  />
+                  <p className="text-xs text-gray-400 dark:text-gray-500 text-center mt-2">
+                    Before the ban. 34,500 subscribers built from scratch.
+                  </p>
                 </div>
-              ))}
+              </div>
             </div>
           )}
 
