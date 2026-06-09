@@ -4,31 +4,31 @@ const services = [
   {
     icon: '💻',
     title: 'Web Development',
-    description: 'Custom websites and web applications built with modern technologies. From landing pages to full-stack applications.',
+    description: 'Custom websites built in 48 hours. From landing pages to full-stack applications. React, JavaScript, Tailwind.',
     link: '/webdev',
     color: 'from-blue-600 to-cyan-500',
   },
   {
     icon: '📱',
     title: 'Social Media Marketing',
-    description: 'Proven track record of building audiences and driving engagement across all major platforms.',
+    description: '314K followers built. 50M+ monthly views. Platform captain. I know what works because I\'ve done it at scale.',
     link: '/smma',
     color: 'from-purple-600 to-pink-500',
   },
   {
     icon: '🔄',
     title: 'Flipping & Liquidation',
-    description: 'Helping vendors turn inventory into cash. Specializing in electronics, gaming, and collectibles.',
+    description: 'Instant cash for your inventory. Online pawn shop model. Cypress, CA local. Fair prices, fast transactions.',
     link: '/flipping',
     color: 'from-orange-600 to-yellow-500',
   },
 ];
 
 const stats = [
-  { value: '5+', label: 'Years Experience' },
+  { value: '314,300', label: 'Followers Built' },
   { value: '50M+', label: 'Monthly Views Generated' },
-  { value: '350K+', label: 'Followers Built' },
-  { value: '∞', label: 'Problems Solved' },
+  { value: '9+', label: 'Platforms Dominated' },
+  { value: '5', label: 'Person Elite Team' },
 ];
 
 export default function Home() {
@@ -68,8 +68,7 @@ export default function Home() {
           </h1>
 
           <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10">
-            Whatever you need, I can get it done. Web development, social media marketing, 
-            inventory liquidation — if you can describe it, I can build it.
+            314,000 followers built from scratch. 50 million monthly views. Banned from 4 platforms for being too effective. Now I build, market, and sell — for you.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -122,7 +121,7 @@ export default function Home() {
               What I Do
             </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Three core services, one mission: help businesses and individuals succeed.
+              Three ways I make you money. Pick your lane.
             </p>
           </div>
 
@@ -164,8 +163,7 @@ export default function Home() {
               </h2>
               <div className="space-y-4 text-gray-600 dark:text-gray-400">
                 <p>
-                  I started as a rideshare driver, transitioned into delivery, then taught myself 
-                  web development while building a social media empire that generated 50M+ monthly views.
+                  I built a social media empire that generated 50 million views per month — then got banned from four platforms for being too effective. Before that, I drove Uber. After that, I taught myself to code and built two production applications. Now I do all three: build, market, and sell.
                 </p>
                 <p>
                   Along the way, I became a platform captain in The Real World university, 
@@ -239,7 +237,7 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Ready to Work Together?
+            Let's Build Something They Can't Ignore.
           </h2>
           <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
             Whether you need a website, social media strategy, or help liquidating inventory — 

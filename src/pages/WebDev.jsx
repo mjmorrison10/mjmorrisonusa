@@ -3,41 +3,32 @@ import { useState } from 'react';
 const projects = [
   {
     title: 'PriceSpy',
-    description: 'Real-time eBay price data, conditions, fees, liquidity, saturation — built for flippers. Features include Quick Deal analyzer, Watchlist, Inventory management, Lot Calculator, Bulk Price Check, and True ROI Calculator.',
+    description: 'Real-time eBay price data, conditions, fees, liquidity, saturation — built for flippers. Features include Quick Deal analyzer, Watchlist, Inventory management, Lot Calculator, Bulk Price Check, and True ROI Calculator. Built in 48 hours using AI-assisted development.',
     tech: ['Python', 'Flask', 'Firebase', 'HTML', 'CSS', 'JavaScript'],
     image: null,
     liveUrl: 'https://pricespy-yx00.onrender.com/',
     githubUrl: 'https://github.com/mjmorrison10/PriceSpy',
     featured: true,
-    stats: ['Real-time pricing', 'Multi-platform fees', 'Camera/barcode scanning'],
+    stats: ['Real-time pricing', 'Multi-platform fees', 'Built in 48 hours'],
   },
   {
     title: 'Cypress Flips',
-    description: 'Professional storefront for a local flipping business. Features premium picks, category filtering, vendor intake system, and condition-first product listings.',
+    description: 'Professional storefront for a local flipping business. Features premium picks, category filtering, vendor intake system, and condition-first product listings. Built in 48 hours. Now serves as the storefront for my flipping business.',
     tech: ['React', 'Tailwind CSS', 'Netlify'],
     image: null,
     liveUrl: 'https://cypressflips.netlify.app/',
     githubUrl: 'https://github.com/mjmorrison10/cypress-flips',
     featured: true,
-    stats: ['Premium curation', 'Vendor system', 'Mobile responsive'],
+    stats: ['Premium curation', 'Vendor system', 'Built in 48 hours'],
   },
 ];
 
-const skills = [
-  { name: 'React', level: 90 },
-  { name: 'JavaScript', level: 90 },
-  { name: 'HTML/CSS', level: 95 },
-  { name: 'Tailwind CSS', level: 90 },
-  { name: 'Node.js', level: 75 },
-  { name: 'Python', level: 70 },
-  { name: 'Git/GitHub', level: 85 },
-  { name: 'Responsive Design', level: 90 },
-];
+const skills = ['React', 'JavaScript', 'HTML/CSS', 'Tailwind CSS', 'Node.js', 'Python', 'Git/GitHub', 'Responsive Design'];
 
 const learningPath = [
   { year: '2021', title: 'Started Learning', description: 'Began with HTML, CSS, JavaScript fundamentals through Clever Programmer and Frontend Mentor' },
   { year: '2022', title: 'Built Projects', description: 'Created games, banking apps, MERN stack projects, and portfolio sites' },
-  { year: '2023-24', title: 'Focused on SMMA', description: 'Shifted focus to social media marketing while maintaining dev skills' },
+  { year: '2023-24', title: 'Built Marketing Empire', description: 'Built marketing empire while maintaining development skills. Learned to ship fast under pressure.' },
   { year: '2025', title: 'Full-Stack Applications', description: 'Built PriceSpy and Cypress Flips — complex, production-ready applications' },
 ];
 
@@ -54,9 +45,9 @@ export default function WebDev() {
               💻 Web Development
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              Building the Web,
+              I Taught Myself to Code.
               <span className="block bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
-                One Line at a Time
+                Then I Built Tools That Make Me Money.
               </span>
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
@@ -151,25 +142,16 @@ export default function WebDev() {
       <section className="py-20 bg-gray-50 dark:bg-gray-950">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            Tech Stack
+            What I Build With
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-12">
             Technologies I work with daily to build modern web applications.
           </p>
 
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="flex flex-wrap justify-center gap-4">
             {skills.map((skill, index) => (
-              <div key={index} className="bg-white dark:bg-gray-900 rounded-xl p-4 border border-gray-200 dark:border-gray-800">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="font-medium text-gray-900 dark:text-white">{skill.name}</span>
-                  <span className="text-sm text-gray-500 dark:text-gray-400">{skill.level}%</span>
-                </div>
-                <div className="h-2 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
-                  <div
-                    className="h-full bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full transition-all duration-1000"
-                    style={{ width: `${skill.level}%` }}
-                  />
-                </div>
+              <div key={index} className="px-6 py-3 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 font-medium text-gray-900 dark:text-white">
+                {skill}
               </div>
             ))}
           </div>
@@ -220,7 +202,7 @@ export default function WebDev() {
       <section className="py-20 bg-gradient-to-br from-blue-600 to-cyan-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Need a Website?
+            Need a Website That Converts?
           </h2>
           <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
             Whether you need a landing page, e-commerce store, or a full-stack application — 

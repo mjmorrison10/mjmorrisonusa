@@ -71,13 +71,13 @@ export default function SMMA() {
               📱 Social Media Marketing
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              I Didn't Just Post Content.
+              They Said Facebook Was Dead.
               <span className="block bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
-                I Changed the Game.
+                I Proved Them Wrong.
               </span>
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              50M+ monthly views. 350K+ followers built. Platform captain. Recruited to an exclusive 
+              50M+ monthly views. 314,300 followers built. Platform captain. Recruited to an exclusive 
               5-person team. When they said "it won't work," I proved them wrong.
             </p>
           </div>
@@ -93,7 +93,7 @@ export default function SMMA() {
               <div className="text-sm text-purple-100">Monthly Views</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-white">350K+</div>
+              <div className="text-3xl sm:text-4xl font-bold text-white">314,300</div>
               <div className="text-sm text-purple-100">Followers Built</div>
             </div>
             <div className="text-center">
@@ -137,8 +137,7 @@ export default function SMMA() {
                 </h2>
                 <div className="space-y-4 text-gray-600 dark:text-gray-400">
                   <p>
-                    In October 2021, I joined The Real World (then Hustler's University) when there were 
-                    only 1,000 members. Luc Tate, Andrew Tate's cousin, was teaching affiliate marketing 
+                    October 2021. 1,000 members. That's when I joined. Luc Tate, Andrew Tate's cousin, was teaching affiliate marketing 
                     on TikTok, Instagram, and YouTube.
                   </p>
                   <p>
@@ -212,7 +211,7 @@ export default function SMMA() {
               {/* Screenshot Proofs */}
               <div className="mt-10">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 text-center">
-                  📸 Screenshots Before the Bans
+                  📸 The Proof
                 </h3>
                 <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
                   <div>
@@ -362,7 +361,7 @@ export default function SMMA() {
       <section className="py-20 bg-gradient-to-br from-purple-600 to-pink-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Need Social Media Strategy?
+            Ready to Dominate Social Media?
           </h2>
           <p className="text-purple-100 mb-8 max-w-2xl mx-auto">
             Whether you need content creation, platform strategy, or someone who's been in the trenches — 

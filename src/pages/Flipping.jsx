@@ -1,8 +1,8 @@
 const businessModel = [
   {
     step: '01',
-    title: 'You Have Inventory',
-    description: 'Items taking up space. Products you need to move. Inventory that needs to become cash.',
+    title: 'You Have Stuff',
+    description: 'You have stuff. You need money. I buy stuff.',
     icon: '📦',
   },
   {
@@ -59,14 +59,13 @@ export default function Flipping() {
               🔄 Flipping & Liquidation
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              Your Inventory,
+              Turn Your Clutter
               <span className="block bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text text-transparent">
-                My Opportunity
+                Into Cash
               </span>
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              An online pawn shop for the digital age. I help vendors turn inventory into cash — 
-              fast, fair, and hassle-free. Cypress, CA based.
+              Instant cash service for your inventory. I buy stuff. You get money. Same day. Cypress, CA based.
             </p>
           </div>
         </div>
@@ -80,7 +79,7 @@ export default function Flipping() {
               How It Works
             </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Think of it as an online pawn shop. You need money. I buy inventory. Simple.
+              Think of it as an instant cash service for your inventory. You sell. I buy. Same day.
             </p>
           </div>
 
@@ -116,9 +115,9 @@ export default function Flipping() {
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 text-center">
             What I Flip
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 mb-12 text-center max-w-2xl mx-auto">
-            If I can test it, enjoy it, and sell it — I'll flip it. Here are my focus areas.
-          </p>
+            <p className="text-gray-600 dark:text-gray-400 mb-12 text-center max-w-2xl mx-auto">
+              If it has value and I can verify it, I'll buy it.
+            </p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {categories.map((category, index) => (
@@ -252,7 +251,7 @@ export default function Flipping() {
       <section className="py-20 bg-gradient-to-br from-orange-600 to-yellow-500">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Have Inventory to Move?
+            Turn Your Inventory Into Cash Today
           </h2>
           <p className="text-orange-100 mb-8 max-w-2xl mx-auto">
             Whether it's one item or a warehouse full — I'll make you a fair offer and handle the rest.
