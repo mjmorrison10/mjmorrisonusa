@@ -144,7 +144,7 @@ export default function SMMA() {
                   <p>
                     One day, Luc gave a lesson: if you're already editing for Instagram, take the extra 
                     5 minutes to upload to YouTube too. Most students took that literally. I took it to 
-                    the extreme — <strong>why not upload to every platform possible?</strong>
+                    the extreme, <strong>why not upload to every platform possible?</strong>
                   </p>
                   <p>
                     I started uploading to Facebook and Snapchat. When I told other affiliates about my 
@@ -222,7 +222,7 @@ export default function SMMA() {
                       className="rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg w-full"
                     />
                     <p className="text-xs text-gray-400 dark:text-gray-500 text-center mt-2">
-                      Instagram — 37.4K followers, 2.4M monthly views
+                      Instagram, 37.4K followers, 2.4M monthly views
                     </p>
                   </div>
                   <div>
@@ -232,7 +232,7 @@ export default function SMMA() {
                       className="rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg w-full"
                     />
                     <p className="text-xs text-gray-400 dark:text-gray-500 text-center mt-2">
-                      YouTube — 34.5K subscribers
+                      YouTube, 34.5K subscribers
                     </p>
                   </div>
                   <div>
@@ -242,7 +242,7 @@ export default function SMMA() {
                       className="rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg w-full"
                     />
                     <p className="text-xs text-gray-400 dark:text-gray-500 text-center mt-2">
-                      Facebook — 34K+ followers
+                      Facebook, 34K+ followers
                     </p>
                   </div>
                   <div>
@@ -252,7 +252,7 @@ export default function SMMA() {
                       className="rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg w-full"
                     />
                     <p className="text-xs text-gray-400 dark:text-gray-500 text-center mt-2">
-                      TikTok — 39.7K followers
+                      TikTok, 39.7K followers
                     </p>
                   </div>
                   <div>
@@ -267,7 +267,7 @@ export default function SMMA() {
                       </span>
                     </div>
                     <p className="text-xs text-green-600 dark:text-green-400 text-center mt-2 font-medium">
-                      Snapchat — 168.7K followers ✓ Active
+                      Snapchat, 168.7K followers ✓ Active
                     </p>
                   </div>
                 </div>
@@ -366,7 +366,7 @@ export default function SMMA() {
               Ready to Domininate Social Media?
             </h2>
             <p className="text-purple-100 max-w-2xl mx-auto">
-              Whether you need content creation, platform strategy, or someone who's been in the trenches — 
+              Whether you need content creation, platform strategy, or someone who's been in the trenches, 
               I know what works because I've done it at scale.
             </p>
           </div>

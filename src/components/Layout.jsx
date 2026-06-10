@@ -143,7 +143,7 @@ export default function Layout({ children }) {
                 {currentVerse.text}
               </p>
               <p className="text-xs text-gray-300 dark:text-gray-600 mt-0.5">
-                — {currentVerse.verse} (NCB)
+               , {currentVerse.verse} (NCB)
               </p>
             </div>
           </div>

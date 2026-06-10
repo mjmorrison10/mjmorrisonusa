@@ -41,7 +41,7 @@ export default function Contact() {
               </span>
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Whether you need a website, social media strategy, or help liquidating inventory — 
+              Whether you need a website, social media strategy, or help liquidating inventory, 
               I'm ready to help you conquer your next challenge.
             </p>
           </div>

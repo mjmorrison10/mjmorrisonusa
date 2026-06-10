@@ -75,7 +75,7 @@ export default function Home() {
           </h1>
 
           <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10">
-            314,000 followers built from scratch. 50 million monthly views. Banned from 4 platforms for being too effective. Now I build, market, and sell — for you.
+            314,000 followers built from scratch. 50 million monthly views. Banned from 4 platforms for being too effective. Now I build, market, and sell, for you.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -95,7 +95,7 @@ export default function Home() {
 
           {/* Urgency */}
           <p className="mt-6 text-sm text-gray-500 dark:text-gray-400">
-            Currently accepting 2 web dev clients per month • Limited inventory — check Cypress Flips daily
+            Currently accepting 2 web dev clients per month | Limited inventory, check Cypress Flips daily
           </p>
         </div>
 
@@ -190,7 +190,7 @@ export default function Home() {
               </h2>
               <div className="space-y-4 text-gray-600 dark:text-gray-400">
                 <p>
-                  I built a social media empire that generated 50 million views per month — then got banned from four platforms for being too effective. Before that, I drove Uber. After that, I taught myself to code and built two production applications. Now I do all three: build, market, and sell.
+                  I built a social media empire that generated 50 million views per month, then got banned from four platforms for being too effective. Before that, I drove Uber. After that, I taught myself to code and built two production applications. Now I do all three: build, market, and sell.
                 </p>
                 <p>
                   Along the way, I became a platform captain in The Real World university, 
@@ -199,8 +199,8 @@ export default function Home() {
                   figures on the internet.
                 </p>
                 <p>
-                  Now I'm combining everything I've learned — marketing, development, sales, 
-                  and relentless work ethic — to help businesses grow and individuals succeed.
+                  Now I'm combining everything I've learned, marketing, development, sales, 
+                  and relentless work ethic, to help businesses grow and individuals succeed.
                 </p>
               </div>
             </div>
@@ -345,7 +345,7 @@ export default function Home() {
               Let's Build Something They Can't Ignore.
             </h2>
             <p className="text-blue-100 max-w-2xl mx-auto">
-              Whether you need a website, social media strategy, or help liquidating inventory — 
+              Whether you need a website, social media strategy, or help liquidating inventory, 
               let's talk about how I can help you conquer your next challenge.
             </p>
           </div>

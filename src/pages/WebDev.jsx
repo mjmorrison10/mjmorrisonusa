@@ -4,7 +4,7 @@ import ContactFormMini from '../components/ContactFormMini';
 const projects = [
   {
     title: 'PriceSpy',
-    description: 'Real-time eBay price data, conditions, fees, liquidity, saturation — built for flippers. Features include Quick Deal analyzer, Watchlist, Inventory management, Lot Calculator, Bulk Price Check, and True ROI Calculator. Built in 48 hours using AI-assisted development.',
+    description: 'Real-time eBay price data, conditions, fees, liquidity, saturation, built for flippers. Features include Quick Deal analyzer, Watchlist, Inventory management, Lot Calculator, Bulk Price Check, and True ROI Calculator. Built in 48 hours using AI-assisted development.',
     tech: ['Python', 'Flask', 'Firebase', 'HTML', 'CSS', 'JavaScript'],
     image: null,
     liveUrl: 'https://pricespy-yx00.onrender.com/',
@@ -30,7 +30,7 @@ const learningPath = [
   { year: '2021', title: 'Started Learning', description: 'Began with HTML, CSS, JavaScript fundamentals through Clever Programmer and Frontend Mentor' },
   { year: '2022', title: 'Built Projects', description: 'Created games, banking apps, MERN stack projects, and portfolio sites' },
   { year: '2023-24', title: 'Built Marketing Empire', description: 'Built marketing empire while maintaining development skills. Learned to ship fast under pressure.' },
-  { year: '2025', title: 'Full-Stack Applications', description: 'Built PriceSpy and Cypress Flips — complex, production-ready applications' },
+  { year: '2025', title: 'Full-Stack Applications', description: 'Built PriceSpy and Cypress Flips, complex, production-ready applications' },
 ];
 
 export default function WebDev() {
@@ -52,7 +52,7 @@ export default function WebDev() {
               </span>
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              From simple landing pages to complex full-stack applications — I build websites that work 
+              From simple landing pages to complex full-stack applications, I build websites that work 
               as hard as you do. Self-taught, battle-tested, and always shipping.
             </p>
           </div>
@@ -207,7 +207,7 @@ export default function WebDev() {
               Need a Website That Converts?
             </h2>
             <p className="text-blue-100 mb-2 max-w-2xl mx-auto">
-              Whether you need a landing page, e-commerce store, or a full-stack application — 
+              Whether you need a landing page, e-commerce store, or a full-stack application, 
               I'll build it fast, clean, and ready to convert.
             </p>
             <p className="text-blue-200 text-sm">Currently accepting 2 clients per month</p>

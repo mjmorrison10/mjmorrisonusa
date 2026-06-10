@@ -158,7 +158,7 @@ export default function Flipping() {
             Built for the Business
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-12 text-center max-w-2xl mx-auto">
-            I don't just flip — I build tools to flip smarter.
+            I don't just flip, I build tools to flip smarter.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -257,7 +257,7 @@ export default function Flipping() {
               Turn Your Inventory Into Cash Today
             </h2>
             <p className="text-orange-100 max-w-2xl mx-auto">
-              Whether it's one item or a warehouse full — I'll make you a fair offer and handle the rest.
+              Whether it's one item or a warehouse full, I'll make you a fair offer and handle the rest.
             </p>
           </div>
           <ContactFormMini service="Inventory Liquidation" />
