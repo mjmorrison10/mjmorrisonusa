@@ -80,8 +80,8 @@ export default function WebDev() {
           </p>
 
           <div className="grid lg:grid-cols-3 gap-6 items-start">
-            {/* #2 PriceSpy - Left */}
-            <div className="group bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-700 transition-all duration-300 hover:shadow-xl lg:mt-8">
+            {/* #1 CurveRunner - Middle (Featured) - First on mobile */}
+            <div className="group bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden border-2 border-blue-500 dark:border-blue-400 transition-all duration-300 hover:shadow-2xl shadow-lg shadow-blue-500/20 order-1 lg:order-2">
               <div className="bg-gradient-to-br from-blue-600 to-cyan-500 p-5">
                 <div className="flex items-start justify-between">
                   <div>
@@ -119,8 +119,8 @@ export default function WebDev() {
               </div>
             </div>
 
-            {/* #1 CurveRunner - Middle (Featured) */}
-            <div className="group bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden border-2 border-blue-500 dark:border-blue-400 transition-all duration-300 hover:shadow-2xl shadow-lg shadow-blue-500/20">
+            {/* #2 PriceSpy - Left - Second on mobile */}
+            <div className="group bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-700 transition-all duration-300 hover:shadow-xl lg:mt-8 order-2 lg:order-1">
               <div className="bg-gradient-to-br from-blue-600 via-purple-600 to-cyan-500 p-6">
                 <div className="flex items-start justify-between">
                   <div>
@@ -160,8 +160,8 @@ export default function WebDev() {
               </div>
             </div>
 
-            {/* #3 Cypress Flips - Right */}
-            <div className="group bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-700 transition-all duration-300 hover:shadow-xl lg:mt-8">
+            {/* #3 Cypress Flips - Right - Third on mobile */}
+            <div className="group bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-700 transition-all duration-300 hover:shadow-xl lg:mt-8 order-3">
               <div className="bg-gradient-to-br from-blue-600 to-cyan-500 p-5">
                 <div className="flex items-start justify-between">
                   <div>
