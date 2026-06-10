@@ -48,6 +48,8 @@ const projects = [
   },
 ];
 
+import ContactFormMini from '../components/ContactFormMini';
+
 export default function Flipping() {
   return (
     <div className="relative">
@@ -249,29 +251,16 @@ export default function Flipping() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-orange-600 to-yellow-500">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Turn Your Inventory Into Cash Today
-          </h2>
-          <p className="text-orange-100 mb-8 max-w-2xl mx-auto">
-            Whether it's one item or a warehouse full — I'll make you a fair offer and handle the rest.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="https://cypressflips.netlify.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-white text-orange-600 rounded-xl font-semibold hover:bg-orange-50 transition-colors shadow-lg"
-            >
-              Visit Cypress Flips
-            </a>
-            <a
-              href="mailto:mjmorrisonusa@gmail.com?subject=Inventory Liquidation"
-              className="px-8 py-4 bg-orange-500 text-white rounded-xl font-semibold hover:bg-orange-400 transition-colors border border-orange-400"
-            >
-              Contact Me
-            </a>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Turn Your Inventory Into Cash Today
+            </h2>
+            <p className="text-orange-100 max-w-2xl mx-auto">
+              Whether it's one item or a warehouse full — I'll make you a fair offer and handle the rest.
+            </p>
           </div>
+          <ContactFormMini service="Inventory Liquidation" />
         </div>
       </section>
     </div>

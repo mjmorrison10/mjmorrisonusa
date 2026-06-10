@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import ContactFormMini from '../components/ContactFormMini';
 
 const projects = [
   {
@@ -200,30 +201,18 @@ export default function WebDev() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-blue-600 to-cyan-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Need a Website That Converts?
-          </h2>
-          <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-            Whether you need a landing page, e-commerce store, or a full-stack application — 
-            I'll build it fast, clean, and ready to convert.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="mailto:mjmorrisonusa@gmail.com?subject=Web Development Inquiry"
-              className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold hover:bg-blue-50 transition-colors shadow-lg"
-            >
-              Start a Project
-            </a>
-            <a
-              href="https://github.com/mjmorrison10"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-blue-500 text-white rounded-xl font-semibold hover:bg-blue-400 transition-colors border border-blue-400"
-            >
-              View GitHub
-            </a>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Need a Website That Converts?
+            </h2>
+            <p className="text-blue-100 mb-2 max-w-2xl mx-auto">
+              Whether you need a landing page, e-commerce store, or a full-stack application — 
+              I'll build it fast, clean, and ready to convert.
+            </p>
+            <p className="text-blue-200 text-sm">Currently accepting 2 clients per month</p>
           </div>
+          <ContactFormMini service="Web Development" />
         </div>
       </section>
     </div>

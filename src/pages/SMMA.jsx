@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import ContactFormMini from '../components/ContactFormMini';
 
 const platforms = [
   { name: 'Instagram', followers: '37.4K', views: '2.4M/mo', status: 'Banned', icon: '📸' },
@@ -359,30 +360,17 @@ export default function SMMA() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-purple-600 to-pink-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Ready to Dominate Social Media?
-          </h2>
-          <p className="text-purple-100 mb-8 max-w-2xl mx-auto">
-            Whether you need content creation, platform strategy, or someone who's been in the trenches — 
-            I know what works because I've done it at scale.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="mailto:mjmorrisonusa@gmail.com?subject=SMMA Inquiry"
-              className="px-8 py-4 bg-white text-purple-600 rounded-xl font-semibold hover:bg-purple-50 transition-colors shadow-lg"
-            >
-              Let's Talk Strategy
-            </a>
-            <a
-              href="https://linkedin.com/in/mjmorrisonusa"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-purple-500 text-white rounded-xl font-semibold hover:bg-purple-400 transition-colors border border-purple-400"
-            >
-              Connect on LinkedIn
-            </a>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Ready to Domininate Social Media?
+            </h2>
+            <p className="text-purple-100 max-w-2xl mx-auto">
+              Whether you need content creation, platform strategy, or someone who's been in the trenches — 
+              I know what works because I've done it at scale.
+            </p>
           </div>
+          <ContactFormMini service="Social Media Marketing" />
         </div>
       </section>
     </div>

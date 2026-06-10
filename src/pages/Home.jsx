@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import ContactFormMini from '../components/ContactFormMini';
 
 const services = [
   {
@@ -338,30 +339,17 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-700">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Let's Build Something They Can't Ignore.
-          </h2>
-          <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-            Whether you need a website, social media strategy, or help liquidating inventory — 
-            let's talk about how I can help you conquer your next challenge.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="mailto:mjmorrisonusa@gmail.com"
-              className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold hover:bg-blue-50 transition-colors shadow-lg"
-            >
-              Email Me
-            </a>
-            <a
-              href="https://linkedin.com/in/mjmorrisonusa"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-blue-500 text-white rounded-xl font-semibold hover:bg-blue-400 transition-colors border border-blue-400"
-            >
-              Connect on LinkedIn
-            </a>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Let's Build Something They Can't Ignore.
+            </h2>
+            <p className="text-blue-100 max-w-2xl mx-auto">
+              Whether you need a website, social media strategy, or help liquidating inventory — 
+              let's talk about how I can help you conquer your next challenge.
+            </p>
           </div>
+          <ContactFormMini service="General Inquiry" />
         </div>
       </section>
     </div>
