@@ -152,7 +152,7 @@ export default function Contact() {
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-6 text-center">
               Other Ways to Reach Me
             </h3>
-            <div className="grid sm:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               <a
                 href="mailto:mjmorrisonusa@gmail.com"
                 className="flex flex-col items-center gap-3 p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-750 transition-colors"
@@ -180,6 +180,56 @@ export default function Contact() {
                 <span className="text-2xl">💻</span>
                 <span className="text-sm font-medium text-gray-900 dark:text-white">GitHub</span>
                 <span className="text-xs text-gray-500 dark:text-gray-400">View my code</span>
+              </a>
+              <a
+                href="https://youtube.com/@mjmorrisonusa"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center gap-3 p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-750 transition-colors"
+              >
+                <span className="text-2xl">🎬</span>
+                <span className="text-sm font-medium text-gray-900 dark:text-white">YouTube</span>
+                <span className="text-xs text-gray-500 dark:text-gray-400">@mjmorrisonusa</span>
+              </a>
+              <a
+                href="https://instagram.com/mjmorrisonusa"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center gap-3 p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-750 transition-colors"
+              >
+                <span className="text-2xl">📸</span>
+                <span className="text-sm font-medium text-gray-900 dark:text-white">Instagram</span>
+                <span className="text-xs text-gray-500 dark:text-gray-400">@mjmorrisonusa</span>
+              </a>
+              <a
+                href="https://facebook.com/mjmorrisonusa"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center gap-3 p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-750 transition-colors"
+              >
+                <span className="text-2xl">👥</span>
+                <span className="text-sm font-medium text-gray-900 dark:text-white">Facebook</span>
+                <span className="text-xs text-gray-500 dark:text-gray-400">@mjmorrisonusa</span>
+              </a>
+              <a
+                href="https://twitter.com/mmorrisonusa"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center gap-3 p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-750 transition-colors"
+              >
+                <span className="text-2xl">🐦</span>
+                <span className="text-sm font-medium text-gray-900 dark:text-white">Twitter/X</span>
+                <span className="text-xs text-gray-500 dark:text-gray-400">@mmorrisonusa</span>
+              </a>
+              <a
+                href="https://snapchat.com/add/mjmorrisonusa"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center gap-3 p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-750 transition-colors"
+              >
+                <span className="text-2xl">👻</span>
+                <span className="text-sm font-medium text-gray-900 dark:text-white">Snapchat</span>
+                <span className="text-xs text-gray-500 dark:text-gray-400">@mjmorrisonusa</span>
               </a>
             </div>
           </div>

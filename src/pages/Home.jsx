@@ -269,44 +269,51 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {/* Testimonial 1 */}
+            {/* Testimonial 1 - Luc Tate */}
             <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-200 dark:border-gray-800">
               <div className="flex items-center gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
                   <span key={i} className="text-yellow-400">★</span>
                 ))}
               </div>
-              <p className="text-gray-600 dark:text-gray-400 mb-6 italic">
-                "If it weren't for Michael sticking it through on Facebook, we probably would've quit during those hard times. He proved Facebook was viable when everyone else said it wasn't."
+              <p className="text-gray-600 dark:text-gray-400 mb-6 italic text-lg">
+                "Ask Michael about Snapchat and Facebook."
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400 font-bold">
-                  TC
-                </div>
+                <img 
+                  src={import.meta.env.BASE_URL + 'luc.jpg'} 
+                  alt="Luc Tate"
+                  className="w-12 h-12 rounded-full object-cover"
+                />
                 <div>
-                  <div className="font-semibold text-gray-900 dark:text-white">Platform Captain</div>
-                  <div className="text-sm text-gray-500 dark:text-gray-400">The Real World University</div>
+                  <div className="font-semibold text-gray-900 dark:text-white">Luc Tate</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400">Professor, The Real World University</div>
                 </div>
               </div>
             </div>
 
-            {/* Testimonial 2 */}
+            {/* Testimonial 2 - Tatoo */}
             <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-200 dark:border-gray-800">
               <div className="flex items-center gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
                   <span key={i} className="text-yellow-400">★</span>
                 ))}
               </div>
-              <p className="text-gray-600 dark:text-gray-400 mb-6 italic">
-                "Michael was one of the only students uploading to Facebook and proving the point: other platforms may be viable, we just need to breakthrough and figure it out."
+              <p className="text-gray-600 dark:text-gray-400 mb-2 italic text-lg">
+                Student: "Who knows FB or SC?"
+              </p>
+              <p className="text-gray-900 dark:text-white mb-6 font-semibold text-lg">
+                "Michael."
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 font-bold">
-                  LT
-                </div>
+                <img 
+                  src={import.meta.env.BASE_URL + 'tatoo.jpg'} 
+                  alt="Tatoo"
+                  className="w-12 h-12 rounded-full object-cover"
+                />
                 <div>
-                  <div className="font-semibold text-gray-900 dark:text-white">Luc Tate</div>
-                  <div className="text-sm text-gray-500 dark:text-gray-400">Professor, The Real World University</div>
+                  <div className="font-semibold text-gray-900 dark:text-white">Tatoo</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400">Instagram Captain, The Real World University</div>
                 </div>
               </div>
             </div>
