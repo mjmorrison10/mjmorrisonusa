@@ -79,72 +79,125 @@ export default function WebDev() {
             Real applications, real problems solved. Built with modern tech stacks and deployed to production.
           </p>
 
-          <div className="grid lg:grid-cols-2 gap-8">
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className="group bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-700 transition-all duration-300 hover:shadow-xl"
-              >
-                {/* Project header */}
-                <div className="bg-gradient-to-br from-blue-600 to-cyan-500 p-6">
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <h3 className="text-2xl font-bold text-white mb-2">{project.title}</h3>
-                      <div className="flex flex-wrap gap-2">
-                        {project.tech.map((tech, i) => (
-                          <span
-                            key={i}
-                            className="px-2 py-1 bg-white/20 rounded text-xs text-white font-medium"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
+          <div className="grid lg:grid-cols-3 gap-6 items-start">
+            {/* #2 PriceSpy - Left */}
+            <div className="group bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-700 transition-all duration-300 hover:shadow-xl lg:mt-8">
+              <div className="bg-gradient-to-br from-blue-600 to-cyan-500 p-5">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-2">{projects[1].title}</h3>
+                    <div className="flex flex-wrap gap-1.5">
+                      {projects[1].tech.map((tech, i) => (
+                        <span key={i} className="px-2 py-0.5 bg-white/20 rounded text-xs text-white font-medium">
+                          {tech}
+                        </span>
+                      ))}
                     </div>
-                    <span className="px-3 py-1 bg-white/20 rounded-full text-xs text-white font-medium">
-                      Featured
-                    </span>
                   </div>
+                  <span className="px-2 py-0.5 bg-white/20 rounded-full text-xs text-white font-medium">#2</span>
                 </div>
+              </div>
+              <div className="p-5">
+                <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
+                  {projects[1].description}
+                </p>
+                <div className="flex flex-wrap gap-1.5 mb-4">
+                  {projects[1].stats.map((stat, i) => (
+                    <span key={i} className="px-2 py-1 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded text-xs">
+                      ✓ {stat}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex gap-2">
+                  <a href={projects[1].liveUrl} target="_blank" rel="noopener noreferrer" className="flex-1 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-xs font-medium text-center transition-colors">
+                    View Live
+                  </a>
+                  <a href={projects[1].githubUrl} target="_blank" rel="noopener noreferrer" className="px-3 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-lg text-xs font-medium transition-colors">
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
 
-                {/* Project body */}
-                <div className="p-6">
-                  <p className="text-gray-600 dark:text-gray-400 mb-4">
-                    {project.description}
-                  </p>
-                  
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.stats.map((stat, i) => (
-                      <span
-                        key={i}
-                        className="px-3 py-1.5 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded-lg text-sm"
-                      >
-                        ✓ {stat}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="flex gap-3">
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium text-center transition-colors"
-                    >
-                      View Live →
-                    </a>
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-4 py-2.5 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-medium transition-colors"
-                    >
-                      GitHub
-                    </a>
+            {/* #1 CurveRunner - Middle (Featured) */}
+            <div className="group bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden border-2 border-blue-500 dark:border-blue-400 transition-all duration-300 hover:shadow-2xl shadow-lg shadow-blue-500/20">
+              <div className="bg-gradient-to-br from-blue-600 via-purple-600 to-cyan-500 p-6">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="px-2 py-0.5 bg-white/30 rounded-full text-xs text-white font-bold">⭐ #1 FEATURED</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-2">{projects[0].title}</h3>
+                    <div className="flex flex-wrap gap-1.5">
+                      {projects[0].tech.map((tech, i) => (
+                        <span key={i} className="px-2 py-0.5 bg-white/20 rounded text-xs text-white font-medium">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
-            ))}
+              <div className="p-6">
+                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                  {projects[0].description}
+                </p>
+                <div className="flex flex-wrap gap-2 mb-5">
+                  {projects[0].stats.map((stat, i) => (
+                    <span key={i} className="px-3 py-1.5 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded-lg text-sm">
+                      ✓ {stat}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex gap-3">
+                  <a href={projects[0].liveUrl} target="_blank" rel="noopener noreferrer" className="flex-1 px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium text-center transition-colors">
+                    View Live
+                  </a>
+                  <a href={projects[0].githubUrl} target="_blank" rel="noopener noreferrer" className="px-4 py-2.5 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-medium transition-colors">
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* #3 Cypress Flips - Right */}
+            <div className="group bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-700 transition-all duration-300 hover:shadow-xl lg:mt-8">
+              <div className="bg-gradient-to-br from-blue-600 to-cyan-500 p-5">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-2">{projects[2].title}</h3>
+                    <div className="flex flex-wrap gap-1.5">
+                      {projects[2].tech.map((tech, i) => (
+                        <span key={i} className="px-2 py-0.5 bg-white/20 rounded text-xs text-white font-medium">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <span className="px-2 py-0.5 bg-white/20 rounded-full text-xs text-white font-medium">#3</span>
+                </div>
+              </div>
+              <div className="p-5">
+                <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
+                  {projects[2].description}
+                </p>
+                <div className="flex flex-wrap gap-1.5 mb-4">
+                  {projects[2].stats.map((stat, i) => (
+                    <span key={i} className="px-2 py-1 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded text-xs">
+                      ✓ {stat}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex gap-2">
+                  <a href={projects[2].liveUrl} target="_blank" rel="noopener noreferrer" className="flex-1 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-xs font-medium text-center transition-colors">
+                    View Live
+                  </a>
+                  <a href={projects[2].githubUrl} target="_blank" rel="noopener noreferrer" className="px-3 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-lg text-xs font-medium transition-colors">
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
