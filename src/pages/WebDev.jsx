@@ -3,6 +3,16 @@ import ContactFormMini from '../components/ContactFormMini';
 
 const projects = [
   {
+    title: 'CurveRunner',
+    description: 'Motorcycle navigation PWA built for riders who love curves. Features GPS tracking, lean angle measurement, voice navigation, curvy route finding, cloud sync, ride replay, and installs as an app on iPhone without the App Store.',
+    tech: ['JavaScript', 'PWA', 'Firebase', 'Leaflet', 'Service Workers'],
+    image: null,
+    liveUrl: 'https://mjmorrison10.github.io/CurveRunner/',
+    githubUrl: 'https://github.com/mjmorrison10/CurveRunner',
+    featured: true,
+    stats: ['PWA install on iPhone', 'GPS + lean tracking', 'Voice navigation'],
+  },
+  {
     title: 'PriceSpy',
     description: 'Real-time eBay price data, conditions, fees, liquidity, saturation, built for flippers. Features include Quick Deal analyzer, Watchlist, Inventory management, Lot Calculator, Bulk Price Check, and True ROI Calculator. Built in 48 hours using AI-assisted development.',
     tech: ['Python', 'Flask', 'Firebase', 'HTML', 'CSS', 'JavaScript'],
