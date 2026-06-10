@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
+import PageTransition from './PageTransition';
 
 const navLinks = [
   { path: '/', label: 'Home' },
   { path: '/webdev', label: 'Web Dev' },
   { path: '/smma', label: 'SMMA' },
   { path: '/flipping', label: 'Flipping' },
+  { path: '/contact', label: 'Contact' },
 ];
 
 // Define which links show for each route
@@ -15,14 +17,21 @@ const routeNavMap = {
   '/webdev': [
     { path: '/', label: 'Home' },
     { path: '/webdev', label: 'Web Dev' },
+    { path: '/contact', label: 'Contact' },
   ],
   '/smma': [
     { path: '/', label: 'Home' },
     { path: '/smma', label: 'SMMA' },
+    { path: '/contact', label: 'Contact' },
   ],
   '/flipping': [
     { path: '/', label: 'Home' },
     { path: '/flipping', label: 'Flipping' },
+    { path: '/contact', label: 'Contact' },
+  ],
+  '/contact': [
+    { path: '/', label: 'Home' },
+    { path: '/contact', label: 'Contact' },
   ],
 };
 
@@ -136,7 +145,9 @@ export default function Layout({ children }) {
 
       {/* Main Content */}
       <main className="pt-16">
-        {children}
+        <PageTransition>
+          {children}
+        </PageTransition>
       </main>
 
       {/* Footer */}

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const services = [
   {
@@ -32,6 +33,11 @@ const stats = [
 ];
 
 export default function Home() {
+  const [statsRef, statsVisible] = useScrollReveal();
+  const [servicesRef, servicesVisible] = useScrollReveal();
+  const [aboutRef, aboutVisible] = useScrollReveal();
+  const [testimonialsRef, testimonialsVisible] = useScrollReveal();
+
   return (
     <div className="relative">
       {/* Hero Section */}
@@ -48,7 +54,7 @@ export default function Home() {
           {/* Profile Picture */}
           <div className="mb-8">
             <img 
-              src={import.meta.env.BASE_URL + 'profile.png'} 
+              src={import.meta.env.BASE_URL + 'profile.webp'} 
               alt="Michael Morrison"
               className="w-40 h-40 rounded-full object-cover border-4 border-white dark:border-gray-800 shadow-xl mx-auto"
             />
@@ -73,18 +79,23 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              to="/webdev"
+              to="/contact"
               className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold transition-all duration-200 shadow-lg shadow-blue-600/25 hover:shadow-xl hover:shadow-blue-600/30 hover:-translate-y-0.5"
+            >
+              Work With Me
+            </Link>
+            <Link
+              to="/webdev"
+              className="px-8 py-4 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-750 text-gray-900 dark:text-white rounded-xl font-semibold transition-all duration-200 border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600"
             >
               View My Work
             </Link>
-            <a
-              href="mailto:mjmorrisonusa@gmail.com"
-              className="px-8 py-4 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-750 text-gray-900 dark:text-white rounded-xl font-semibold transition-all duration-200 border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600"
-            >
-              Get In Touch
-            </a>
           </div>
+
+          {/* Urgency */}
+          <p className="mt-6 text-sm text-gray-500 dark:text-gray-400">
+            Currently accepting 2 web dev clients per month • Limited inventory — check Cypress Flips daily
+          </p>
         </div>
 
         {/* Scroll indicator */}
@@ -96,7 +107,12 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white dark:bg-gray-900 border-y border-gray-200 dark:border-gray-800">
+      <section 
+        ref={statsRef}
+        className={`py-16 bg-white dark:bg-gray-900 border-y border-gray-200 dark:border-gray-800 transition-all duration-700 ${
+          statsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}
+      >
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -114,7 +130,12 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-950">
+      <section 
+        ref={servicesRef}
+        className={`py-20 bg-gray-50 dark:bg-gray-950 transition-all duration-700 delay-100 ${
+          servicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}
+      >
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -154,7 +175,12 @@ export default function Home() {
       </section>
 
       {/* About Preview */}
-      <section className="py-20 bg-white dark:bg-gray-900">
+      <section 
+        ref={aboutRef}
+        className={`py-20 bg-white dark:bg-gray-900 transition-all duration-700 delay-200 ${
+          aboutVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}
+      >
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -178,14 +204,6 @@ export default function Home() {
               </div>
             </div>
             <div className="relative">
-              {/* Profile image */}
-              <div className="mb-6 flex justify-center">
-                <img 
-                  src={import.meta.env.BASE_URL + 'profile.png'} 
-                  alt="Michael Morrison"
-                  className="w-48 h-48 rounded-2xl object-cover border-4 border-white dark:border-gray-900 shadow-xl"
-                />
-              </div>
               <div className="bg-gradient-to-br from-blue-600 to-blue-400 rounded-2xl p-1">
                 <div className="bg-white dark:bg-gray-900 rounded-xl p-8">
                   <div className="space-y-4">
@@ -229,6 +247,84 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section 
+        ref={testimonialsRef}
+        className={`py-20 bg-gray-50 dark:bg-gray-950 transition-all duration-700 delay-300 ${
+          testimonialsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}
+      >
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              What People Say
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              Real feedback from real people who've worked with me.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Testimonial 1 */}
+            <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-200 dark:border-gray-800">
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i} className="text-yellow-400">★</span>
+                ))}
+              </div>
+              <p className="text-gray-600 dark:text-gray-400 mb-6 italic">
+                "If it weren't for Michael sticking it through on Facebook, we probably would've quit during those hard times. He proved Facebook was viable when everyone else said it wasn't."
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400 font-bold">
+                  TC
+                </div>
+                <div>
+                  <div className="font-semibold text-gray-900 dark:text-white">Platform Captain</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400">The Real World University</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimonial 2 */}
+            <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-200 dark:border-gray-800">
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i} className="text-yellow-400">★</span>
+                ))}
+              </div>
+              <p className="text-gray-600 dark:text-gray-400 mb-6 italic">
+                "Michael was one of the only students uploading to Facebook and proving the point: other platforms may be viable, we just need to breakthrough and figure it out."
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 font-bold">
+                  LT
+                </div>
+                <div>
+                  <div className="font-semibold text-gray-900 dark:text-white">Luc Tate</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400">Professor, The Real World University</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Featured Interview */}
+          <div className="mt-12 text-center">
+            <a 
+              href="https://rumble.com/v2t456y-marketing-success-michael-the-real-world-interview-172.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-xl font-medium transition-colors"
+            >
+              🎬 Watch My Interview on The Real World
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
           </div>
         </div>
       </section>

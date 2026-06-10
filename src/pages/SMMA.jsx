@@ -213,10 +213,10 @@ export default function SMMA() {
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 text-center">
                   📸 The Proof
                 </h3>
-                <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
                   <div>
                     <img 
-                      src={import.meta.env.BASE_URL + 'instagram-screenshot.jpg'} 
+                      src={import.meta.env.BASE_URL + 'instagram-screenshot.webp'} 
                       alt="Instagram 37.4K followers screenshot"
                       className="rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg w-full"
                     />
@@ -226,7 +226,7 @@ export default function SMMA() {
                   </div>
                   <div>
                     <img 
-                      src={import.meta.env.BASE_URL + 'youtube-screenshot.jpg'} 
+                      src={import.meta.env.BASE_URL + 'youtube-screenshot.webp'} 
                       alt="YouTube 34.5K subscribers screenshot"
                       className="rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg w-full"
                     />
@@ -236,7 +236,7 @@ export default function SMMA() {
                   </div>
                   <div>
                     <img 
-                      src={import.meta.env.BASE_URL + 'facebook-screenshot.jpg'} 
+                      src={import.meta.env.BASE_URL + 'facebook-screenshot.webp'} 
                       alt="Facebook 34K followers screenshot"
                       className="rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg w-full"
                     />
@@ -246,7 +246,7 @@ export default function SMMA() {
                   </div>
                   <div>
                     <img 
-                      src={import.meta.env.BASE_URL + 'tiktok-screenshot.jpg'} 
+                      src={import.meta.env.BASE_URL + 'tiktok-screenshot.webp'} 
                       alt="TikTok 39.7K followers screenshot"
                       className="rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg w-full"
                     />
@@ -257,7 +257,7 @@ export default function SMMA() {
                   <div>
                     <div className="relative">
                       <img 
-                        src={import.meta.env.BASE_URL + 'snapchat-screenshot.png'} 
+                        src={import.meta.env.BASE_URL + 'snapchat-screenshot.webp'} 
                         alt="Snapchat 168.7K followers screenshot"
                         className="rounded-xl border-2 border-green-500 dark:border-green-400 shadow-lg w-full"
                       />
