@@ -277,7 +277,7 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-gray-600 dark:text-gray-400 mb-6 italic text-lg">
-                "Ask Michael about Snapchat and Facebook."
+                "Ask <span className="text-gray-900 dark:text-white font-semibold not-italic">Michael</span> about Snapchat and Facebook."
               </p>
               <div className="flex items-center gap-3">
                 <img 
