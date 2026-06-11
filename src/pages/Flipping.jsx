@@ -162,28 +162,87 @@ export default function Flipping() {
           </p>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {projects.map((project, index) => (
-              <a
-                key={index}
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700 hover:border-orange-300 dark:hover:border-orange-700 transition-all duration-300 hover:shadow-xl"
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <span className="text-xs font-medium text-orange-600 dark:text-orange-400 bg-orange-100 dark:bg-orange-900/30 px-2 py-1 rounded-full">
-                      {project.type}
-                    </span>
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-2">{project.title}</h3>
+            {/* Cypress Flips */}
+            <a
+              href="https://cypressflips.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 hover:border-orange-300 dark:hover:border-orange-700 transition-all duration-300 hover:shadow-xl"
+            >
+              {/* Browser Preview */}
+              <div className="relative bg-gray-200 dark:bg-gray-700 p-2">
+                <div className="flex items-center gap-1.5 mb-2 px-2">
+                  <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
+                  <div className="ml-2 flex-1 bg-gray-300 dark:bg-gray-600 rounded-md px-3 py-0.5 text-xs text-gray-500 dark:text-gray-400 truncate">
+                    cypressflips.netlify.app
                   </div>
-                  <svg className="w-6 h-6 text-gray-400 group-hover:text-orange-500 transform group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
                 </div>
-                <p className="text-gray-600 dark:text-gray-400">{project.description}</p>
-              </a>
-            ))}
+                <div className="relative bg-white dark:bg-gray-900 rounded-lg overflow-hidden" style={{ paddingBottom: '50%' }}>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center p-4">
+                      <div className="text-4xl mb-2">🛒</div>
+                      <div className="text-lg font-bold text-gray-900 dark:text-white">Cypress Flips</div>
+                      <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">E-Commerce Storefront</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="p-6">
+                <div className="flex items-start justify-between mb-2">
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Cypress Flips</h3>
+                  <span className="text-xs font-medium text-orange-600 dark:text-orange-400 bg-orange-100 dark:bg-orange-900/30 px-2 py-1 rounded-full">
+                    Storefront
+                  </span>
+                </div>
+                <p className="text-gray-600 dark:text-gray-400 mb-4">My storefront for local flipping. Condition-first listings, transparent pricing, and fair local deals.</p>
+                <div className="flex items-center text-orange-600 dark:text-orange-400 text-sm font-medium group-hover:translate-x-1 transition-transform">
+                  Visit Cypress Flips →
+                </div>
+              </div>
+            </a>
+
+            {/* PriceSpy */}
+            <a
+              href="https://pricespy-yx00.onrender.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 hover:border-orange-300 dark:hover:border-orange-700 transition-all duration-300 hover:shadow-xl"
+            >
+              {/* Browser Preview */}
+              <div className="relative bg-gray-200 dark:bg-gray-700 p-2">
+                <div className="flex items-center gap-1.5 mb-2 px-2">
+                  <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
+                  <div className="ml-2 flex-1 bg-gray-300 dark:bg-gray-600 rounded-md px-3 py-0.5 text-xs text-gray-500 dark:text-gray-400 truncate">
+                    pricespy-yx00.onrender.com
+                  </div>
+                </div>
+                <div className="relative bg-white dark:bg-gray-900 rounded-lg overflow-hidden" style={{ paddingBottom: '50%' }}>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center p-4">
+                      <div className="text-4xl mb-2">💰</div>
+                      <div className="text-lg font-bold text-gray-900 dark:text-white">PriceSpy</div>
+                      <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">Real-Time eBay Price Tool</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="p-6">
+                <div className="flex items-start justify-between mb-2">
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white">PriceSpy</h3>
+                  <span className="text-xs font-medium text-orange-600 dark:text-orange-400 bg-orange-100 dark:bg-orange-900/30 px-2 py-1 rounded-full">
+                    Tool
+                  </span>
+                </div>
+                <p className="text-gray-600 dark:text-gray-400 mb-4">Real-time eBay pricing tool built for flippers. Fee calculators, deal analyzers, and market data.</p>
+                <div className="flex items-center text-orange-600 dark:text-orange-400 text-sm font-medium group-hover:translate-x-1 transition-transform">
+                  Visit PriceSpy →
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </section>

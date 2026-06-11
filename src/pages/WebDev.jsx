@@ -1,36 +1,61 @@
 import { useState } from 'react';
+import ProjectCard from '../components/ProjectCard';
 import ContactFormMini from '../components/ContactFormMini';
 
 const projects = [
   {
     title: 'CurveRunner',
+    subtitle: 'Motorcycle Navigation PWA',
+    icon: '🏍️',
     description: 'Motorcycle navigation PWA built for riders who love curves. Features GPS tracking, lean angle measurement, voice navigation, curvy route finding, cloud sync, ride replay, and installs as an app on iPhone without the App Store.',
     tech: ['JavaScript', 'PWA', 'Firebase', 'Leaflet', 'Service Workers'],
-    image: null,
     liveUrl: 'https://mjmorrison10.github.io/CurveRunner/',
     githubUrl: 'https://github.com/mjmorrison10/CurveRunner',
-    featured: true,
     stats: ['PWA install on iPhone', 'GPS + lean tracking', 'Voice navigation'],
+    badge: 'In Progress',
   },
   {
     title: 'PriceSpy',
-    description: 'Real-time eBay price data, conditions, fees, liquidity, saturation, built for flippers. Features include Quick Deal analyzer, Watchlist, Inventory management, Lot Calculator, Bulk Price Check, and True ROI Calculator. Built in 48 hours using AI-assisted development.',
+    subtitle: 'Real-Time eBay Price Tool',
+    icon: '💰',
+    description: 'Real-time eBay price data, conditions, fees, liquidity, saturation, built for flippers. Features include Quick Deal analyzer, Watchlist, Inventory management, Lot Calculator, Bulk Price Check, and True ROI Calculator.',
     tech: ['Python', 'Flask', 'Firebase', 'HTML', 'CSS', 'JavaScript'],
-    image: null,
     liveUrl: 'https://pricespy-yx00.onrender.com/',
     githubUrl: 'https://github.com/mjmorrison10/PriceSpy',
-    featured: true,
     stats: ['Real-time pricing', 'Multi-platform fees', 'Built in 48 hours'],
+    badge: null,
   },
   {
     title: 'Cypress Flips',
-    description: 'Professional storefront for a local flipping business. Features premium picks, category filtering, vendor intake system, and condition-first product listings. Built in 48 hours. Now serves as the storefront for my flipping business.',
+    subtitle: 'E-Commerce Storefront',
+    icon: '🛒',
+    description: 'Professional storefront for a local flipping business. Features premium picks, category filtering, vendor intake system, and condition-first product listings.',
     tech: ['React', 'Tailwind CSS', 'Netlify'],
-    image: null,
     liveUrl: 'https://cypressflips.netlify.app/',
     githubUrl: 'https://github.com/mjmorrison10/cypress-flips',
-    featured: true,
     stats: ['Premium curation', 'Vendor system', 'Built in 48 hours'],
+    badge: null,
+  },
+];
+
+const processSteps = [
+  {
+    step: '01',
+    title: 'Discovery',
+    description: 'You tell me what you need. I ask the right questions to understand your business, audience, and goals.',
+    icon: '🔍',
+  },
+  {
+    step: '02',
+    title: 'Design & Build',
+    description: 'I leverage AI-assisted development with my web dev knowledge to build fast. Simple sites in hours, complex apps in days.',
+    icon: '⚡',
+  },
+  {
+    step: '03',
+    title: 'Deploy & Launch',
+    description: 'Your site goes live. Hosted, optimized, and ready for customers. No waiting weeks for a developer.',
+    icon: '🚀',
   },
 ];
 
@@ -71,7 +96,7 @@ export default function WebDev() {
 
       {/* Featured Projects */}
       <section className="py-20 bg-white dark:bg-gray-900">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
             Featured Projects
           </h2>
@@ -80,123 +105,61 @@ export default function WebDev() {
           </p>
 
           <div className="grid lg:grid-cols-3 gap-6 items-start">
-            {/* #1 CurveRunner - Middle (Featured) - First on mobile */}
-            <div className="group bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden border-2 border-blue-500 dark:border-blue-400 transition-all duration-300 hover:shadow-2xl shadow-lg shadow-blue-500/20 order-1 lg:order-2">
-              <div className="bg-gradient-to-br from-blue-600 to-cyan-500 p-5">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-2">{projects[1].title}</h3>
-                    <div className="flex flex-wrap gap-1.5">
-                      {projects[1].tech.map((tech, i) => (
-                        <span key={i} className="px-2 py-0.5 bg-white/20 rounded text-xs text-white font-medium">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  <span className="px-2 py-0.5 bg-white/20 rounded-full text-xs text-white font-medium">#2</span>
-                </div>
-              </div>
-              <div className="p-5">
-                <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                  {projects[1].description}
-                </p>
-                <div className="flex flex-wrap gap-1.5 mb-4">
-                  {projects[1].stats.map((stat, i) => (
-                    <span key={i} className="px-2 py-1 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded text-xs">
-                      ✓ {stat}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex gap-2">
-                  <a href={projects[1].liveUrl} target="_blank" rel="noopener noreferrer" className="flex-1 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-xs font-medium text-center transition-colors">
-                    View Live
-                  </a>
-                  <a href={projects[1].githubUrl} target="_blank" rel="noopener noreferrer" className="px-3 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-lg text-xs font-medium transition-colors">
-                    GitHub
-                  </a>
-                </div>
-              </div>
+            <div className="order-1 lg:order-2 lg:-mt-4">
+              <ProjectCard project={projects[0]} featured={true} />
             </div>
-
-            {/* #2 PriceSpy - Left - Second on mobile */}
-            <div className="group bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-700 transition-all duration-300 hover:shadow-xl lg:mt-8 order-2 lg:order-1">
-              <div className="bg-gradient-to-br from-blue-600 via-purple-600 to-cyan-500 p-6">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="px-2 py-0.5 bg-white/30 rounded-full text-xs text-white font-bold">⭐ #1 FEATURED</span>
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{projects[0].title}</h3>
-                    <div className="flex flex-wrap gap-1.5">
-                      {projects[0].tech.map((tech, i) => (
-                        <span key={i} className="px-2 py-0.5 bg-white/20 rounded text-xs text-white font-medium">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="p-6">
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  {projects[0].description}
-                </p>
-                <div className="flex flex-wrap gap-2 mb-5">
-                  {projects[0].stats.map((stat, i) => (
-                    <span key={i} className="px-3 py-1.5 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded-lg text-sm">
-                      ✓ {stat}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex gap-3">
-                  <a href={projects[0].liveUrl} target="_blank" rel="noopener noreferrer" className="flex-1 px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium text-center transition-colors">
-                    View Live
-                  </a>
-                  <a href={projects[0].githubUrl} target="_blank" rel="noopener noreferrer" className="px-4 py-2.5 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-medium transition-colors">
-                    GitHub
-                  </a>
-                </div>
-              </div>
+            <div className="order-2 lg:order-1 lg:mt-4">
+              <ProjectCard project={projects[1]} />
             </div>
+            <div className="order-3 lg:order-3 lg:mt-4">
+              <ProjectCard project={projects[2]} />
+            </div>
+          </div>
+        </div>
+      </section>
 
-            {/* #3 Cypress Flips - Right - Third on mobile */}
-            <div className="group bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-700 transition-all duration-300 hover:shadow-xl lg:mt-8 order-3">
-              <div className="bg-gradient-to-br from-blue-600 to-cyan-500 p-5">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-2">{projects[2].title}</h3>
-                    <div className="flex flex-wrap gap-1.5">
-                      {projects[2].tech.map((tech, i) => (
-                        <span key={i} className="px-2 py-0.5 bg-white/20 rounded text-xs text-white font-medium">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
+      {/* How I Work Section */}
+      <section className="py-20 bg-gray-50 dark:bg-gray-950">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              How I Work
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              I combine my web development knowledge with AI-assisted tools to build websites faster than traditional developers. Simple sites in hours. Complex apps in days, not weeks.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {processSteps.map((step, index) => (
+              <div key={index} className="relative">
+                <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-200 dark:border-gray-800 h-full">
+                  <div className="text-4xl mb-4">{step.icon}</div>
+                  <div className="text-sm font-medium text-blue-600 dark:text-blue-400 mb-2">
+                    Step {step.step}
                   </div>
-                  <span className="px-2 py-0.5 bg-white/20 rounded-full text-xs text-white font-medium">#3</span>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                    {step.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    {step.description}
+                  </p>
                 </div>
+                {index < processSteps.length - 1 && (
+                  <div className="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2 text-gray-300 dark:text-gray-600 text-2xl">
+                    →
+                  </div>
+                )}
               </div>
-              <div className="p-5">
-                <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                  {projects[2].description}
-                </p>
-                <div className="flex flex-wrap gap-1.5 mb-4">
-                  {projects[2].stats.map((stat, i) => (
-                    <span key={i} className="px-2 py-1 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded text-xs">
-                      ✓ {stat}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex gap-2">
-                  <a href={projects[2].liveUrl} target="_blank" rel="noopener noreferrer" className="flex-1 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-xs font-medium text-center transition-colors">
-                    View Live
-                  </a>
-                  <a href={projects[2].githubUrl} target="_blank" rel="noopener noreferrer" className="px-3 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-lg text-xs font-medium transition-colors">
-                    GitHub
-                  </a>
-                </div>
-              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <div className="inline-flex items-center gap-2 px-6 py-3 bg-blue-50 dark:bg-blue-900/20 rounded-xl">
+              <span className="text-blue-600 dark:text-blue-400 font-medium">⏱️</span>
+              <span className="text-gray-700 dark:text-gray-300">
+                CurveRunner: 2 days and counting. PriceSpy: 48 hours. Cypress Flips: 48 hours.
+              </span>
             </div>
           </div>
         </div>
