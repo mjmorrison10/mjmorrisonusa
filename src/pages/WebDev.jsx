@@ -124,8 +124,8 @@ const faqItems = [
     answer: 'Yes. After the 30-day period, I offer monthly maintenance packages starting at $100/month for updates, security patches, and minor content changes.',
   },
   {
-    question: 'What if I don't like it?',
-    answer: 'If you're not happy with the first draft, I keep working until you are. 100% satisfaction guaranteed. I don't stop until you love it.',
+    question: 'What if I don\'t like it?',
+    answer: 'If you\'re not happy with the first draft, I keep working until you are. 100% satisfaction guaranteed. I don\'t stop until you love it.',
   },
 ];
 
