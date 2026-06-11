@@ -13,6 +13,10 @@ const projects = [
     githubUrl: 'https://github.com/mjmorrison10/CurveRunner',
     stats: ['PWA install on iPhone', 'GPS + lean tracking', 'Voice navigation'],
     badge: 'In Progress',
+    screenshots: [
+      'curverunner-welcome-desktop.webp',
+      'curverunner-desktop.webp',
+    ],
   },
   {
     title: 'PriceSpy',
@@ -24,6 +28,7 @@ const projects = [
     githubUrl: 'https://github.com/mjmorrison10/PriceSpy',
     stats: ['Real-time pricing', 'Multi-platform fees', 'Built in 48 hours'],
     badge: null,
+    screenshots: [],
   },
   {
     title: 'Cypress Flips',
@@ -35,6 +40,11 @@ const projects = [
     githubUrl: 'https://github.com/mjmorrison10/cypress-flips',
     stats: ['Premium curation', 'Vendor system', 'Built in 48 hours'],
     badge: null,
+    screenshots: [
+      'cypressflips-desktop.webp',
+      'cypressflips-items-desktop.webp',
+      'cypressflips-items2-desktop.webp',
+    ],
   },
 ];
 

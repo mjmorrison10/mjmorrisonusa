@@ -179,14 +179,12 @@ export default function Flipping() {
                     cypressflips.netlify.app
                   </div>
                 </div>
-                <div className="relative bg-white dark:bg-gray-900 rounded-lg overflow-hidden" style={{ paddingBottom: '50%' }}>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center p-4">
-                      <div className="text-4xl mb-2">🛒</div>
-                      <div className="text-lg font-bold text-gray-900 dark:text-white">Cypress Flips</div>
-                      <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">E-Commerce Storefront</div>
-                    </div>
-                  </div>
+                <div className="relative bg-white dark:bg-gray-900 rounded-lg overflow-hidden">
+                  <img 
+                    src={import.meta.env.BASE_URL + 'cypressflips-desktop.webp'} 
+                    alt="Cypress Flips screenshot"
+                    className="w-full"
+                  />
                 </div>
               </div>
               <div className="p-6">

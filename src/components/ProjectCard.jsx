@@ -1,4 +1,17 @@
+import { useState, useEffect } from 'react';
+
 export default function ProjectCard({ project, featured = false }) {
+  const [currentImage, setCurrentImage] = useState(0);
+  const hasMultipleImages = project.screenshots && project.screenshots.length > 1;
+
+  useEffect(() => {
+    if (!hasMultipleImages) return;
+    const interval = setInterval(() => {
+      setCurrentImage(prev => (prev + 1) % project.screenshots.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [hasMultipleImages, project.screenshots]);
+
   return (
     <div className={`group bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl ${
       featured 
@@ -17,16 +30,45 @@ export default function ProjectCard({ project, featured = false }) {
           </div>
         </div>
         {/* Screenshot area */}
-        <div className="relative bg-white dark:bg-gray-900 rounded-lg overflow-hidden" style={{ paddingBottom: '60%' }}>
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center p-4">
-              <div className="text-4xl mb-2">{project.icon}</div>
-              <div className="text-lg font-bold text-gray-900 dark:text-white">{project.title}</div>
-              <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">{project.subtitle}</div>
+        <div className="relative bg-white dark:bg-gray-900 rounded-lg overflow-hidden">
+          {project.screenshots && project.screenshots.length > 0 ? (
+            <div className="relative" style={{ paddingBottom: '60%' }}>
+              {project.screenshots.map((screenshot, index) => (
+                <img
+                  key={index}
+                  src={import.meta.env.BASE_URL + screenshot}
+                  alt={`${project.title} screenshot ${index + 1}`}
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+                    index === currentImage ? 'opacity-100' : 'opacity-0'
+                  }`}
+                />
+              ))}
+              {/* Dots for multiple images */}
+              {hasMultipleImages && (
+                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
+                  {project.screenshots.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImage(index)}
+                      className={`w-2 h-2 rounded-full transition-colors ${
+                        index === currentImage ? 'bg-blue-500' : 'bg-white/50'
+                      }`}
+                    />
+                  ))}
+                </div>
+              )}
             </div>
-          </div>
-          {/* Gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/10 dark:to-gray-900/10" />
+          ) : (
+            <div className="relative" style={{ paddingBottom: '60%' }}>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center p-4">
+                  <div className="text-4xl mb-2">{project.icon}</div>
+                  <div className="text-lg font-bold text-gray-900 dark:text-white">{project.title}</div>
+                  <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">{project.subtitle}</div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
 
