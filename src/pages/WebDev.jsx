@@ -41,20 +41,20 @@ const projects = [
 const processSteps = [
   {
     step: '01',
-    title: 'Discovery',
-    description: 'You tell me what you need. I ask the right questions to understand your business, audience, and goals.',
-    icon: '🔍',
+    title: 'Understand Your Revenue',
+    description: 'Before I write a single line of code, I learn how you make money. Who buys from you? Why do they buy? What makes them click "Buy Now" instead of clicking away? This is where most developers fail. They build pretty websites. I build money machines.',
+    icon: '🎯',
   },
   {
     step: '02',
-    title: 'Design & Build',
-    description: 'I leverage AI-assisted development with my web dev knowledge to build fast. Simple sites in hours, complex apps in days.',
+    title: 'Build the Asset',
+    description: 'I combine my web development skills with sales copywriting, audience psychology, and conversion strategy learned from generating 50M+ monthly views. Every button, every headline, every section is designed to turn visitors into customers.',
     icon: '⚡',
   },
   {
     step: '03',
-    title: 'Deploy & Launch',
-    description: 'Your site goes live. Hosted, optimized, and ready for customers. No waiting weeks for a developer.',
+    title: 'Launch and Optimize',
+    description: 'Your site goes live, but that is not the finish line. I help you understand what is working, what needs improvement, and how to scale. A website is not a brochure. It is your best salesperson, working 24/7.',
     icon: '🚀',
   },
 ];
@@ -87,8 +87,9 @@ export default function WebDev() {
               </span>
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              From simple landing pages to complex full-stack applications, I build websites that work 
-              as hard as you do. Self-taught, battle-tested, and always shipping.
+              I don't just build websites, I build revenue machines. Combining web development with 
+              sales psychology, conversion copywriting, and marketing strategy. Self-taught, 
+              battle-tested, and built to make you money.
             </p>
           </div>
         </div>
@@ -126,7 +127,7 @@ export default function WebDev() {
               How I Work
             </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              I combine my web development knowledge with AI-assisted tools to build websites faster than traditional developers. Simple sites in hours. Complex apps in days, not weeks.
+              Any developer can build a website. I build revenue machines. I combine web development with sales psychology, conversion copywriting, and marketing strategy to create websites that don't just look good, they make you money.
             </p>
           </div>
 
@@ -158,7 +159,7 @@ export default function WebDev() {
             <div className="inline-flex items-center gap-2 px-6 py-3 bg-blue-50 dark:bg-blue-900/20 rounded-xl">
               <span className="text-blue-600 dark:text-blue-400 font-medium">⏱️</span>
               <span className="text-gray-700 dark:text-gray-300">
-                CurveRunner: 2 days and counting. PriceSpy: 48 hours. Cypress Flips: 48 hours.
+                CurveRunner: 2 days. PriceSpy: 48 hours. Cypress Flips: 48 hours. Not just fast, built to convert.
               </span>
             </div>
           </div>
@@ -230,11 +231,11 @@ export default function WebDev() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Need a Website That Converts?
+              Ready to Turn Your Website Into a Revenue Machine?
             </h2>
             <p className="text-blue-100 mb-2 max-w-2xl mx-auto">
-              Whether you need a landing page, e-commerce store, or a full-stack application, 
-              I'll build it fast, clean, and ready to convert.
+              Most developers build websites. I build assets that pay you every month. 
+              Let's talk about how I can increase your revenue.
             </p>
             <p className="text-blue-200 text-sm">Currently accepting 2 clients per month</p>
           </div>
