@@ -62,7 +62,7 @@ export default function ContactFormMini({ service = '' }) {
         name="message"
         required
         rows={3}
-        placeholder="Tell me about your project..."
+        placeholder="I respond within 24 hours..."
         value={formData.message}
         onChange={handleChange}
         className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:ring-2 focus:ring-white/50 focus:border-transparent transition-all resize-none"
@@ -71,7 +71,7 @@ export default function ContactFormMini({ service = '' }) {
         type="submit"
         className="w-full px-8 py-4 bg-white text-gray-900 rounded-xl font-semibold hover:bg-gray-100 transition-colors shadow-lg"
       >
-        Send Message
+        Get Your Free Quote
       </button>
     </form>
   );

@@ -197,7 +197,7 @@ export default function WebDev() {
             <div className="inline-flex items-center gap-2 px-6 py-3 bg-blue-50 dark:bg-blue-900/20 rounded-xl">
               <span className="text-blue-600 dark:text-blue-400 font-medium">⏱️</span>
               <span className="text-gray-700 dark:text-gray-300">
-                CurveRunner: 2 days. PriceSpy: 48 hours. Cypress Flips: 48 hours. Not just fast, built to convert.
+                CurveRunner: 2 days. PriceSpy: 48 hours. Cypress Flips: 48 hours. How fast can I deliver YOUR project?
               </span>
             </div>
           </div>

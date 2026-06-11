@@ -6,21 +6,21 @@ const services = [
   {
     icon: '💻',
     title: 'Web Development',
-    description: 'Custom websites built in 48 hours. From landing pages to full-stack applications. React, JavaScript, Tailwind.',
+    description: 'I build websites that make you money while you sleep. Revenue-focused, conversion-optimized, ready in 48 hours.',
     link: '/webdev',
     color: 'from-blue-600 to-cyan-500',
   },
   {
     icon: '📱',
     title: 'Social Media Marketing',
-    description: '314K followers built. 50M+ monthly views. Platform captain. I know what works because I\'ve done it at scale.',
+    description: 'I grew 314K followers and generated 50M+ views. I can do the same for your brand.',
     link: '/smma',
     color: 'from-purple-600 to-pink-500',
   },
   {
     icon: '🔄',
     title: 'Flipping & Liquidation',
-    description: 'Instant cash for your inventory. Online pawn shop model. Cypress, CA local. Fair prices, fast transactions.',
+    description: 'Turn your clutter into cash. I buy your inventory, you get paid today. Simple.',
     link: '/flipping',
     color: 'from-orange-600 to-yellow-500',
   },
@@ -57,14 +57,14 @@ export default function Home() {
             <img 
               src={import.meta.env.BASE_URL + 'profile.webp'} 
               alt="Michael Morrison"
-              className="w-40 h-40 rounded-full object-cover border-4 border-white dark:border-gray-800 shadow-xl mx-auto"
+              className="w-48 h-48 rounded-full object-cover border-4 border-white dark:border-gray-800 shadow-xl mx-auto hover:scale-105 transition-transform duration-300"
             />
           </div>
 
-          {/* Subtle heritage badge */}
+          {/* Heritage badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200 dark:border-gray-700 mb-8">
-            <span className="text-xs text-gray-500 dark:text-gray-400">🏴󠁧󠁢󠁳󠁣󠁴󠁿 🇮🇹 🇵🇭</span>
-            <span className="text-xs text-gray-500 dark:text-gray-400">Cypress, CA</span>
+            <span className="text-sm text-gray-500 dark:text-gray-400">🏴󠁧󠁢󠁳󠁣󠁴󠁿 🇮🇹 🇵🇭</span>
+            <span className="text-sm text-gray-500 dark:text-gray-400">Cypress, CA</span>
           </div>
 
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
@@ -74,9 +74,21 @@ export default function Home() {
             </span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10">
-            314,000 followers built from scratch. 50 million monthly views. Banned from 4 platforms for being too effective. Now I build, market, and sell, for you.
+          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-4">
+            314,000 followers built from scratch. 50 million monthly views. Banned from 4 platforms for being too effective.
           </p>
+          
+          <div className="flex flex-wrap justify-center gap-4 mb-10">
+            <span className="px-4 py-2 bg-blue-50 dark:bg-blue-900/20 rounded-full text-sm text-blue-700 dark:text-blue-300">
+              💻 <strong>For businesses:</strong> Websites that increase your revenue
+            </span>
+            <span className="px-4 py-2 bg-orange-50 dark:bg-orange-900/20 rounded-full text-sm text-orange-700 dark:text-orange-300">
+              🔄 <strong>For flippers:</strong> I buy your inventory for cash
+            </span>
+            <span className="px-4 py-2 bg-purple-50 dark:bg-purple-900/20 rounded-full text-sm text-purple-700 dark:text-purple-300">
+              📱 <strong>For creators:</strong> I grow your audience
+            </span>
+          </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
@@ -126,6 +138,34 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Trusted By Section */}
+      <section className="py-12 bg-white dark:bg-gray-900">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-sm text-gray-400 dark:text-gray-500 mb-6 uppercase tracking-wider">
+            Featured On
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-8">
+            <a 
+              href="https://rumble.com/v2t456y-marketing-success-michael-the-real-world-interview-172.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-750 transition-colors"
+            >
+              <span className="text-lg">🎬</span>
+              <span className="text-sm font-medium text-gray-600 dark:text-gray-400">The Real World University</span>
+            </a>
+            <div className="flex items-center gap-2 px-4 py-2 bg-gray-50 dark:bg-gray-800 rounded-lg">
+              <span className="text-lg">👻</span>
+              <span className="text-sm font-medium text-gray-600 dark:text-gray-400">168.7K Snapchat Followers</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 bg-gray-50 dark:bg-gray-800 rounded-lg">
+              <span className="text-lg">📊</span>
+              <span className="text-sm font-medium text-gray-600 dark:text-gray-400">50M+ Monthly Views Generated</span>
+            </div>
           </div>
         </div>
       </section>
@@ -344,9 +384,12 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Let's Build Something They Can't Ignore.
             </h2>
-            <p className="text-blue-100 max-w-2xl mx-auto">
+            <p className="text-blue-100 max-w-2xl mx-auto mb-4">
               Whether you need a website, social media strategy, or help liquidating inventory, 
               let's talk about how I can help you conquer your next challenge.
+            </p>
+            <p className="text-blue-200 text-sm">
+              Not happy with the first draft? I keep working until you are. 100% satisfaction guaranteed.
             </p>
           </div>
           <ContactFormMini service="General Inquiry" />
