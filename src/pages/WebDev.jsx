@@ -48,11 +48,39 @@ const projects = [
   },
 ];
 
+const moreProjects = [
+  { name: 'Timeless Vintage', slug: 'timeless-vintage', category: 'E-Commerce' },
+  { name: 'The Bakery Buena Park', slug: 'the-bakery-buena-park', category: 'Restaurant' },
+  { name: 'Starline Nails', slug: 'starline-nails', category: 'Beauty' },
+  { name: 'Salon 360', slug: 'salon-360', category: 'Beauty' },
+  { name: 'Quality Auto Care', slug: 'quality-auto-care', category: 'Automotive' },
+  { name: "Mr. D's Automotive", slug: 'mr-ds-automotive', category: 'Automotive' },
+  { name: 'Manon', slug: 'manon', category: 'Business' },
+  { name: 'Les Auto Repair', slug: 'les-auto-repair', category: 'Automotive' },
+  { name: 'HYD K Hair Salon', slug: 'hyd-k-hair-salon', category: 'Beauty' },
+  { name: "French's Pastry Bakery", slug: 'frenchs-pastry-bakery', category: 'Restaurant' },
+  { name: 'Fish and Chips Downey', slug: 'fish-and-chips-downey', category: 'Restaurant' },
+  { name: 'Euro Cleaning', slug: 'euro-cleaning', category: 'Services' },
+  { name: 'Costco Business Center', slug: 'costco-business-center', category: 'Retail' },
+  { name: 'Chris the Mobile Mechanic', slug: 'chris-the-mobile-mechanic', category: 'Automotive' },
+  { name: 'Chopd', slug: 'chopd', category: 'Restaurant' },
+  { name: 'Cal State Auto Center', slug: 'cal-state-auto-center', category: 'Automotive' },
+  { name: 'Bag of Cakes', slug: 'bag-of-cakes', category: 'Restaurant' },
+  { name: 'Antique Station', slug: 'antique-station', category: 'Retail' },
+  { name: 'Antique Depot', slug: 'antique-depot', category: 'Retail' },
+  { name: 'AEN Mobile Mechanic', slug: 'aen-mobile-mechanic', category: 'Automotive' },
+  { name: "Dora's Cleaning Services", slug: 'doras-cleaning-services', category: 'Services' },
+  { name: 'CT Auto Repair', slug: 'ct-auto-repair', category: 'Automotive' },
+  { name: 'Big Q Auto Repair', slug: 'big-q-auto-repair', category: 'Automotive' },
+  { name: 'Belmont Auto Repair', slug: 'belmont-auto-repair', category: 'Automotive' },
+  { name: 'Long Beach 76 Auto Repair', slug: 'long-beach-76-auto-repair', category: 'Automotive' },
+];
+
 const processSteps = [
   {
     step: '01',
     title: 'Understand Your Revenue',
-    description: 'Before I write a single line of code, I learn how you make money. Who buys from you? Why do they buy? What makes them click "Buy Now" instead of clicking away? This is where most developers fail. They build pretty websites. I build money machines.',
+    description: "Before I write a single line of code, I learn how you make money. Who buys from you? Why do they buy? What makes them click \"Buy Now\" instead of clicking away? This is where most developers fail. They build pretty websites. I build money machines.",
     icon: '🎯',
   },
   {
@@ -79,7 +107,7 @@ const learningPath = [
 ];
 
 export default function WebDev() {
-  const [activeProject, setActiveProject] = useState(0);
+  const [showMoreProjects, setShowMoreProjects] = useState(false);
 
   return (
     <div className="relative">
@@ -177,7 +205,7 @@ export default function WebDev() {
       </section>
 
       {/* Skills Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-950">
+      <section className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
             What I Build With
@@ -188,7 +216,7 @@ export default function WebDev() {
 
           <div className="flex flex-wrap justify-center gap-4">
             {skills.map((skill, index) => (
-              <div key={index} className="px-6 py-3 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 font-medium text-gray-900 dark:text-white">
+              <div key={index} className="px-6 py-3 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-800 font-medium text-gray-900 dark:text-white">
                 {skill}
               </div>
             ))}
@@ -197,7 +225,7 @@ export default function WebDev() {
       </section>
 
       {/* Journey Timeline */}
-      <section className="py-20 bg-white dark:bg-gray-900">
+      <section className="py-20 bg-gray-50 dark:bg-gray-950">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 text-center">
             The Journey
@@ -207,7 +235,6 @@ export default function WebDev() {
           </p>
 
           <div className="relative">
-            {/* Timeline line */}
             <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-gray-800 transform -translate-x-1/2" />
 
             <div className="space-y-12">
@@ -218,12 +245,10 @@ export default function WebDev() {
                     index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                   }`}
                 >
-                  {/* Timeline dot */}
                   <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white dark:border-gray-900 transform -translate-x-1/2 z-10" />
 
-                  {/* Content */}
                   <div className={`ml-12 md:ml-0 md:w-1/2 ${index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12'}`}>
-                    <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+                    <div className="bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-800">
                       <span className="text-sm font-medium text-blue-600 dark:text-blue-400">{item.year}</span>
                       <h3 className="text-lg font-semibold text-gray-900 dark:text-white mt-1 mb-2">{item.title}</h3>
                       <p className="text-sm text-gray-600 dark:text-gray-400">{item.description}</p>
@@ -233,6 +258,42 @@ export default function WebDev() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* More Projects - Hidden Section */}
+      <section className="py-16 bg-white dark:bg-gray-900">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <button
+            onClick={() => setShowMoreProjects(!showMoreProjects)}
+            className="flex items-center gap-2 mx-auto text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors text-sm"
+          >
+            <span>{showMoreProjects ? 'Hide' : 'Show'} all projects</span>
+            <svg className={`w-4 h-4 transform transition-transform ${showMoreProjects ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          {showMoreProjects && (
+            <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+              {moreProjects.map((project, index) => (
+                <a
+                  key={index}
+                  href={`https://mjmorrison10.github.io/${project.slug}/`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group px-3 py-2 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-700 transition-all text-center"
+                >
+                  <div className="text-xs font-medium text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 truncate">
+                    {project.name}
+                  </div>
+                  <div className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">
+                    {project.category}
+                  </div>
+                </a>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
