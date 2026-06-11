@@ -216,7 +216,7 @@ export default function SMMA() {
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
                   <div>
-                    <img 
+                    <img loading="lazy" 
                       src={import.meta.env.BASE_URL + 'instagram-screenshot.webp'} 
                       alt="Instagram 37.4K followers screenshot"
                       className="rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg w-full"
@@ -226,7 +226,7 @@ export default function SMMA() {
                     </p>
                   </div>
                   <div>
-                    <img 
+                    <img loading="lazy" 
                       src={import.meta.env.BASE_URL + 'youtube-screenshot.webp'} 
                       alt="YouTube 34.5K subscribers screenshot"
                       className="rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg w-full"
@@ -236,7 +236,7 @@ export default function SMMA() {
                     </p>
                   </div>
                   <div>
-                    <img 
+                    <img loading="lazy" 
                       src={import.meta.env.BASE_URL + 'facebook-screenshot.webp'} 
                       alt="Facebook 34K followers screenshot"
                       className="rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg w-full"
@@ -246,7 +246,7 @@ export default function SMMA() {
                     </p>
                   </div>
                   <div>
-                    <img 
+                    <img loading="lazy" 
                       src={import.meta.env.BASE_URL + 'tiktok-screenshot.webp'} 
                       alt="TikTok 39.7K followers screenshot"
                       className="rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg w-full"
@@ -257,7 +257,7 @@ export default function SMMA() {
                   </div>
                   <div>
                     <div className="relative">
-                      <img 
+                      <img loading="lazy" 
                         src={import.meta.env.BASE_URL + 'snapchat-screenshot.webp'} 
                         alt="Snapchat 168.7K followers screenshot"
                         className="rounded-xl border-2 border-green-500 dark:border-green-400 shadow-lg w-full"

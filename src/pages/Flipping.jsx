@@ -180,7 +180,7 @@ export default function Flipping() {
                   </div>
                 </div>
                 <div className="relative bg-white dark:bg-gray-900 rounded-lg overflow-hidden">
-                  <img 
+                  <img loading="lazy" 
                     src={import.meta.env.BASE_URL + 'cypressflips-desktop.webp'} 
                     alt="Cypress Flips screenshot"
                     className="w-full"

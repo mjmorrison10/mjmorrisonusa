@@ -106,8 +106,32 @@ const learningPath = [
   { year: '2025', title: 'Full-Stack Applications', description: 'Built PriceSpy and Cypress Flips, complex, production-ready applications' },
 ];
 
+const faqItems = [
+  {
+    question: 'How much does it cost?',
+    answer: 'It depends on the complexity. A simple landing page starts at $500. A full-stack application like PriceSpy or CurveRunner starts at $2,000. I provide a detailed quote after understanding your needs.',
+  },
+  {
+    question: 'How long does it take?',
+    answer: 'Simple sites: 24-48 hours. Complex applications: 2-7 days. I use AI-assisted development to build faster than traditional developers without sacrificing quality.',
+  },
+  {
+    question: 'What do I get?',
+    answer: 'A fully responsive, mobile-optimized website hosted and deployed. Plus, I include a 30-day support period for any bugs or minor changes.',
+  },
+  {
+    question: 'Do you offer ongoing support?',
+    answer: 'Yes. After the 30-day period, I offer monthly maintenance packages starting at $100/month for updates, security patches, and minor content changes.',
+  },
+  {
+    question: 'What if I don't like it?',
+    answer: 'If you're not happy with the first draft, I keep working until you are. 100% satisfaction guaranteed. I don't stop until you love it.',
+  },
+];
+
 export default function WebDev() {
   const [showMoreProjects, setShowMoreProjects] = useState(false);
+  const [openFaq, setOpenFaq] = useState(null);
 
   return (
     <div className="relative">
@@ -257,6 +281,41 @@ export default function WebDev() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-white dark:bg-gray-900">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400">
+              Everything you need to know before we work together.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            {faqItems.map((item, index) => (
+              <div key={index} className="border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden">
+                <button
+                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                  className="w-full px-6 py-4 text-left flex items-center justify-between bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-750 transition-colors"
+                >
+                  <span className="font-medium text-gray-900 dark:text-white">{item.question}</span>
+                  <svg className={`w-5 h-5 text-gray-500 transform transition-transform ${openFaq === index ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {openFaq === index && (
+                  <div className="px-6 py-4 bg-white dark:bg-gray-900">
+                    <p className="text-gray-600 dark:text-gray-400">{item.answer}</p>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </section>

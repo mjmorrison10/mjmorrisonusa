@@ -54,7 +54,7 @@ export default function Home() {
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           {/* Profile Picture */}
           <div className="mb-8">
-            <img 
+            <img loading="lazy" 
               src={import.meta.env.BASE_URL + 'profile.webp'} 
               alt="Michael Morrison"
               className="w-48 h-48 rounded-full object-cover border-4 border-white dark:border-gray-800 shadow-xl mx-auto hover:scale-105 transition-transform duration-300"
@@ -165,6 +165,49 @@ export default function Home() {
             <div className="flex items-center gap-2 px-4 py-2 bg-gray-50 dark:bg-gray-800 rounded-lg">
               <span className="text-lg">📊</span>
               <span className="text-sm font-medium text-gray-600 dark:text-gray-400">50M+ Monthly Views Generated</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Win Section */}
+      <section className="py-16 bg-white dark:bg-gray-900">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              Not Sure What You Need?
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              Here's what I can do for you in the next 48 hours:
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
+              <div className="text-3xl mb-4">💻</div>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Landing Page</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
+                A professional landing page that converts visitors into customers. Mobile responsive, SEO optimized, ready to generate leads.
+              </p>
+              <div className="text-blue-600 dark:text-blue-400 font-medium text-sm">Ready in 24 hours</div>
+            </div>
+
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
+              <div className="text-3xl mb-4">📱</div>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Content Strategy</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
+                A 30-day content plan tailored to your brand. Platform-specific strategies, posting schedules, and content ideas that convert.
+              </p>
+              <div className="text-purple-600 dark:text-purple-400 font-medium text-sm">Ready in 48 hours</div>
+            </div>
+
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
+              <div className="text-3xl mb-4">🔄</div>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Inventory Quote</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
+                Send me photos of what you want to sell. I'll give you a fair cash offer within 24 hours. No pressure, no obligation.
+              </p>
+              <div className="text-orange-600 dark:text-orange-400 font-medium text-sm">Quote in 24 hours</div>
             </div>
           </div>
         </div>
@@ -309,9 +352,9 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Testimonial 1 - Luc Tate */}
-            <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-200 dark:border-gray-800">
+            <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-200 dark:border-gray-800 max-w-lg">
               <div className="flex items-center gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
                   <span key={i} className="text-yellow-400">★</span>
@@ -321,7 +364,7 @@ export default function Home() {
                 "Ask <span className="text-gray-900 dark:text-white font-semibold not-italic">Michael</span> about Snapchat and Facebook."
               </p>
               <div className="flex items-center gap-3">
-                <img 
+                <img loading="lazy" 
                   src={import.meta.env.BASE_URL + 'luc.jpg'} 
                   alt="Luc Tate"
                   className="w-12 h-12 rounded-full object-cover"
@@ -347,7 +390,7 @@ export default function Home() {
                 "Michael."
               </p>
               <div className="flex items-center gap-3">
-                <img 
+                <img loading="lazy" 
                   src={import.meta.env.BASE_URL + 'tatoo.jpg'} 
                   alt="Tatoo"
                   className="w-12 h-12 rounded-full object-cover"
