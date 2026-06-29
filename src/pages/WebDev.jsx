@@ -17,6 +17,12 @@ const projects = [
       'curverunner-welcome-desktop.webp',
       'curverunner-desktop.webp',
     ],
+    caseStudy: {
+      problem: 'Motorcycle riders wanted a navigation app that finds the curviest, most fun roads instead of the fastest route.',
+      solution: 'Built a PWA with GPS tracking, lean angle measurement, voice navigation, and curvy route finding using Valhalla routing API.',
+      result: 'Working app with 24 commits, installs as native app on iPhone, still adding features like pocket mode calibration and off-route detection.',
+      time: '2 days (ongoing)',
+    },
   },
   {
     title: 'PriceSpy',
@@ -29,6 +35,12 @@ const projects = [
     stats: ['Real-time pricing', 'Multi-platform fees', 'Built in 48 hours'],
     badge: null,
     screenshots: [],
+    caseStudy: {
+      problem: 'Flippers needed a tool to quickly analyze eBay listings, calculate fees across platforms, and determine if items were worth buying.',
+      solution: 'Built a full-stack Python/Flask app with real-time eBay API integration, multi-platform fee calculators, and a Quick Deal analyzer.',
+      result: 'Production tool used for inventory analysis. Features 8+ tools including bulk CSV import, watchlist, and true ROI calculator.',
+      time: '48 hours',
+    },
   },
   {
     title: 'Cypress Flips',
@@ -45,6 +57,12 @@ const projects = [
       'cypressflips-items-desktop.webp',
       'cypressflips-items2-desktop.webp',
     ],
+    caseStudy: {
+      problem: 'Needed a professional storefront for local flipping business with condition-first listings and vendor intake.',
+      solution: 'Built a React app with premium picks, category filtering, vendor intake forms, and condition-first product pages.',
+      result: 'Live storefront serving Cypress, CA area. 19+ listings with professional presentation and transparent pricing.',
+      time: '48 hours',
+    },
   },
 ];
 

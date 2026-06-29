@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 export default function ProjectCard({ project, featured = false }) {
   const [currentImage, setCurrentImage] = useState(0);
+  const [showCaseStudy, setShowCaseStudy] = useState(false);
   const hasMultipleImages = project.screenshots && project.screenshots.length > 1;
 
   useEffect(() => {
@@ -36,6 +37,7 @@ export default function ProjectCard({ project, featured = false }) {
               {project.screenshots.map((screenshot, index) => (
                 <img
                   key={index}
+                  loading="lazy"
                   src={import.meta.env.BASE_URL + screenshot}
                   alt={`${project.title} screenshot ${index + 1}`}
                   className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
@@ -110,6 +112,40 @@ export default function ProjectCard({ project, featured = false }) {
             </span>
           ))}
         </div>
+
+        {/* Case Study Toggle */}
+        {project.caseStudy && (
+          <button
+            onClick={() => setShowCaseStudy(!showCaseStudy)}
+            className="w-full text-left text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 mb-4 flex items-center gap-1"
+          >
+            {showCaseStudy ? 'Hide' : 'Show'} Case Study
+            <svg className={`w-4 h-4 transform transition-transform ${showCaseStudy ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+        )}
+
+        {showCaseStudy && project.caseStudy && (
+          <div className="mb-4 p-4 bg-gray-100 dark:bg-gray-750 rounded-xl space-y-3">
+            <div>
+              <span className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase">Problem</span>
+              <p className="text-sm text-gray-700 dark:text-gray-300">{project.caseStudy.problem}</p>
+            </div>
+            <div>
+              <span className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase">Solution</span>
+              <p className="text-sm text-gray-700 dark:text-gray-300">{project.caseStudy.solution}</p>
+            </div>
+            <div>
+              <span className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase">Result</span>
+              <p className="text-sm text-gray-700 dark:text-gray-300">{project.caseStudy.result}</p>
+            </div>
+            <div>
+              <span className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase">Time</span>
+              <p className="text-sm text-gray-700 dark:text-gray-300">{project.caseStudy.time}</p>
+            </div>
+          </div>
+        )}
 
         <div className="flex gap-2">
           <a

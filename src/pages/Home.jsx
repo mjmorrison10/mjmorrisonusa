@@ -186,6 +186,39 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Results Section */}
+      <section className="py-16 bg-gradient-to-br from-blue-600 to-purple-600">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Results That Speak
+            </h2>
+            <p className="text-blue-100 max-w-2xl mx-auto">
+              Real metrics from real projects. No vanity numbers.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-6">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
+              <div className="text-4xl font-bold text-white mb-2">314K+</div>
+              <div className="text-blue-100 text-sm">Followers Built</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
+              <div className="text-4xl font-bold text-white mb-2">50M+</div>
+              <div className="text-blue-100 text-sm">Monthly Views</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
+              <div className="text-4xl font-bold text-white mb-2">48hr</div>
+              <div className="text-blue-100 text-sm">Fastest Build</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
+              <div className="text-4xl font-bold text-white mb-2">28+</div>
+              <div className="text-blue-100 text-sm">Websites Built</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Quick Win Section */}
       <section className="py-16 bg-white dark:bg-gray-900">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -274,10 +307,104 @@ export default function Home() {
         </div>
       </section>
 
+      {/* My Story Section */}
+      <section className="py-20 bg-white dark:bg-gray-900">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              My Story
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              From Uber driver to platform captain. Here's the journey.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-2xl">
+                  🚗
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 dark:text-white mb-1">The Beginning</h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">
+                    Started as an Uber driver. Transitioned to delivery. Then discovered The Real World University in October 2021 with just 1,000 members.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center text-2xl">
+                  📱
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 dark:text-white mb-1">The Rise</h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">
+                    Built a social media empire generating 50M+ monthly views. Became Facebook & Snapchat captain. Recruited to a 5-person exclusive team working with Andrew Tate's project manager.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-red-100 dark:bg-red-900/30 rounded-xl flex items-center justify-center text-2xl">
+                  🚫
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 dark:text-white mb-1">The Fall</h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">
+                    Banned from 4 platforms. Not for policy violations, but for being too effective. Lost 250K+ followers overnight.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center text-2xl">
+                  💻
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 dark:text-white mb-1">The Pivot</h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">
+                    Taught myself to code. Built PriceSpy in 48 hours. Built Cypress Flips in 48 hours. Built CurveRunner in 2 days (still in progress). Now combining marketing, sales, and development to build revenue machines.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-1">
+              <div className="bg-white dark:bg-gray-900 rounded-xl p-8">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">By the Numbers</h3>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-600 dark:text-gray-400">Followers Built</span>
+                    <span className="font-bold text-gray-900 dark:text-white">314,300</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-600 dark:text-gray-400">Monthly Views Generated</span>
+                    <span className="font-bold text-gray-900 dark:text-white">50M+</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-600 dark:text-gray-400">Platforms Dominated</span>
+                    <span className="font-bold text-gray-900 dark:text-white">9+</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-600 dark:text-gray-400">Fastest Build Time</span>
+                    <span className="font-bold text-gray-900 dark:text-white">48 Hours</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-600 dark:text-gray-400">Biggest Single Video</span>
+                    <span className="font-bold text-gray-900 dark:text-white">20M Views</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* About Preview */}
       <section 
         ref={aboutRef}
-        className={`py-20 bg-white dark:bg-gray-900 transition-all duration-700 delay-200 ${
+        className={`py-20 bg-gray-50 dark:bg-gray-950 transition-all duration-700 delay-200 ${
           aboutVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
       >
@@ -481,6 +608,31 @@ export default function Home() {
               </svg>
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* Email Capture Section */}
+      <section className="py-16 bg-gray-50 dark:bg-gray-900">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+            Get Free Web Development Insights
+          </h2>
+          <p className="text-gray-600 dark:text-gray-400 mb-6">
+            Tips on building revenue-generating websites, social media strategy, and business growth. No spam, ever.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="flex-1 px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            />
+            <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-medium transition-colors">
+              Subscribe
+            </button>
+          </div>
+          <p className="text-xs text-gray-400 dark:text-gray-500 mt-3">
+            Join 500+ business owners. Unsubscribe anytime.
+          </p>
         </div>
       </section>
 
