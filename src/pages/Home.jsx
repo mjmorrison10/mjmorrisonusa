@@ -192,6 +192,55 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Business Model Section */}
+      <section className="py-16 bg-white dark:bg-gray-900">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              How My Business Works
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400">
+              Three revenue streams. One mission: help you succeed.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
+              <div className="text-3xl mb-3">💻</div>
+              <h3 className="font-bold text-gray-900 dark:text-white mb-2">Web Development</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                I build revenue-generating websites for businesses. Fast, conversion-optimized, and built to make you money.
+              </p>
+              <div className="text-xs font-medium text-blue-600 dark:text-blue-400">
+                Revenue: Project-based ($500-$3,000+)
+              </div>
+            </div>
+
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
+              <div className="text-3xl mb-3">📱</div>
+              <h3 className="font-bold text-gray-900 dark:text-white mb-2">Social Media Marketing</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                I help brands grow their audience and generate revenue through social media. Strategy, content, and execution.
+              </p>
+              <div className="text-xs font-medium text-purple-600 dark:text-purple-400">
+                Revenue: Consulting + Retainer
+              </div>
+            </div>
+
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
+              <div className="text-3xl mb-3">🔄</div>
+              <h3 className="font-bold text-gray-900 dark:text-white mb-2">Flipping Business</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                I buy inventory from vendors and resell for profit. Video games, electronics, collectibles, and more.
+              </p>
+              <div className="text-xs font-medium text-orange-600 dark:text-orange-400">
+                Revenue: Buy low, sell high
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Results Section */}
       <section className="py-16 bg-gradient-to-br from-blue-600 to-purple-600">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">

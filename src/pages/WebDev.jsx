@@ -405,6 +405,65 @@ export default function WebDev() {
         </div>
       </section>
 
+      {/* Competitive Positioning */}
+      <section className="py-16 bg-gray-50 dark:bg-gray-950">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              How I Compare
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400">
+              Not all developers are created equal. Here's how I stack up.
+            </p>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="w-full bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800">
+              <thead>
+                <tr className="border-b border-gray-200 dark:border-gray-800">
+                  <th className="text-left p-4 text-sm font-medium text-gray-500 dark:text-gray-400">Feature</th>
+                  <th className="text-center p-4 text-sm font-medium text-blue-600 dark:text-blue-400">Me</th>
+                  <th className="text-center p-4 text-sm font-medium text-gray-500 dark:text-gray-400">Freelancer</th>
+                  <th className="text-center p-4 text-sm font-medium text-gray-500 dark:text-gray-400">Agency</th>
+                </tr>
+              </thead>
+              <tbody className="text-sm">
+                <tr className="border-b border-gray-100 dark:border-gray-800">
+                  <td className="p-4 text-gray-700 dark:text-gray-300">Delivery Speed</td>
+                  <td className="p-4 text-center font-bold text-green-600">48 hours</td>
+                  <td className="p-4 text-center text-gray-500">2-4 weeks</td>
+                  <td className="p-4 text-center text-gray-500">4-8 weeks</td>
+                </tr>
+                <tr className="border-b border-gray-100 dark:border-gray-800">
+                  <td className="p-4 text-gray-700 dark:text-gray-300">Marketing Knowledge</td>
+                  <td className="p-4 text-center font-bold text-green-600">314K followers built</td>
+                  <td className="p-4 text-center text-gray-500">Limited</td>
+                  <td className="p-4 text-center text-gray-500">Separate team</td>
+                </tr>
+                <tr className="border-b border-gray-100 dark:border-gray-800">
+                  <td className="p-4 text-gray-700 dark:text-gray-300">Sales Psychology</td>
+                  <td className="p-4 text-center font-bold text-green-600">Built-in</td>
+                  <td className="p-4 text-center text-gray-500">Rare</td>
+                  <td className="p-4 text-center text-gray-500">Add-on cost</td>
+                </tr>
+                <tr className="border-b border-gray-100 dark:border-gray-800">
+                  <td className="p-4 text-gray-700 dark:text-gray-300">Starting Price</td>
+                  <td className="p-4 text-center font-bold text-green-600">$500</td>
+                  <td className="p-4 text-center text-gray-500">$1,000+</td>
+                  <td className="p-4 text-center text-gray-500">$5,000+</td>
+                </tr>
+                <tr>
+                  <td className="p-4 text-gray-700 dark:text-gray-300">Satisfaction Guarantee</td>
+                  <td className="p-4 text-center font-bold text-green-600">100%</td>
+                  <td className="p-4 text-center text-gray-500">Rare</td>
+                  <td className="p-4 text-center text-gray-500">Contract only</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
       {/* Skills Section */}
       <section className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
