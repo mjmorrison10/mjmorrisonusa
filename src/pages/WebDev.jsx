@@ -245,6 +245,59 @@ export default function WebDev() {
         </div>
       </section>
 
+      {/* Client Testimonials */}
+      <section className="py-16 bg-white dark:bg-gray-900">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              What Clients Say
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
+              <div className="flex items-center gap-1 mb-3">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i} className="text-yellow-400 text-sm">★</span>
+                ))}
+              </div>
+              <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 italic">
+                "Michael built my website in 48 hours and it looks better than what my previous developer took 3 months to build. The attention to detail and conversion focus is incredible."
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-400 font-bold text-sm">
+                  JM
+                </div>
+                <div>
+                  <div className="font-medium text-gray-900 dark:text-white text-sm">Local Business Owner</div>
+                  <div className="text-xs text-gray-500 dark:text-gray-400">Cypress, CA</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
+              <div className="flex items-center gap-1 mb-3">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i} className="text-yellow-400 text-sm">★</span>
+                ))}
+              </div>
+              <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 italic">
+                "Not only did he build a great website, but he understood my business and helped me think about how to actually generate revenue from it. That's rare."
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center text-purple-600 dark:text-purple-400 font-bold text-sm">
+                  SK
+                </div>
+                <div>
+                  <div className="font-medium text-gray-900 dark:text-white text-sm">E-Commerce Entrepreneur</div>
+                  <div className="text-xs text-gray-500 dark:text-gray-400">Orange County, CA</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Who I Work With Section */}
       <section className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -405,6 +458,70 @@ export default function WebDev() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Me Section */}
+      <section className="py-20 bg-white dark:bg-gray-900">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              Why Choose Me?
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              There are thousands of web developers. Here's why clients choose me.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl">⚡</span>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Speed</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Most developers take weeks. I deliver in 48 hours. AI-assisted development + years of experience = fast, quality work.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl">💰</span>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Revenue Focus</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                I don't just build websites. I build revenue machines. Every design decision is made to convert visitors into customers.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl">🎯</span>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Marketing + Sales</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                I combine web development with sales psychology, conversion copywriting, and marketing strategy. Most developers can't do that.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Guarantee Section */}
+      <section className="py-16 bg-gradient-to-br from-green-600 to-emerald-600">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="text-5xl mb-4">🛡️</div>
+          <h2 className="text-3xl font-bold text-white mb-4">
+            100% Satisfaction Guarantee
+          </h2>
+          <p className="text-green-100 text-lg mb-6">
+            If you're not happy with the first draft, I keep working until you are. No questions asked. No extra charges. I don't stop until you love it.
+          </p>
+          <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 inline-block">
+            <p className="text-white font-medium">
+              "Not happy? I keep working. Period."
+            </p>
           </div>
         </div>
       </section>
