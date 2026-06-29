@@ -153,4 +153,73 @@ Your SMMA story alone could generate:
 
 ---
 
-*Next Agent: Marketing SEO Specialist*
+---
+
+## Agent: SEO Specialist
+**Date:** June 11, 2026
+
+### Analysis Summary
+Analyzed mjmorrisonusa portfolio website from a search engine optimization perspective. Focus on technical SEO, local SEO, and structured data.
+
+### Current State Assessment
+
+**Strengths:**
+- Open Graph tags implemented
+- Meta descriptions on each page
+- Page-specific titles
+- Alt text on images
+- Lazy loading on images
+
+**Weaknesses:**
+- No sitemap.xml
+- No robots.txt
+- No schema markup (before this analysis)
+- No canonical URLs
+- No local SEO signals
+- No structured data for FAQ
+
+### Recommendations Implemented
+
+1. **Added FAQ schema markup (JSON-LD)**
+   - All 5 FAQ questions marked up
+   - Eligible for rich results in search
+   - Can appear in People Also Ask
+
+2. **Added local business schema**
+   - LocalBusiness type with Cypress, CA address
+   - Geo coordinates for local search
+   - Service area: 50km radius
+   - Service types: Web Development, Social Media Marketing, Inventory Liquidation
+   - Price range: $500 - $10,000
+
+3. **Optimized for local keywords**
+   - "web developer Cypress CA"
+   - "website developer Orange County"
+   - "freelance web developer Los Angeles"
+   - "React developer"
+   - "JavaScript developer"
+
+### Key Insights
+
+- **Local SEO is critical** for a service business. Cypress, CA is your competitive advantage.
+- **Schema markup can increase CTR by 30%** through rich results.
+- **FAQ schema** makes you eligible for featured snippets and People Also Ask boxes.
+- **Local business schema** helps you appear in Google Maps and local search results.
+
+### SEO Opportunities
+
+1. **Create a Google Business Profile** — Even as a service business, you can list yourself
+2. **Get listed in local directories** — Cypress Chamber of Commerce, Orange County business directories
+3. **Build local backlinks** — Partner with local businesses for case studies
+4. **Create location-specific content** — "Best web developer in Cypress, CA" blog post
+
+### Action Items
+
+- [ ] Submit sitemap to Google Search Console
+- [ ] Create Google Business Profile
+- [ ] Build 5 local backlinks within 30 days
+- [ ] Create location-specific landing page if expanding to other cities
+
+---
+
+*Next Agent: Sales Deal Strategist*
