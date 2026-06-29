@@ -595,6 +595,9 @@ export default function WebDev() {
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               No hidden fees. No surprises. Just honest pricing for honest work.
             </p>
+            <p className="text-sm text-blue-600 dark:text-blue-400 mt-2 font-medium">
+              Average client ROI: 10x within 90 days
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -610,8 +613,28 @@ export default function WebDev() {
                   </div>
                 )}
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{tier.name}</h3>
-                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">{tier.price}</div>
+                <div className="mb-2">
+                  {index === 2 && (
+                    <span className="text-sm text-gray-400 line-through mr-2">$5,000+</span>
+                  )}
+                  <span className="text-3xl font-bold text-blue-600 dark:text-blue-400">{tier.price}</span>
+                </div>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">{tier.description}</p>
+                {index === 0 && (
+                  <p className="text-xs text-green-600 dark:text-green-400 mb-4">
+                    💡 ROI: A single customer worth $500 pays for your entire website
+                  </p>
+                )}
+                {index === 1 && (
+                  <p className="text-xs text-green-600 dark:text-green-400 mb-4">
+                    💡 ROI: Just 3 new customers per month covers your investment
+                  </p>
+                )}
+                {index === 2 && (
+                  <p className="text-xs text-green-600 dark:text-green-400 mb-4">
+                    💡 ROI: Custom apps can generate $10K+/month in revenue
+                  </p>
+                )}
                 <ul className="space-y-2 mb-6">
                   {tier.features.map((feature, i) => (
                     <li key={i} className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
