@@ -355,4 +355,56 @@ Analyzed mjmorrisonusa portfolio website from a sales coaching perspective. Focu
 
 ---
 
-*Next Agent: Product Manager*
+---
+
+## Agent: Product Manager
+**Date:** June 11, 2026
+
+### Analysis Summary
+Analyzed mjmorrisonusa portfolio website from a product management perspective. Focus on roadmap, feature prioritization, and success metrics.
+
+### Current State Assessment
+
+**Strengths:**
+- Clear value proposition
+- Service offerings defined
+- Pricing tiers
+- Contact forms
+- Case studies (in progress)
+
+**Weaknesses:**
+- No product roadmap for CurveRunner
+- No success metrics for projects
+- No "What We're Not Building" section
+
+### Recommendations Implemented
+
+1. **Added CurveRunner roadmap**
+   - Shipped: Core Navigation, Cloud Sync & Auth
+   - In Progress: Advanced Features (pocket mode, off-route detection)
+   - Planned: Social Features, Premium Features
+   - Visual status indicators (Shipped, In Progress, Planned)
+
+### Key Insights
+
+- **Roadmaps build confidence**. Showing what's coming next demonstrates you're thinking long-term.
+- **"Shipped" items are proof**. Every shipped feature is evidence you can deliver.
+- **Saying "Planned" is powerful**. It shows ambition without overpromising.
+
+### Product Decisions to Document
+
+| Decision | Rationale | Trade-offs |
+|----------|-----------|------------|
+| PWA over native app | No App Store fees, instant updates, cross-platform | No push notifications (yet), limited offline |
+| Free tier with premium | Build user base first, monetize later | Delayed revenue, need conversion strategy |
+| Curvy routes over fastest | Differentiation from Google Maps/Waze | Niche audience, may limit mass appeal |
+
+### Action Items
+
+- [ ] Add success metrics to case studies (e.g., "PriceSpy: Used for 50+ inventory analyses")
+- [ ] Create "What We're Not Building" section (optional)
+- [ ] Document product decisions in AGENT-INSIGHTS.md
+
+---
+
+*Next Agent: Growth Hacker*
