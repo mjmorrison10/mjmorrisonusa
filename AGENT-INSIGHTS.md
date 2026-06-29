@@ -222,4 +222,74 @@ Analyzed mjmorrisonusa portfolio website from a search engine optimization persp
 
 ---
 
-*Next Agent: Sales Deal Strategist*
+---
+
+## Agent: Deal Strategist
+**Date:** June 11, 2026
+
+### Analysis Summary
+Analyzed mjmorrisonusa portfolio website from a sales/deal strategy perspective. Focus on qualification, pricing, objection handling, and clear next steps.
+
+### Current State Assessment
+
+**Strengths:**
+- Clear service offerings
+- Contact forms on every page
+- Risk reversal: "100% satisfaction guaranteed"
+- Urgency: "Currently accepting 2 clients per month"
+- Social proof: 314K followers, testimonials
+
+**Weaknesses:**
+- No pricing tiers (buyers can't self-qualify)
+- No "Who I Work With" section
+- No clear next steps after contact
+- No case study quantified results
+
+### Recommendations Implemented
+
+1. **Added pricing tiers/packages**
+   - Landing Page: $500
+   - Business Website: $1,500 (Most Popular)
+   - Full-Stack App: $3,000+
+   - Each with clear features and CTAs
+
+2. **Added "Who I Work With" section**
+   - Ideal Clients: Small businesses, flippers, content creators, startups
+   - Not a Good Fit: No budget, unrealistic expectations, not ready to invest
+
+3. **Added "What Happens Next" section**
+   - Step 1: Discovery Call (15 min)
+   - Step 2: Proposal & Quote (24 hours)
+   - Step 3: Build & Launch (48 hours)
+   - Step 4: Ongoing Support (30 days)
+
+### Key Insights
+
+- **Pricing transparency builds trust**. Buyers want to know if they can afford you before reaching out.
+- **Qualifying out is as important as qualifying in**. "Not a Good Fit" section saves everyone time.
+- **Clear next steps reduce friction**. Buyers want to know what happens after they click.
+- **Risk reversal is powerful**. "100% satisfaction guaranteed" removes the biggest objection.
+
+### MEDDPICC Assessment (Your Portfolio)
+
+| Element | Score | Evidence |
+|---------|-------|----------|
+| Metrics | 4 | "48-hour builds", "314K followers", "50M+ views" |
+| Economic Buyer | 3 | Small business owners, but need to identify specific titles |
+| Decision Criteria | 4 | Clear pricing, features, and process |
+| Decision Process | 4 | "What Happens Next" section maps the journey |
+| Paper Process | 2 | Not addressed (contracts, payment terms) |
+| Identify Pain | 5 | "Most developers build websites. I build revenue machines." |
+| Champion | 3 | Testimonials from Luc Tate and Tatoo |
+| Competition | 2 | Not addressed (who are you competing against?) |
+
+### Action Items
+
+- [ ] Add payment terms and contract information
+- [ ] Add competitor comparison section (optional)
+- [ ] Add more case studies with quantified results
+- [ ] Consider adding a "Results" page with client outcomes
+
+---
+
+*Next Agent: Sales Coach*
