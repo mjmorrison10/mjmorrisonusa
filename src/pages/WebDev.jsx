@@ -712,6 +712,72 @@ export default function WebDev() {
         </div>
       </section>
 
+      {/* CurveRunner Roadmap */}
+      <section className="py-16 bg-gray-50 dark:bg-gray-950">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              CurveRunner Roadmap
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400">
+              What's coming next for the motorcycle navigation app.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <div className="bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-800">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="px-2 py-0.5 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded text-xs font-bold">SHIPPED</span>
+                <h3 className="font-semibold text-gray-900 dark:text-white">Core Navigation</h3>
+              </div>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                GPS tracking, curvy route finding, voice navigation, lean angle measurement, PWA install.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-800">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="px-2 py-0.5 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded text-xs font-bold">SHIPPED</span>
+                <h3 className="font-semibold text-gray-900 dark:text-white">Cloud Sync & Auth</h3>
+              </div>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Google sign-in, email accounts, ride history sync across devices.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 rounded-xl p-6 border border-blue-200 dark:border-blue-800">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="px-2 py-0.5 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded text-xs font-bold">IN PROGRESS</span>
+                <h3 className="font-semibold text-gray-900 dark:text-white">Advanced Features</h3>
+              </div>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Pocket mode calibration, off-route detection, direction arrow user icon, ride replay.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-800 opacity-75">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="px-2 py-0.5 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded text-xs font-bold">PLANNED</span>
+                <h3 className="font-semibold text-gray-900 dark:text-white">Social Features</h3>
+              </div>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Share routes with friends, group rides, leaderboards, achievements.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-800 opacity-75">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="px-2 py-0.5 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded text-xs font-bold">PLANNED</span>
+                <h3 className="font-semibold text-gray-900 dark:text-white">Premium Features</h3>
+              </div>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Advanced analytics, custom route preferences, offline maps, premium voice packs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-blue-600 to-cyan-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
