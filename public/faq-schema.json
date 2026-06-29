@@ -1,0 +1,46 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does it cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the complexity. A simple landing page starts at $500. A full-stack application like PriceSpy or CurveRunner starts at $2,000. I provide a detailed quote after understanding your needs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Simple sites: 24-48 hours. Complex applications: 2-7 days. I use AI-assisted development to build faster than traditional developers without sacrificing quality."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do I get?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A fully responsive, mobile-optimized website hosted and deployed. Plus, I include a 30-day support period for any bugs or minor changes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer ongoing support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. After the 30-day period, I offer monthly maintenance packages starting at $100/month for updates, security patches, and minor content changes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I don't like it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you're not happy with the first draft, I keep working until you are. 100% satisfaction guaranteed. I don't stop until you love it."
+      }
+    }
+  ]
+}
