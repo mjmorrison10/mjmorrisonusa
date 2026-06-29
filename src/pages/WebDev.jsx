@@ -298,6 +298,90 @@ export default function WebDev() {
         </div>
       </section>
 
+      {/* Feedback & Testimonials Section */}
+      <section className="py-16 bg-white dark:bg-gray-900">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              Your Feedback Matters
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              I'm always looking to improve. If you've worked with me, I'd love to hear your experience.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Leave Feedback */}
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">💬 Leave Feedback</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                Your feedback helps me improve my services and helps other clients make informed decisions.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <span className="text-green-500">✓</span>
+                  <span className="text-sm text-gray-700 dark:text-gray-300">Quick 2-minute survey</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-green-500">✓</span>
+                  <span className="text-sm text-gray-700 dark:text-gray-300">Anonymous option available</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-green-500">✓</span>
+                  <span className="text-sm text-gray-700 dark:text-gray-300">Direct input to improve services</span>
+                </div>
+              </div>
+              <a
+                href="mailto:mjmorrisonusa@gmail.com?subject=Feedback - Web Development"
+                className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-colors"
+              >
+                Share Your Feedback
+              </a>
+            </div>
+
+            {/* Request Testimonial */}
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">⭐ Client Testimonials</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                If you're happy with my work, a testimonial would mean the world to me. It helps other clients trust that I'll deliver results.
+              </p>
+              <div className="bg-white dark:bg-gray-900 rounded-xl p-4 mb-4">
+                <div className="text-xs text-gray-500 dark:text-gray-400 mb-2">Example testimonial format:</div>
+                <p className="text-sm text-gray-700 dark:text-gray-300 italic">
+                  "Michael built my website in 48 hours and it looks better than what my previous developer took 3 months to build. The attention to detail and conversion focus is incredible."
+                </p>
+                <div className="text-xs text-gray-500 dark:text-gray-400 mt-2">
+                  — [Your Name], [Your Business]
+                </div>
+              </div>
+              <a
+                href="mailto:mjmorrisonusa@gmail.com?subject=Testimonial - Web Development"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg text-sm font-medium transition-colors"
+              >
+                Submit Testimonial
+              </a>
+            </div>
+          </div>
+
+          {/* Case Study Request */}
+          <div className="mt-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8">
+            <div className="text-center">
+              <h3 className="text-xl font-bold text-white mb-4">📚 Want to Be Featured?</h3>
+              <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+                I'm building a portfolio of client success stories. If you've seen great results from your website, 
+                I'd love to feature you as a case study. It's free exposure for your business and helps me show potential clients what's possible.
+              </p>
+              <a
+                href="mailto:mjmorrisonusa@gmail.com?subject=Case Study Feature"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-blue-600 rounded-xl font-medium hover:bg-blue-50 transition-colors"
+              >
+                Get Featured
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Who I Work With Section */}
       <section className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
