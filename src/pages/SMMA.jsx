@@ -365,10 +365,18 @@ export default function SMMA() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Ready to Domininate Social Media?
             </h2>
-            <p className="text-purple-100 max-w-2xl mx-auto">
+            <p className="text-purple-100 max-w-2xl mx-auto mb-4">
               Whether you need content creation, platform strategy, or someone who's been in the trenches, 
               I know what works because I've done it at scale.
             </p>
+            <a 
+              href="https://linkedin.com/in/mjmorrisonusa"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white/20 hover:bg-white/30 text-white rounded-xl font-medium transition-colors"
+            >
+              💼 Connect with me on LinkedIn for B2B opportunities
+            </a>
           </div>
           <ContactFormMini service="Social Media Marketing" />
         </div>
