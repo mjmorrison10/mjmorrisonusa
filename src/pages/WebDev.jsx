@@ -170,7 +170,8 @@ const pricingTiers = [
     popular: false,
   },
 ];
-  {
+  const faqItems = [
+    {
     question: 'How much does it cost?',
     answer: 'It depends on the complexity. A simple landing page starts at $500. A full-stack application like PriceSpy or CurveRunner starts at $2,000. I provide a detailed quote after understanding your needs.',
   },
