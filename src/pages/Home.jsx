@@ -596,18 +596,52 @@ export default function Home() {
 
           {/* Featured Interview */}
           <div className="mt-12 text-center">
-            <a 
-              href="https://rumble.com/v2t456y-marketing-success-michael-the-real-world-interview-172.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-xl font-medium transition-colors"
-            >
-              🎬 Watch My Interview on The Real World
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </a>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a 
+                href="https://rumble.com/v2t456y-marketing-success-michael-the-real-world-interview-172.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-xl font-medium transition-colors"
+              >
+                🎬 Watch My Interview on The Real World
+              </a>
+              <a 
+                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent('Check out Michael Morrison\'s story: From 0 to 314K followers. Banned from 4 platforms for being too effective.')}&url=${encodeURIComponent('https://mjmorrison10.github.io/mjmorrisonusa/')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-xl font-medium transition-colors"
+              >
+                🐦 Share on Twitter
+              </a>
+            </div>
           </div>
+        </div>
+      </section>
+
+      {/* Lead Magnet Section */}
+      <section className="py-16 bg-gradient-to-br from-blue-600 to-purple-600">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="text-5xl mb-4">🎁</div>
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+            Free Guide: "How I Built 314K Followers from Scratch"
+          </h2>
+          <p className="text-blue-100 mb-6">
+            The exact strategy I used to grow from 0 to 314K followers across 5 platforms. 
+            Includes the Facebook rebel story, platform-specific tactics, and the content formula that generated 50M+ views.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="flex-1 px-4 py-3 rounded-xl border-0 text-gray-900 focus:ring-2 focus:ring-white"
+            />
+            <button className="px-6 py-3 bg-white text-blue-600 rounded-xl font-bold hover:bg-blue-50 transition-colors">
+              Get Free Guide
+            </button>
+          </div>
+          <p className="text-xs text-blue-200 mt-3">
+            Join 500+ marketers. Unsubscribe anytime.
+          </p>
         </div>
       </section>
 
