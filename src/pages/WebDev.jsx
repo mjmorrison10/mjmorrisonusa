@@ -585,6 +585,112 @@ export default function WebDev() {
         </div>
       </section>
 
+      {/* Client Success Section */}
+      <section className="py-20 bg-white dark:bg-gray-900">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              Your Success is My Success
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              I don't just build websites and disappear. Here's how I ensure you get results.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Onboarding Guide */}
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">📋 Client Onboarding</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-6 h-6 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center text-xs font-bold text-blue-600 dark:text-blue-400">1</span>
+                  <div>
+                    <div className="font-medium text-gray-900 dark:text-white text-sm">Discovery Call</div>
+                    <div className="text-xs text-gray-600 dark:text-gray-400">15 minutes to understand your goals, audience, and success metrics</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-6 h-6 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center text-xs font-bold text-blue-600 dark:text-blue-400">2</span>
+                  <div>
+                    <div className="font-medium text-gray-900 dark:text-white text-sm">Proposal & Approval</div>
+                    <div className="text-xs text-gray-600 dark:text-gray-400">Detailed scope, timeline, and pricing delivered within 24 hours</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-6 h-6 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center text-xs font-bold text-blue-600 dark:text-blue-400">3</span>
+                  <div>
+                    <div className="font-medium text-gray-900 dark:text-white text-sm">Build & Review</div>
+                    <div className="text-xs text-gray-600 dark:text-gray-400">First draft delivered. You review. We iterate until perfect.</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-6 h-6 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center text-xs font-bold text-green-600 dark:text-green-400">✓</span>
+                  <div>
+                    <div className="font-medium text-gray-900 dark:text-white text-sm">Launch & Handoff</div>
+                    <div className="text-xs text-gray-600 dark:text-gray-400">Site goes live. Training on how to update content. Support begins.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Post-Launch Support */}
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">🛡️ Post-Launch Support (30 Days)</h3>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <span className="text-green-500">✓</span>
+                  <span className="text-sm text-gray-700 dark:text-gray-300">Bug fixes and critical issues</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-green-500">✓</span>
+                  <span className="text-sm text-gray-700 dark:text-gray-300">Minor content updates (text, images)</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-green-500">✓</span>
+                  <span className="text-sm text-gray-700 dark:text-gray-300">Email support (24hr response)</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-green-500">✓</span>
+                  <span className="text-sm text-gray-700 dark:text-gray-300">Performance monitoring</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-green-500">✓</span>
+                  <span className="text-sm text-gray-700 dark:text-gray-300">Google Analytics setup (if needed)</span>
+                </div>
+              </div>
+              <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                <div className="text-xs text-gray-500 dark:text-gray-400">
+                  <strong>After 30 days:</strong> Maintenance packages available from $100/month
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Success Metrics */}
+          <div className="mt-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8">
+            <h3 className="text-xl font-bold text-white mb-6 text-center">📊 How We Measure Success</h3>
+            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-white mb-1">30 days</div>
+                <div className="text-sm text-blue-100">Time to First Value</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-white mb-1">100%</div>
+                <div className="text-sm text-blue-100">Satisfaction Rate</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-white mb-1">24 hours</div>
+                <div className="text-sm text-blue-100">Support Response</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-white mb-1">10x</div>
+                <div className="text-sm text-blue-100">Average Client ROI</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing Section */}
       <section className="py-20 bg-gray-50 dark:bg-gray-950">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
