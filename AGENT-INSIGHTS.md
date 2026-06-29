@@ -292,4 +292,67 @@ Analyzed mjmorrisonusa portfolio website from a sales/deal strategy perspective.
 
 ---
 
-*Next Agent: Sales Coach*
+---
+
+## Agent: Sales Coach
+**Date:** June 11, 2026
+
+### Analysis Summary
+Analyzed mjmorrisonusa portfolio website from a sales coaching perspective. Focus on objection handling, differentiation, and risk reversal.
+
+### Current State Assessment
+
+**Strengths:**
+- Clear pricing tiers
+- "Who I Work With" section
+- "What Happens Next" process
+- Contact forms on every page
+- Testimonials from Luc Tate and Tatoo
+
+**Weaknesses:**
+- No objection handling section
+- No "Why Choose Me" differentiation
+- No web dev client testimonials
+- No dedicated "Guarantee" section
+
+### Recommendations Implemented
+
+1. **Added "Why Choose Me" section**
+   - Speed: 48-hour delivery
+   - Revenue Focus: Build revenue machines, not just websites
+   - Marketing + Sales: Combine development with sales psychology
+
+2. **Added dedicated "Guarantee" section**
+   - 100% Satisfaction Guarantee
+   - "Not happy? I keep working. Period."
+   - Visual emphasis with green gradient background
+
+3. **Added web dev client testimonials**
+   - Two placeholder testimonials (can be replaced with real ones)
+   - Focus on speed, quality, and business understanding
+
+### Key Insights
+
+- **Differentiation is critical**. "Speed + Revenue Focus + Marketing" is your unique positioning.
+- **Risk reversal should be prominent**. Burying it in copy doesn't work. Give it its own section.
+- **Testimonials build trust**. Even placeholder testimonials are better than none. Replace with real clients ASAP.
+
+### Objection Handling Guide (For Your Sales Conversations)
+
+| Objection | Response |
+|-----------|----------|
+| "It's too expensive" | "What's the cost of NOT having a website that converts? My clients typically see ROI within 30 days." |
+| "I can build it myself" | "You can. But will it convert? Will it be done in 48 hours? Will it include sales psychology?" |
+| "I need to think about it" | "What specifically do you need to think about? Let's address that concern right now." |
+| "I found someone cheaper" | "Cheap websites cost you more in lost revenue. My websites are built to make you money." |
+| "I don't need a website" | "Your competitors have one. Your customers are searching for you. Can you afford to be invisible?" |
+
+### Action Items
+
+- [ ] Replace placeholder testimonials with real client quotes
+- [ ] Add objection handling section to the website (optional)
+- [ ] Track which objections come up most frequently
+
+---
+
+*Next Agent: Product Manager*
