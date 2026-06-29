@@ -124,7 +124,52 @@ const learningPath = [
   { year: '2025', title: 'Full-Stack Applications', description: 'Built PriceSpy and Cypress Flips, complex, production-ready applications' },
 ];
 
-const faqItems = [
+const pricingTiers = [
+  {
+    name: 'Landing Page',
+    price: '$500',
+    description: 'Single-page website that converts visitors into customers',
+    features: [
+      'Mobile responsive design',
+      'SEO optimized',
+      'Contact form integration',
+      '48-hour turnaround',
+      '30-day support',
+    ],
+    cta: 'Get Started',
+    popular: false,
+  },
+  {
+    name: 'Business Website',
+    price: '$1,500',
+    description: 'Multi-page website for established businesses',
+    features: [
+      'Up to 5 pages',
+      'Custom design',
+      'CMS integration',
+      'Analytics setup',
+      '48-72 hour turnaround',
+      '30-day support',
+    ],
+    cta: 'Most Popular',
+    popular: true,
+  },
+  {
+    name: 'Full-Stack App',
+    price: '$3,000+',
+    description: 'Complex applications with backend, database, and integrations',
+    features: [
+      'Custom functionality',
+      'Database integration',
+      'User authentication',
+      'API integrations',
+      '2-7 day turnaround',
+      '30-day support',
+    ],
+    cta: 'Get Quote',
+    popular: false,
+  },
+];
   {
     question: 'How much does it cost?',
     answer: 'It depends on the complexity. A simple landing page starts at $500. A full-stack application like PriceSpy or CurveRunner starts at $2,000. I provide a detailed quote after understanding your needs.',
@@ -194,6 +239,66 @@ export default function WebDev() {
             </div>
             <div className="order-3 lg:order-3 lg:mt-4">
               <ProjectCard project={projects[2]} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Who I Work With Section */}
+      <section className="py-20 bg-white dark:bg-gray-900">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              Who I Work With
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              I specialize in helping businesses that are ready to grow. Here's who I work best with:
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">✅ Ideal Clients</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3 text-sm text-gray-700 dark:text-gray-300">
+                  <span className="text-green-500 mt-0.5">✓</span>
+                  Small businesses ready to invest in growth
+                </li>
+                <li className="flex items-start gap-3 text-sm text-gray-700 dark:text-gray-300">
+                  <span className="text-green-500 mt-0.5">✓</span>
+                  Flippers and resellers needing online presence
+                </li>
+                <li className="flex items-start gap-3 text-sm text-gray-700 dark:text-gray-300">
+                  <span className="text-green-500 mt-0.5">✓</span>
+                  Content creators wanting to monetize their audience
+                </li>
+                <li className="flex items-start gap-3 text-sm text-gray-700 dark:text-gray-300">
+                  <span className="text-green-500 mt-0.5">✓</span>
+                  Startups with proven traction needing a website
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">❌ Not a Good Fit</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3 text-sm text-gray-700 dark:text-gray-300">
+                  <span className="text-red-500 mt-0.5">✗</span>
+                  "I need a website but have no budget"
+                </li>
+                <li className="flex items-start gap-3 text-sm text-gray-700 dark:text-gray-300">
+                  <span className="text-red-500 mt-0.5">✗</span>
+                  "Can you build me Facebook/Twitter?"
+                </li>
+                <li className="flex items-start gap-3 text-sm text-gray-700 dark:text-gray-300">
+                  <span className="text-red-500 mt-0.5">✗</span>
+                  Businesses not ready to invest in growth
+                </li>
+                <li className="flex items-start gap-3 text-sm text-gray-700 dark:text-gray-300">
+                  <span className="text-red-500 mt-0.5">✗</span>
+                  Projects with unrealistic timelines
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -303,6 +408,57 @@ export default function WebDev() {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section className="py-20 bg-gray-50 dark:bg-gray-950">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              Simple, Transparent Pricing
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              No hidden fees. No surprises. Just honest pricing for honest work.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {pricingTiers.map((tier, index) => (
+              <div key={index} className={`relative bg-white dark:bg-gray-900 rounded-2xl p-6 border ${
+                tier.popular 
+                  ? 'border-blue-500 dark:border-blue-400 shadow-lg shadow-blue-500/20' 
+                  : 'border-gray-200 dark:border-gray-800'
+              }`}>
+                {tier.popular && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-blue-600 text-white text-xs font-bold rounded-full">
+                    MOST POPULAR
+                  </div>
+                )}
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{tier.name}</h3>
+                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">{tier.price}</div>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">{tier.description}</p>
+                <ul className="space-y-2 mb-6">
+                  {tier.features.map((feature, i) => (
+                    <li key={i} className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
+                      <span className="text-green-500">✓</span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href={`mailto:mjmorrisonusa@gmail.com?subject=${tier.name} Inquiry`}
+                  className={`block text-center px-4 py-2.5 rounded-lg font-medium transition-colors ${
+                    tier.popular
+                      ? 'bg-blue-600 hover:bg-blue-700 text-white'
+                      : 'bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-white'
+                  }`}
+                >
+                  {tier.cta}
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -371,6 +527,70 @@ export default function WebDev() {
               ))}
             </div>
           )}
+        </div>
+      </section>
+
+      {/* What Happens Next Section */}
+      <section className="py-16 bg-white dark:bg-gray-900">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              What Happens After You Reach Out?
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400">
+              Simple, transparent process. No surprises.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-400 font-bold">
+                1
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-1">Discovery Call (15 min)</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  We hop on a quick call. I learn about your business, your goals, and what success looks like. No pitch, just listening.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-400 font-bold">
+                2
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-1">Proposal & Quote (24 hours)</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  I send you a detailed proposal with scope, timeline, and pricing. No vague estimates. Clear deliverables.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-400 font-bold">
+                3
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-1">Build & Launch (48 hours)</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  I build your site. You review the first draft. We iterate until you love it. Then we launch.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-10 h-10 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center text-green-600 dark:text-green-400 font-bold">
+                ✓
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-1">Ongoing Support (30 days)</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Bugs? Changes? Questions? I'm here for 30 days after launch. Then optional maintenance packages.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
