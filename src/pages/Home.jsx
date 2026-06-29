@@ -241,6 +241,102 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Trends & Why Now Section */}
+      <section className="py-20 bg-white dark:bg-gray-900">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              Why Now is the Time
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              The market is shifting. Here's why you need to act now.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Web Development Trends */}
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">💻 Web Development Trends</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-6 h-6 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center text-xs font-bold text-green-600 dark:text-green-400">↑</span>
+                  <div>
+                    <div className="font-medium text-gray-900 dark:text-white text-sm">AI-Assisted Development</div>
+                    <div className="text-xs text-gray-600 dark:text-gray-400">AI tools are making developers 10x faster. I leverage them to deliver in 48 hours.</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-6 h-6 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center text-xs font-bold text-green-600 dark:text-green-400">↑</span>
+                  <div>
+                    <div className="font-medium text-gray-900 dark:text-white text-sm">PWA Revolution</div>
+                    <div className="text-xs text-gray-600 dark:text-gray-400">Progressive Web Apps are replacing native apps. No App Store fees, instant updates.</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-6 h-6 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center text-xs font-bold text-green-600 dark:text-green-400">↑</span>
+                  <div>
+                    <div className="font-medium text-gray-900 dark:text-white text-sm">Conversion-Focused Design</div>
+                    <div className="text-xs text-gray-600 dark:text-gray-400">Pretty websites don't pay bills. Revenue-generating websites do.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* SMMA Trends */}
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">📱 Social Media Trends</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-6 h-6 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center text-xs font-bold text-green-600 dark:text-green-400">↑</span>
+                  <div>
+                    <div className="font-medium text-gray-900 dark:text-white text-sm">Short-Form Video Dominance</div>
+                    <div className="text-xs text-gray-600 dark:text-gray-400">TikTok, Reels, Shorts. I pioneered this with podcast clips before it was mainstream.</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-6 h-6 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center text-xs font-bold text-green-600 dark:text-green-400">↑</span>
+                  <div>
+                    <div className="font-medium text-gray-900 dark:text-white text-sm">Facebook Resurgence</div>
+                    <div className="text-xs text-gray-600 dark:text-gray-400">While others chased TikTok, I proved Facebook is the most stable platform. I was right.</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-6 h-6 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center text-xs font-bold text-green-600 dark:text-green-400">↑</span>
+                  <div>
+                    <div className="font-medium text-gray-900 dark:text-white text-sm">Multi-Platform Strategy</div>
+                    <div className="text-xs text-gray-600 dark:text-gray-400">One piece of content, every platform. I pioneered this approach at scale.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Market Opportunity */}
+          <div className="mt-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8">
+            <div className="text-center">
+              <h3 className="text-xl font-bold text-white mb-4">📊 Market Opportunity</h3>
+              <div className="grid sm:grid-cols-3 gap-6">
+                <div>
+                  <div className="text-3xl font-bold text-white mb-1">$4.2B</div>
+                  <div className="text-sm text-blue-100">Web Development Market</div>
+                  <div className="text-xs text-blue-200">Growing 8.5% annually</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-white mb-1">$15.4B</div>
+                  <div className="text-sm text-blue-100">Social Media Marketing</div>
+                  <div className="text-xs text-blue-200">Growing 12% annually</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-white mb-1">$2.1B</div>
+                  <div className="text-sm text-blue-100">Flipping/Resale Market</div>
+                  <div className="text-xs text-blue-200">Growing 15% annually</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Results Section */}
       <section className="py-16 bg-gradient-to-br from-blue-600 to-purple-600">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
