@@ -984,6 +984,57 @@ export default function WebDev() {
         </div>
       </section>
 
+      {/* Current Sprint Goals */}
+      <section className="py-16 bg-gray-50 dark:bg-gray-950">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              🎯 Current Sprint Focus
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400">
+              What I'm building this week
+            </p>
+          </div>
+
+          <div className="bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-200 dark:border-gray-800">
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <span className="flex-shrink-0 w-6 h-6 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center text-xs font-bold text-blue-600 dark:text-blue-400">1</span>
+                <div>
+                  <div className="font-medium text-gray-900 dark:text-white text-sm">CurveRunner: Pocket Mode Calibration</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-400">Adjustable delay timer, voice countdown, baseline lean-angle correction</div>
+                  <div className="mt-1">
+                    <span className="px-2 py-0.5 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 rounded text-xs">In Progress</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <span className="flex-shrink-0 w-6 h-6 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center text-xs font-bold text-blue-600 dark:text-blue-400">2</span>
+                <div>
+                  <div className="font-medium text-gray-900 dark:text-white text-sm">CurveRunner: Off-Route Detection</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-400">Auto-recalculate when rider deviates from planned route</div>
+                  <div className="mt-1">
+                    <span className="px-2 py-0.5 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 rounded text-xs">In Progress</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <span className="flex-shrink-0 w-6 h-6 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center text-xs font-bold text-blue-600 dark:text-blue-400">3</span>
+                <div>
+                  <div className="font-medium text-gray-900 dark:text-white text-sm">Portfolio Website Updates</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-400">Agent analysis improvements, copy refinements, new features</div>
+                  <div className="mt-1">
+                    <span className="px-2 py-0.5 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded text-xs">Ongoing</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CurveRunner Roadmap */}
       <section className="py-16 bg-gray-50 dark:bg-gray-950">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
