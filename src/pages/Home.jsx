@@ -69,7 +69,7 @@ export default function Home() {
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
             <span className="block text-gray-900 dark:text-white">Michael Morrison</span>
             <span className="block mt-2 bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
-              Conqueror of Life
+              Web Developer & Growth Strategist
             </span>
           </h1>
 
@@ -94,7 +94,7 @@ export default function Home() {
               to="/contact"
               className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold transition-all duration-200 shadow-lg shadow-blue-600/25 hover:shadow-xl hover:shadow-blue-600/30 hover:-translate-y-0.5"
             >
-              Work With Me
+              Get Your Free Quote
             </Link>
             <Link
               to="/webdev"
@@ -104,14 +104,10 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* Urgency */}
-          <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 bg-red-50 dark:bg-red-900/20 rounded-full">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
-            </span>
-            <span className="text-sm text-red-700 dark:text-red-300 font-medium">
-              Only 2 web dev client spots left this month
+          {/* Capacity note */}
+          <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 bg-blue-50 dark:bg-blue-900/20 rounded-full">
+            <span className="text-sm text-blue-700 dark:text-blue-300 font-medium">
+              I take on a small, limited number of web projects at a time so every client gets real attention
             </span>
           </div>
 
@@ -206,7 +202,7 @@ export default function Home() {
                 I build revenue-generating websites for businesses. Fast, conversion-optimized, and built to make you money.
               </p>
               <div className="text-xs font-medium text-blue-600 dark:text-blue-400">
-                Revenue: Project-based ($500-$3,000+)
+                Revenue: Project-based ($500-$3,500+)
               </div>
             </div>
 
@@ -361,6 +357,9 @@ export default function Home() {
               <div className="text-blue-100 text-sm">Websites Built</div>
             </div>
           </div>
+          <p className="text-blue-100/70 text-xs text-center mt-4 max-w-2xl mx-auto">
+            48-hour builds are my own solo projects (CurveRunner, PriceSpy, Cypress Flips) with no client feedback cycles. Client projects typically take longer due to revisions and approval rounds — see individual project timelines for details.
+          </p>
         </div>
       </section>
 
@@ -619,60 +618,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-
-
-      {/* Lead Magnet Section */}
-      <section className="py-16 bg-gradient-to-br from-blue-600 to-purple-600">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="text-5xl mb-4">🎁</div>
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-            Free Guide: "How I Built 314K Followers from Scratch"
-          </h2>
-          <p className="text-blue-100 mb-6">
-            The exact strategy I used to grow from 0 to 314K followers across 5 platforms. 
-            Includes the Facebook rebel story, platform-specific tactics, and the content formula that generated 50M+ views.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-xl border-0 text-gray-900 focus:ring-2 focus:ring-white"
-            />
-            <button className="px-6 py-3 bg-white text-blue-600 rounded-xl font-bold hover:bg-blue-50 transition-colors">
-              Get Free Guide
-            </button>
-          </div>
-          <p className="text-xs text-blue-200 mt-3">
-            Join 500+ marketers. Unsubscribe anytime.
-          </p>
-        </div>
-      </section>
-
-      {/* Email Capture Section */}
-      <section className="py-16 bg-gray-50 dark:bg-gray-900">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            Get Free Web Development Insights
-          </h2>
-          <p className="text-gray-600 dark:text-gray-400 mb-6">
-            Tips on building revenue-generating websites, social media strategy, and business growth. No spam, ever.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            />
-            <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-medium transition-colors">
-              Subscribe
-            </button>
-          </div>
-          <p className="text-xs text-gray-400 dark:text-gray-500 mt-3">
-            Join 500+ business owners. Unsubscribe anytime.
-          </p>
         </div>
       </section>
 

@@ -1,19 +1,36 @@
 import { useState } from 'react';
 
+// Formspree endpoint — replace YOUR_FORM_ID with the real form ID after
+// creating a free form at https://formspree.io tied to michael@mjmorrisonusa.com
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+
 export default function ContactFormMini({ service = '' }) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState('idle'); // idle | sending | success | error
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`${service || 'Inquiry'} - ${formData.name}`);
-    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nService: ${service}\n\nMessage:\n${formData.message}`);
-    window.open(`mailto:mjmorrisonusa@gmail.com?subject=${subject}&body=${body}`);
-    setSubmitted(true);
+    setStatus('sending');
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(e.target),
+      });
+
+      if (response.ok) {
+        setStatus('success');
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
   };
 
   const handleChange = (e) => {
@@ -23,14 +40,14 @@ export default function ContactFormMini({ service = '' }) {
     }));
   };
 
-  if (submitted) {
+  if (status === 'success') {
     return (
       <div className="text-center py-8">
         <div className="text-4xl mb-4">✓</div>
-        <p className="text-white font-semibold text-lg mb-2">Message Ready!</p>
+        <p className="text-white font-semibold text-lg mb-2">Message Sent!</p>
         <p className="text-white/80 text-sm">
-          Your email client should have opened. If not, email me at{' '}
-          <a href="mailto:mjmorrisonusa@gmail.com" className="underline">mjmorrisonusa@gmail.com</a>
+          Thanks for reaching out — I'll get back to you within 24 hours. If you don't hear back, email me directly at{' '}
+          <a href="mailto:michael@mjmorrisonusa.com" className="underline">michael@mjmorrisonusa.com</a>
         </p>
       </div>
     );
@@ -38,6 +55,8 @@ export default function ContactFormMini({ service = '' }) {
 
   return (
     <form onSubmit={handleSubmit} className="max-w-lg mx-auto space-y-4">
+      <input type="hidden" name="service" value={service} />
+      <input type="hidden" name="_subject" value={`${service || 'Inquiry'} - New message from mjmorrisonusa.com`} />
       <div className="grid sm:grid-cols-2 gap-4">
         <input
           type="text"
@@ -67,11 +86,18 @@ export default function ContactFormMini({ service = '' }) {
         onChange={handleChange}
         className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:ring-2 focus:ring-white/50 focus:border-transparent transition-all resize-none"
       />
+      {status === 'error' && (
+        <p className="text-red-200 text-sm text-center">
+          Something went wrong sending that. Please email me directly at{' '}
+          <a href="mailto:michael@mjmorrisonusa.com" className="underline">michael@mjmorrisonusa.com</a>.
+        </p>
+      )}
       <button
         type="submit"
-        className="w-full px-8 py-4 bg-white text-gray-900 rounded-xl font-semibold hover:bg-gray-100 transition-colors shadow-lg"
+        disabled={status === 'sending'}
+        className="w-full px-8 py-4 bg-white text-gray-900 rounded-xl font-semibold hover:bg-gray-100 transition-colors shadow-lg disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        Get Your Free Quote
+        {status === 'sending' ? 'Sending...' : 'Get Your Free Quote'}
       </button>
       {/* Trust Badges */}
       <div className="flex items-center justify-center gap-4 mt-4 flex-wrap">

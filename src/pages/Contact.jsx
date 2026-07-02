@@ -1,5 +1,9 @@
 import { useState } from 'react';
 
+// Formspree endpoint — replace YOUR_FORM_ID with the real form ID after
+// creating a free form at https://formspree.io tied to michael@mjmorrisonusa.com
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -7,15 +11,27 @@ export default function Contact() {
     service: '',
     message: ''
   });
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState('idle'); // idle | sending | success | error
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Create mailto link with form data
-    const subject = encodeURIComponent(`${formData.service || 'General Inquiry'} - ${formData.name}`);
-    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nService: ${formData.service}\n\nMessage:\n${formData.message}`);
-    window.open(`mailto:mjmorrisonusa@gmail.com?subject=${subject}&body=${body}`);
-    setSubmitted(true);
+    setStatus('sending');
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(e.target),
+      });
+
+      if (response.ok) {
+        setStatus('success');
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
   };
 
   const handleChange = (e) => {
@@ -51,7 +67,7 @@ export default function Contact() {
       {/* Contact Form */}
       <section className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-          {submitted ? (
+          {status === 'success' ? (
             <div className="text-center py-16">
               <div className="w-20 h-20 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mx-auto mb-6">
                 <span className="text-4xl">✓</span>
@@ -60,17 +76,18 @@ export default function Contact() {
                 Message Sent!
               </h2>
               <p className="text-gray-600 dark:text-gray-400 mb-8">
-                Your email client should have opened with the message. If not, reach me directly at:
+                Thanks for reaching out — I'll get back to you within 24 hours. If you don't hear back, reach me directly at:
               </p>
               <a 
-                href="mailto:mjmorrisonusa@gmail.com"
+                href="mailto:michael@mjmorrisonusa.com"
                 className="text-blue-600 dark:text-blue-400 font-medium hover:underline"
               >
-                mjmorrisonusa@gmail.com
+                michael@mjmorrisonusa.com
               </a>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
+              <input type="hidden" name="_subject" value={`${formData.service || 'General Inquiry'} - New message from mjmorrisonusa.com`} />
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Your Name *
@@ -138,11 +155,19 @@ export default function Contact() {
                 />
               </div>
 
+              {status === 'error' && (
+                <p className="text-red-600 dark:text-red-400 text-sm text-center">
+                  Something went wrong sending that. Please email me directly at{' '}
+                  <a href="mailto:michael@mjmorrisonusa.com" className="underline">michael@mjmorrisonusa.com</a>.
+                </p>
+              )}
+
               <button
                 type="submit"
-                className="w-full px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold transition-all duration-200 shadow-lg shadow-blue-600/25 hover:shadow-xl hover:shadow-blue-600/30"
+                disabled={status === 'sending'}
+                className="w-full px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold transition-all duration-200 shadow-lg shadow-blue-600/25 hover:shadow-xl hover:shadow-blue-600/30 disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Send Message
+                {status === 'sending' ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           )}
@@ -154,12 +179,12 @@ export default function Contact() {
             </h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               <a
-                href="mailto:mjmorrisonusa@gmail.com"
+                href="mailto:michael@mjmorrisonusa.com"
                 className="flex flex-col items-center gap-3 p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-750 transition-colors"
               >
                 <span className="text-2xl">📧</span>
                 <span className="text-sm font-medium text-gray-900 dark:text-white">Email</span>
-                <span className="text-xs text-gray-500 dark:text-gray-400">mjmorrisonusa@gmail.com</span>
+                <span className="text-xs text-gray-500 dark:text-gray-400">michael@mjmorrisonusa.com</span>
               </a>
               <a
                 href="https://linkedin.com/in/mjmorrisonusa"

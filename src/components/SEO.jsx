@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 
 const pageMeta = {
   '/': {
-    title: 'Michael Morrison | Conqueror of Life',
+    title: 'Michael Morrison | Web Developer & Growth Strategist',
     description: 'Web Developer, Social Media Marketer, and Entrepreneur. 314K followers built. 50M+ monthly views. Cypress, CA based.',
   },
   '/webdev': {

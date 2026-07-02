@@ -33,21 +33,6 @@ const categories = [
   { name: 'Anything', description: 'If it has value and I can test it, I\'ll flip it', icon: '🔄', priority: 'Open' },
 ];
 
-const projects = [
-  {
-    title: 'Cypress Flips',
-    description: 'My storefront for local flipping. Condition-first listings, transparent pricing, and fair local deals.',
-    url: 'https://cypressflips.netlify.app/',
-    type: 'Storefront',
-  },
-  {
-    title: 'PriceSpy',
-    description: 'Real-time eBay pricing tool built for flippers. Fee calculators, deal analyzers, and market data.',
-    url: 'https://pricespy-yx00.onrender.com/',
-    type: 'Tool',
-  },
-];
-
 import ContactFormMini from '../components/ContactFormMini';
 
 export default function Flipping() {
