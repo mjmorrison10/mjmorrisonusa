@@ -10,5 +10,6 @@ Sitemap: https://mjmorrison10.github.io/mjmorrisonusa/sitemap.xml
 # Crawl-delay (optional, reduces server load)
 Crawl-delay: 1
 
-# Disallow admin or private paths (none currently)
-# Disallow: /admin/
+# Disallow admin or private paths
+Disallow: /admin
+Disallow: /*#/admin

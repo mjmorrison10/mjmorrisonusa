@@ -7,6 +7,7 @@ import WebDev from './pages/WebDev';
 import SMMA from './pages/SMMA';
 import Flipping from './pages/Flipping';
 import Contact from './pages/Contact';
+import Admin from './pages/Admin';
 import NotFound from './pages/NotFound';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path="/smma" element={<SMMA />} />
             <Route path="/flipping" element={<Flipping />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/admin" element={<Admin />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
