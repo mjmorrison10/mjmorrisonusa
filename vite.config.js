@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
-  base: '/mjmorrisonusa/', // <--- This lets GitHub Pages find your assets
+  base: '/', // <--- This lets GitHub Pages find your assets
   server: {
     host: true,
     port: 5173,
