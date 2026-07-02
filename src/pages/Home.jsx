@@ -37,7 +37,6 @@ export default function Home() {
   const [statsRef, statsVisible] = useScrollReveal();
   const [servicesRef, servicesVisible] = useScrollReveal();
   const [aboutRef, aboutVisible] = useScrollReveal();
-  const [testimonialsRef, testimonialsVisible] = useScrollReveal();
 
   return (
     <div className="relative">
@@ -168,18 +167,9 @@ export default function Home() {
       <section className="py-12 bg-white dark:bg-gray-900">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-sm text-gray-400 dark:text-gray-500 mb-6 uppercase tracking-wider">
-            Featured On
+            By the Numbers
           </p>
           <div className="flex flex-wrap items-center justify-center gap-8">
-            <a 
-              href="https://rumble.com/v2t456y-marketing-success-michael-the-real-world-interview-172.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-750 transition-colors"
-            >
-              <span className="text-lg">🎬</span>
-              <span className="text-sm font-medium text-gray-600 dark:text-gray-400">The Real World University</span>
-            </a>
             <div className="flex items-center gap-2 px-4 py-2 bg-gray-50 dark:bg-gray-800 rounded-lg">
               <span className="text-lg">👻</span>
               <span className="text-sm font-medium text-gray-600 dark:text-gray-400">168.7K Snapchat Followers</span>
@@ -187,6 +177,10 @@ export default function Home() {
             <div className="flex items-center gap-2 px-4 py-2 bg-gray-50 dark:bg-gray-800 rounded-lg">
               <span className="text-lg">📊</span>
               <span className="text-sm font-medium text-gray-600 dark:text-gray-400">50M+ Monthly Views Generated</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 bg-gray-50 dark:bg-gray-800 rounded-lg">
+              <span className="text-lg">🌐</span>
+              <span className="text-sm font-medium text-gray-600 dark:text-gray-400">9+ Platforms Managed</span>
             </div>
           </div>
         </div>
@@ -479,7 +473,7 @@ export default function Home() {
                 <div>
                   <h3 className="font-semibold text-gray-900 dark:text-white mb-1">The Beginning</h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    Started as an Uber driver. Transitioned to delivery. Then discovered The Real World University in October 2021 with just 1,000 members.
+                    Started as an Uber driver. Transitioned to delivery. Then discovered a fast-growing online business education community in October 2021, early enough to help shape it from the ground up.
                   </p>
                 </div>
               </div>
@@ -491,7 +485,7 @@ export default function Home() {
                 <div>
                   <h3 className="font-semibold text-gray-900 dark:text-white mb-1">The Rise</h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    Built a social media empire generating 50M+ monthly views. Became Facebook & Snapchat captain. Recruited to a 5-person exclusive team working with Andrew Tate's project manager.
+                    Built a social media growth engine generating 50M+ monthly views. Became Facebook & Snapchat captain. Recruited to a 5-person exclusive team working directly with senior brand leadership.
                   </p>
                 </div>
               </div>
@@ -567,13 +561,12 @@ export default function Home() {
               </h2>
               <div className="space-y-4 text-gray-600 dark:text-gray-400">
                 <p>
-                  I built a social media empire that generated 50 million views per month, then got banned from four platforms for being too effective. Before that, I drove Uber. After that, I taught myself to code and built two production applications. Now I do all three: build, market, and sell.
+                  I built a social media growth engine that generated 50 million views per month across 9+ platforms, then got banned from four of them, not for breaking any rules, but because the content was performing too well for the platforms' liking. Before that, I drove Uber. After that, I taught myself to code and built two production applications. Now I do all three: build, market, and sell.
                 </p>
                 <p>
-                  Along the way, I became a platform captain in The Real World university, 
-                  pioneered Facebook marketing when experts said it wouldn't work, and was recruited 
-                  to an exclusive 5-person team working directly with one of the most recognized 
-                  figures on the internet.
+                  Along the way, I became a platform captain inside a fast-growing digital education community, 
+                  pioneered Facebook marketing when everyone else said it wouldn't work, and was recruited 
+                  to an exclusive 5-person growth team working directly with senior brand leadership.
                 </p>
                 <p>
                   Now I'm combining everything I've learned, marketing, development, sales, 
@@ -600,7 +593,7 @@ export default function Home() {
                       </div>
                       <div>
                         <div className="font-semibold text-gray-900 dark:text-white">Exclusive Marketing Team</div>
-                        <div className="text-sm text-gray-500 dark:text-gray-400">5-Person Fireblood/DNG Squad</div>
+                        <div className="text-sm text-gray-500 dark:text-gray-400">5-Person Growth & Content Team</div>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
@@ -629,145 +622,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Follow My Journey Section */}
-      <section className="py-20 bg-white dark:bg-gray-900">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Follow My Journey
-            </h2>
-            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              From 1K members to platform captain. Watch my interview on The Real World University.
-            </p>
-          </div>
 
-          <div className="max-w-3xl mx-auto">
-            <div className="relative aspect-video bg-gray-100 dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700">
-              <iframe
-                src="https://rumble.com/embed/v2t456y/?pub=4"
-                className="absolute inset-0 w-full h-full"
-                frameBorder="0"
-                allow="autoplay; fullscreen"
-                allowFullScreen
-                title="Marketing Success - Michael | The Real World | Interview #172"
-              />
-            </div>
-            <div className="mt-6 flex items-center justify-center gap-4">
-              <a 
-                href="https://rumble.com/v2t456y-marketing-success-michael-the-real-world-interview-172.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-xl font-medium transition-colors"
-              >
-                🎬 Watch Full Interview
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </a>
-              <a 
-                href="https://linkedin.com/in/mjmorrisonusa"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-medium transition-colors"
-              >
-                💼 Connect on LinkedIn
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section 
-        ref={testimonialsRef}
-        className={`py-20 bg-gray-50 dark:bg-gray-950 transition-all duration-700 delay-300 ${
-          testimonialsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}
-      >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              What People Say
-            </h2>
-            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Real feedback from real people who've worked with me.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* Testimonial 1 - Luc Tate */}
-            <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-200 dark:border-gray-800 max-w-lg">
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-yellow-400">★</span>
-                ))}
-              </div>
-              <p className="text-gray-600 dark:text-gray-400 mb-6 italic text-lg">
-                "Ask <span className="text-gray-900 dark:text-white font-semibold not-italic">Michael</span> about Snapchat and Facebook."
-              </p>
-              <div className="flex items-center gap-3">
-                <img loading="lazy" 
-                  src={import.meta.env.BASE_URL + 'luc.jpg'} 
-                  alt="Luc Tate"
-                  className="w-12 h-12 rounded-full object-cover"
-                />
-                <div>
-                  <div className="font-semibold text-gray-900 dark:text-white">Luc Tate</div>
-                  <div className="text-sm text-gray-500 dark:text-gray-400">Professor, The Real World University</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Testimonial 2 - Tatoo */}
-            <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-200 dark:border-gray-800">
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-yellow-400">★</span>
-                ))}
-              </div>
-              <p className="text-gray-600 dark:text-gray-400 mb-2 italic text-lg">
-                Student: "Who knows FB or SC?"
-              </p>
-              <p className="text-gray-900 dark:text-white mb-6 font-semibold text-lg">
-                "Michael."
-              </p>
-              <div className="flex items-center gap-3">
-                <img loading="lazy" 
-                  src={import.meta.env.BASE_URL + 'tatoo.jpg'} 
-                  alt="Tatoo"
-                  className="w-12 h-12 rounded-full object-cover"
-                />
-                <div>
-                  <div className="font-semibold text-gray-900 dark:text-white">Tatoo</div>
-                  <div className="text-sm text-gray-500 dark:text-gray-400">Instagram Captain, The Real World University</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Featured Interview */}
-          <div className="mt-12 text-center">
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a 
-                href="https://rumble.com/v2t456y-marketing-success-michael-the-real-world-interview-172.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-xl font-medium transition-colors"
-              >
-                🎬 Watch My Interview on The Real World
-              </a>
-              <a 
-                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent('Check out Michael Morrison\'s story: From 0 to 314K followers. Banned from 4 platforms for being too effective.')}&url=${encodeURIComponent('https://mjmorrison10.github.io/mjmorrisonusa/')}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-xl font-medium transition-colors"
-              >
-                🐦 Share on Twitter
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Lead Magnet Section */}
       <section className="py-16 bg-gradient-to-br from-blue-600 to-purple-600">

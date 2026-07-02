@@ -12,14 +12,14 @@ const platforms = [
 const milestones = [
   {
     date: 'October 2021',
-    title: 'Joined The Real World',
-    description: 'Joined at 1,000 members when it launched as Hustler\'s University. Started learning affiliate marketing from Luc Tate.',
+    title: 'Joined a Growing Education Community',
+    description: 'Joined a fast-growing online business education community at 1,000 members. Started learning affiliate marketing and content strategy from experienced mentors.',
     icon: '🎓',
   },
   {
     date: '2022',
     title: 'Pioneered Facebook & Snapchat',
-    description: 'When experts said Facebook and Snapchat weren\'t viable, I ignored the advice and proved them wrong. Eventually became the unofficial Facebook & Snapchat captain.',
+    description: 'When conventional wisdom said Facebook and Snapchat weren\'t viable for growth, I ignored the advice and proved it wrong. Eventually became the unofficial Facebook & Snapchat captain.',
     icon: '🚀',
   },
   {
@@ -31,13 +31,13 @@ const milestones = [
   {
     date: '2023',
     title: 'Recruited to Exclusive Team',
-    description: 'Selected for a 5-6 person team working directly with Andrew Tate\'s project manager on Fireblood, DNG Comics, and Tate Merch.',
+    description: 'Selected for a 5-6 person team working directly with senior leadership on flagship product launches and brand content.',
     icon: '⭐',
   },
   {
     date: '2023',
     title: 'Platform Captain',
-    description: 'Became the official Facebook & Snapchat captain. My brand accounts were transferred to Andrew Tate\'s ownership for official content testing.',
+    description: 'Became the official Facebook & Snapchat captain, managing brand accounts and testing official content strategy at scale.',
     icon: '👑',
   },
   {
@@ -138,26 +138,26 @@ export default function SMMA() {
                 </h2>
                 <div className="space-y-4 text-gray-600 dark:text-gray-400">
                   <p>
-                    October 2021. 1,000 members. That's when I joined. Luc Tate, Andrew Tate's cousin, was teaching affiliate marketing 
-                    on TikTok, Instagram, and YouTube.
+                    October 2021. 1,000 members. That's when I joined a fast-growing online business 
+                    education community teaching affiliate marketing on TikTok, Instagram, and YouTube.
                   </p>
                   <p>
-                    One day, Luc gave a lesson: if you're already editing for Instagram, take the extra 
+                    One day, a mentor gave a lesson: if you're already editing for Instagram, take the extra 
                     5 minutes to upload to YouTube too. Most students took that literally. I took it to 
                     the extreme, <strong>why not upload to every platform possible?</strong>
                   </p>
                   <p>
                     I started uploading to Facebook and Snapchat. When I told other affiliates about my 
-                    success, Luc Tate himself told students <strong>not to upload to Facebook or Snapchat 
+                    success, the leadership told students <strong>not to bother with Facebook or Snapchat 
                     because it was redundant.</strong>
                   </p>
                   <p className="text-gray-900 dark:text-white font-semibold text-lg">
-                    I ignored him.
+                    I ignored that advice.
                   </p>
                   <p>
                     I kept uploading. I kept growing. Eventually, one of my mentees started dominating 
-                    Facebook, and Luc had to admit Facebook was viable. He changed his teaching to include 
-                    all platforms.
+                    Facebook, and leadership had to admit Facebook was viable. They changed their teaching 
+                    to include all platforms.
                   </p>
                   <p>
                     <strong>Today, Facebook is one of the most stable and profitable platforms for 
@@ -165,7 +165,7 @@ export default function SMMA() {
                     Facebook? It's thriving.
                   </p>
                   <p>
-                    Even captains have said: <em>"If it weren't for Michael sticking it through on Facebook, 
+                    Even fellow captains have said: <em>"If it weren't for Michael sticking it through on Facebook, 
                     we probably would've quit during those hard times."</em>
                   </p>
                 </div>
@@ -331,29 +331,6 @@ export default function SMMA() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Video Testimonial */}
-      <section className="py-20 bg-white dark:bg-gray-900">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 text-center">
-            Featured on The Real World
-          </h2>
-          <p className="text-gray-600 dark:text-gray-400 mb-8 text-center">
-            Interview #172 on the official DiscoverTRW channel.
-          </p>
-
-          <div className="relative aspect-video bg-gray-100 dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700">
-            <iframe
-              src="https://rumble.com/embed/v2t456y/?pub=4"
-              className="absolute inset-0 w-full h-full"
-              frameBorder="0"
-              allow="autoplay; fullscreen"
-              allowFullScreen
-              title="Marketing Success - Michael | The Real World | Interview #172"
-            />
           </div>
         </div>
       </section>
