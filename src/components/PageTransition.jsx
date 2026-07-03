@@ -6,9 +6,12 @@ export default function PageTransition({ children }) {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(false);
-    const timer = setTimeout(() => setIsVisible(true), 50);
-    return () => clearTimeout(timer);
+    const hideFrame = requestAnimationFrame(() => setIsVisible(false));
+    const showTimer = setTimeout(() => setIsVisible(true), 50);
+    return () => {
+      cancelAnimationFrame(hideFrame);
+      clearTimeout(showTimer);
+    };
   }, [location.pathname]);
 
   return (
@@ -23,3 +26,4 @@ export default function PageTransition({ children }) {
     </div>
   );
 }
+

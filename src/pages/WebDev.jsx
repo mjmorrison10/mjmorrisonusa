@@ -2,6 +2,10 @@ import { useState } from 'react';
 import ProjectCard from '../components/ProjectCard';
 import ContactFormMini from '../components/ContactFormMini';
 
+// Manual toggle: set to true to show the Concept Projects section on the site.
+// A future admin panel will let this be flipped without editing code directly.
+const SHOW_CONCEPT_PROJECTS = false;
+
 const projects = [
   {
     title: 'CurveRunner',
@@ -141,7 +145,7 @@ const pricingTiers = [
   },
   {
     name: 'Business Website',
-    price: '$1,500',
+    price: '$1,800',
     description: 'Multi-page website for established businesses',
     features: [
       'Up to 5 pages',
@@ -156,7 +160,7 @@ const pricingTiers = [
   },
   {
     name: 'Full-Stack App',
-    price: '$3,000+',
+    price: '$3,500+',
     description: 'Complex applications with backend, database, and integrations',
     features: [
       'Custom functionality',
@@ -173,7 +177,7 @@ const pricingTiers = [
   const faqItems = [
     {
     question: 'How much does it cost?',
-    answer: 'It depends on the complexity. A simple landing page starts at $500. A full-stack application like PriceSpy or CurveRunner starts at $2,000. I provide a detailed quote after understanding your needs.',
+    answer: 'It depends on the complexity. A simple landing page starts at $500. A multi-page business site starts at $1,800. A full-stack application like PriceSpy or CurveRunner starts at $3,500. I provide a detailed quote after understanding your needs.',
   },
   {
     question: 'How long does it take?',
@@ -245,142 +249,7 @@ export default function WebDev() {
         </div>
       </section>
 
-      {/* Client Testimonials */}
-      <section className="py-16 bg-white dark:bg-gray-900">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              What Clients Say
-            </h2>
-          </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center gap-1 mb-3">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-yellow-400 text-sm">★</span>
-                ))}
-              </div>
-              <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 italic">
-                "Michael built my website in 48 hours and it looks better than what my previous developer took 3 months to build. The attention to detail and conversion focus is incredible."
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-400 font-bold text-sm">
-                  JM
-                </div>
-                <div>
-                  <div className="font-medium text-gray-900 dark:text-white text-sm">Local Business Owner</div>
-                  <div className="text-xs text-gray-500 dark:text-gray-400">Cypress, CA</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center gap-1 mb-3">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-yellow-400 text-sm">★</span>
-                ))}
-              </div>
-              <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 italic">
-                "Not only did he build a great website, but he understood my business and helped me think about how to actually generate revenue from it. That's rare."
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center text-purple-600 dark:text-purple-400 font-bold text-sm">
-                  SK
-                </div>
-                <div>
-                  <div className="font-medium text-gray-900 dark:text-white text-sm">E-Commerce Entrepreneur</div>
-                  <div className="text-xs text-gray-500 dark:text-gray-400">Orange County, CA</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Feedback & Testimonials Section */}
-      <section className="py-16 bg-white dark:bg-gray-900">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              Your Feedback Matters
-            </h2>
-            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              I'm always looking to improve. If you've worked with me, I'd love to hear your experience.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Leave Feedback */}
-            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">💬 Leave Feedback</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                Your feedback helps me improve my services and helps other clients make informed decisions.
-              </p>
-              <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <span className="text-green-500">✓</span>
-                  <span className="text-sm text-gray-700 dark:text-gray-300">Quick 2-minute survey</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-green-500">✓</span>
-                  <span className="text-sm text-gray-700 dark:text-gray-300">Anonymous option available</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-green-500">✓</span>
-                  <span className="text-sm text-gray-700 dark:text-gray-300">Direct input to improve services</span>
-                </div>
-              </div>
-              <a
-                href="mailto:mjmorrisonusa@gmail.com?subject=Feedback - Web Development"
-                className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-colors"
-              >
-                Share Your Feedback
-              </a>
-            </div>
-
-            {/* Request Testimonial */}
-            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">⭐ Client Testimonials</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                If you're happy with my work, a testimonial would mean the world to me. It helps other clients trust that I'll deliver results.
-              </p>
-              <div className="bg-white dark:bg-gray-900 rounded-xl p-4 mb-4">
-                <div className="text-xs text-gray-500 dark:text-gray-400 mb-2">Example testimonial format:</div>
-                <p className="text-sm text-gray-700 dark:text-gray-300 italic">
-                  "Michael built my website in 48 hours and it looks better than what my previous developer took 3 months to build. The attention to detail and conversion focus is incredible."
-                </p>
-                <div className="text-xs text-gray-500 dark:text-gray-400 mt-2">
-                  — [Your Name], [Your Business]
-                </div>
-              </div>
-              <a
-                href="mailto:mjmorrisonusa@gmail.com?subject=Testimonial - Web Development"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg text-sm font-medium transition-colors"
-              >
-                Submit Testimonial
-              </a>
-            </div>
-          </div>
-
-          {/* Case Study Request */}
-          <div className="mt-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8">
-            <div className="text-center">
-              <h3 className="text-xl font-bold text-white mb-4">📚 Want to Be Featured?</h3>
-              <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-                I'm building a portfolio of client success stories. If you've seen great results from your website, 
-                I'd love to feature you as a case study. It's free exposure for your business and helps me show potential clients what's possible.
-              </p>
-              <a
-                href="mailto:mjmorrisonusa@gmail.com?subject=Case Study Feature"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-blue-600 rounded-xl font-medium hover:bg-blue-50 transition-colors"
-              >
-                Get Featured
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Who I Work With Section */}
       <section className="py-20 bg-white dark:bg-gray-900">
@@ -482,7 +351,7 @@ export default function WebDev() {
             <div className="inline-flex items-center gap-2 px-6 py-3 bg-blue-50 dark:bg-blue-900/20 rounded-xl">
               <span className="text-blue-600 dark:text-blue-400 font-medium">⏱️</span>
               <span className="text-gray-700 dark:text-gray-300">
-                CurveRunner: 2 days. PriceSpy: 48 hours. Cypress Flips: 48 hours. How fast can I deliver YOUR project?
+                CurveRunner: 2 days. PriceSpy: 48 hours. Cypress Flips: 48 hours. These are my own solo projects with no client review cycles — client timelines vary based on scope and feedback rounds.
               </span>
             </div>
           </div>
@@ -538,7 +407,7 @@ export default function WebDev() {
                 </tr>
                 <tr>
                   <td className="p-4 text-gray-700 dark:text-gray-300">Satisfaction Guarantee</td>
-                  <td className="p-4 text-center font-bold text-green-600">100%</td>
+                  <td className="p-4 text-center font-bold text-green-600">Yes, in writing</td>
                   <td className="p-4 text-center text-gray-500">Rare</td>
                   <td className="p-4 text-center text-gray-500">Contract only</td>
                 </tr>
@@ -752,23 +621,19 @@ export default function WebDev() {
 
           {/* Success Metrics */}
           <div className="mt-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8">
-            <h3 className="text-xl font-bold text-white mb-6 text-center">📊 How We Measure Success</h3>
-            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+            <h3 className="text-xl font-bold text-white mb-6 text-center">📊 What You Can Expect</h3>
+            <div className="grid sm:grid-cols-3 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-white mb-1">30 days</div>
                 <div className="text-sm text-blue-100">Time to First Value</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-1">100%</div>
-                <div className="text-sm text-blue-100">Satisfaction Rate</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-1">Every Client</div>
+                <div className="text-sm text-blue-100">Satisfied So Far — Small, Growing List</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-white mb-1">24 hours</div>
                 <div className="text-sm text-blue-100">Support Response</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-1">10x</div>
-                <div className="text-sm text-blue-100">Average Client ROI</div>
               </div>
             </div>
           </div>
@@ -784,9 +649,6 @@ export default function WebDev() {
             </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               No hidden fees. No surprises. Just honest pricing for honest work.
-            </p>
-            <p className="text-sm text-blue-600 dark:text-blue-400 mt-2 font-medium">
-              Average client ROI: 10x within 90 days
             </p>
           </div>
 
@@ -804,27 +666,9 @@ export default function WebDev() {
                 )}
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{tier.name}</h3>
                 <div className="mb-2">
-                  {index === 2 && (
-                    <span className="text-sm text-gray-400 line-through mr-2">$5,000+</span>
-                  )}
                   <span className="text-3xl font-bold text-blue-600 dark:text-blue-400">{tier.price}</span>
                 </div>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">{tier.description}</p>
-                {index === 0 && (
-                  <p className="text-xs text-green-600 dark:text-green-400 mb-4">
-                    💡 ROI: A single customer worth $500 pays for your entire website
-                  </p>
-                )}
-                {index === 1 && (
-                  <p className="text-xs text-green-600 dark:text-green-400 mb-4">
-                    💡 ROI: Just 3 new customers per month covers your investment
-                  </p>
-                )}
-                {index === 2 && (
-                  <p className="text-xs text-green-600 dark:text-green-400 mb-4">
-                    💡 ROI: Custom apps can generate $10K+/month in revenue
-                  </p>
-                )}
                 <ul className="space-y-2 mb-6">
                   {tier.features.map((feature, i) => (
                     <li key={i} className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
@@ -834,7 +678,7 @@ export default function WebDev() {
                   ))}
                 </ul>
                 <a
-                  href={`mailto:mjmorrisonusa@gmail.com?subject=${tier.name} Inquiry`}
+                  href={`mailto:michael@mjmorrisonusa.com?subject=${tier.name} Inquiry`}
                   className={`block text-center px-4 py-2.5 rounded-lg font-medium transition-colors ${
                     tier.popular
                       ? 'bg-blue-600 hover:bg-blue-700 text-white'
@@ -884,41 +728,53 @@ export default function WebDev() {
         </div>
       </section>
 
-      {/* More Projects - Hidden Section */}
-      <section className="py-16 bg-white dark:bg-gray-900">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <button
-            onClick={() => setShowMoreProjects(!showMoreProjects)}
-            className="flex items-center gap-2 mx-auto text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors text-sm"
-          >
-            <span>{showMoreProjects ? 'Hide' : 'Show'} all projects</span>
-            <svg className={`w-4 h-4 transform transition-transform ${showMoreProjects ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-
-          {showMoreProjects && (
-            <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
-              {moreProjects.map((project, index) => (
-                <a
-                  key={index}
-                  href={`https://mjmorrison10.github.io/${project.slug}/`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group px-3 py-2 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-700 transition-all text-center"
-                >
-                  <div className="text-xs font-medium text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 truncate">
-                    {project.name}
-                  </div>
-                  <div className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">
-                    {project.category}
-                  </div>
-                </a>
-              ))}
+      {/* Concept Projects - toggled by SHOW_CONCEPT_PROJECTS flag above */}
+      {SHOW_CONCEPT_PROJECTS && (
+        <section className="py-16 bg-white dark:bg-gray-900">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+                Concept Projects
+              </h2>
+              <p className="text-sm text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
+                Speculative redesigns built to demonstrate design and conversion skills — not affiliated with, endorsed by, or built for these businesses. These are unsolicited concept sites, not paid client work.
+              </p>
             </div>
-          )}
-        </div>
-      </section>
+
+            <button
+              onClick={() => setShowMoreProjects(!showMoreProjects)}
+              className="flex items-center gap-2 mx-auto text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors text-sm"
+            >
+              <span>{showMoreProjects ? 'Hide' : 'Show'} concept projects</span>
+              <svg className={`w-4 h-4 transform transition-transform ${showMoreProjects ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            {showMoreProjects && (
+              <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+                {moreProjects.map((project, index) => (
+                  <a
+                    key={index}
+                    href={`https://mjmorrison10.github.io/${project.slug}/`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group px-3 py-2 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-700 transition-all text-center"
+                  >
+                    <div className="text-xs font-medium text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 truncate">
+                      {project.name}
+                    </div>
+                    <div className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">
+                      {project.category}
+                    </div>
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
 
       {/* What Happens Next Section */}
       <section className="py-16 bg-white dark:bg-gray-900">
@@ -1112,7 +968,7 @@ export default function WebDev() {
               Most developers build websites. I build assets that pay you every month. 
               Let's talk about how I can increase your revenue.
             </p>
-            <p className="text-blue-200 text-sm">Currently accepting 2 clients per month</p>
+            <p className="text-blue-200 text-sm">I keep my client list small so every project gets real attention</p>
           </div>
           <ContactFormMini service="Web Development" />
         </div>
