@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 // Formspree endpoint — replace YOUR_FORM_ID with the real form ID after
 // creating a free form at https://formspree.io tied to michael@mjmorrisonusa.com
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xeebpvej';
 
 export default function ContactFormMini({ service = '' }) {
   const [formData, setFormData] = useState({
