@@ -35,10 +35,10 @@ const benefits = [
 ];
 
 const proof = [
-  { value: '9', label: 'commits in one session' },
-  { value: '0', label: 'servers' },
-  { value: '0', label: 'tracking pixels' },
-  { value: '∞', label: 'transcripts you control' },
+  { value: '1s', label: 'to find a line in your library' },
+  { value: 'Free', label: 'to start, forever' },
+  { value: 'Your device', label: 'library never leaves' },
+  { value: 'No limits', label: 'on sources or moments' },
 ];
 
 export default function Recall() {
@@ -177,10 +177,10 @@ export default function Recall() {
 
           <div className="mt-12 max-w-3xl mx-auto text-center">
             <p className="text-gray-700 dark:text-gray-300 italic text-lg leading-relaxed">
-              "You listen to hundreds of hours of podcast. The best line was in episode 47. RECALL knows."
+              "I built this because I needed it. Now I clip 3x faster."
             </p>
             <p className="text-sm text-gray-500 dark:text-gray-400 mt-3">
-              — Built by Michael Morrison, who generated 50M+ monthly views across 9 platforms
+              — Michael Morrison, who generated 50M+ monthly views across 9 platforms
             </p>
           </div>
         </div>

@@ -110,6 +110,99 @@ export default function SMMA() {
         </div>
       </section>
 
+      {/* Featured Product — RECALL */}
+      <section className="py-20 bg-gradient-to-br from-cyan-50 via-white to-amber-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 text-xs font-bold mb-4">
+              ⭐ FEATURED PRODUCT · FREE TOOL
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              Built this for creators like you.
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
+              I got tired of losing the best lines from podcasts I loved. So I built RECALL — searchable clip-memory for short-form creators.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 items-center max-w-4xl mx-auto">
+            {/* Left: value prop */}
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                RECALL — Never lose a great moment again.
+              </h3>
+              <p className="text-gray-700 dark:text-gray-300 mb-4">
+                Drop in every podcast, interview, and livestream you consume. RECALL indexes them so you can search any phrase — and find every moment it appears across every source, with exact timecodes.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400 mb-6">
+                <li className="flex items-start gap-2">
+                  <span className="text-cyan-500 mt-0.5">✓</span>
+                  <span><strong>Search every phrase, every source</strong> — find the line you heard in episode 47, in one keystroke</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-cyan-500 mt-0.5">✓</span>
+                  <span><strong>Cross-source callbacks, made easy</strong> — stack moments from different episodes into one clip concept</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-cyan-500 mt-0.5">✓</span>
+                  <span><strong>Export a clean shot list</strong> — timecoded, source-labeled, paste into your editor</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-cyan-500 mt-0.5">✓</span>
+                  <span><strong>Audio in, transcript out</strong> — drop an MP3, Gemini transcribes it (~$0.009/hr)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-cyan-500 mt-0.5">✓</span>
+                  <span><strong>Installs on iPhone</strong> — no App Store, works offline, your library stays on your device</span>
+                </li>
+              </ul>
+              <Link
+                to="/recall"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white rounded-xl font-bold text-lg transition-all shadow-lg shadow-cyan-500/25"
+              >
+                Get RECALL — Free →
+              </Link>
+            </div>
+
+            {/* Right: proof card */}
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 shadow-xl">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="px-2 py-0.5 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 rounded text-xs font-bold">
+                  🆕 JUST SHIPPED
+                </span>
+                <span className="px-2 py-0.5 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded text-xs font-bold">
+                  FREE
+                </span>
+              </div>
+              <div className="grid grid-cols-2 gap-3 mb-4">
+                <div className="text-center p-3 bg-gray-50 dark:bg-gray-900 rounded-lg">
+                  <div className="text-2xl font-bold text-cyan-600 dark:text-cyan-400">9</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-400">commits in one session</div>
+                </div>
+                <div className="text-center p-3 bg-gray-50 dark:bg-gray-900 rounded-lg">
+                  <div className="text-2xl font-bold text-cyan-600 dark:text-cyan-400">0</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-400">servers to run</div>
+                </div>
+                <div className="text-center p-3 bg-gray-50 dark:bg-gray-900 rounded-lg">
+                  <div className="text-2xl font-bold text-cyan-600 dark:text-cyan-400">~$0</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-400">to start using</div>
+                </div>
+                <div className="text-center p-3 bg-gray-50 dark:bg-gray-900 rounded-lg">
+                  <div className="text-2xl font-bold text-cyan-600 dark:text-cyan-400">∞</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-400">transcripts</div>
+                </div>
+              </div>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                <strong className="text-gray-900 dark:text-white">Built by a creator, for creators.</strong> I generated 50M+ monthly views across 9 platforms. I built RECALL because I needed it myself.
+              </p>
+              <p className="text-xs text-gray-500 dark:text-gray-400 italic">
+                "You listen to hundreds of hours of podcast. The best line was in episode 47. RECALL knows."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* The Story */}
       <section className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -331,99 +424,6 @@ export default function SMMA() {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Product — RECALL */}
-      <section className="py-20 bg-gradient-to-br from-cyan-50 via-white to-amber-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 text-xs font-bold mb-4">
-              ⭐ FEATURED PRODUCT · FREE TOOL
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Built this for creators like you.
-            </h2>
-            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
-              I got tired of losing the best lines from podcasts I loved. So I built RECALL — searchable clip-memory for short-form creators.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 items-center max-w-4xl mx-auto">
-            {/* Left: value prop */}
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                RECALL — Never lose a great moment again.
-              </h3>
-              <p className="text-gray-700 dark:text-gray-300 mb-4">
-                Drop in every podcast, interview, and livestream you consume. RECALL indexes them so you can search any phrase — and find every moment it appears across every source, with exact timecodes.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400 mb-6">
-                <li className="flex items-start gap-2">
-                  <span className="text-cyan-500 mt-0.5">✓</span>
-                  <span><strong>Search every phrase, every source</strong> — find the line you heard in episode 47, in one keystroke</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-cyan-500 mt-0.5">✓</span>
-                  <span><strong>Cross-source callbacks, made easy</strong> — stack moments from different episodes into one clip concept</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-cyan-500 mt-0.5">✓</span>
-                  <span><strong>Export a clean shot list</strong> — timecoded, source-labeled, paste into your editor</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-cyan-500 mt-0.5">✓</span>
-                  <span><strong>Audio in, transcript out</strong> — drop an MP3, Gemini transcribes it (~$0.009/hr)</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-cyan-500 mt-0.5">✓</span>
-                  <span><strong>Installs on iPhone</strong> — no App Store, works offline, your library stays on your device</span>
-                </li>
-              </ul>
-              <Link
-                to="/recall"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white rounded-xl font-bold text-lg transition-all shadow-lg shadow-cyan-500/25"
-              >
-                Get RECALL — Free →
-              </Link>
-            </div>
-
-            {/* Right: proof card */}
-            <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 shadow-xl">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="px-2 py-0.5 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 rounded text-xs font-bold">
-                  🆕 JUST SHIPPED
-                </span>
-                <span className="px-2 py-0.5 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded text-xs font-bold">
-                  FREE
-                </span>
-              </div>
-              <div className="grid grid-cols-2 gap-3 mb-4">
-                <div className="text-center p-3 bg-gray-50 dark:bg-gray-900 rounded-lg">
-                  <div className="text-2xl font-bold text-cyan-600 dark:text-cyan-400">9</div>
-                  <div className="text-xs text-gray-600 dark:text-gray-400">commits in one session</div>
-                </div>
-                <div className="text-center p-3 bg-gray-50 dark:bg-gray-900 rounded-lg">
-                  <div className="text-2xl font-bold text-cyan-600 dark:text-cyan-400">0</div>
-                  <div className="text-xs text-gray-600 dark:text-gray-400">servers to run</div>
-                </div>
-                <div className="text-center p-3 bg-gray-50 dark:bg-gray-900 rounded-lg">
-                  <div className="text-2xl font-bold text-cyan-600 dark:text-cyan-400">~$0</div>
-                  <div className="text-xs text-gray-600 dark:text-gray-400">to start using</div>
-                </div>
-                <div className="text-center p-3 bg-gray-50 dark:bg-gray-900 rounded-lg">
-                  <div className="text-2xl font-bold text-cyan-600 dark:text-cyan-400">∞</div>
-                  <div className="text-xs text-gray-600 dark:text-gray-400">transcripts</div>
-                </div>
-              </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
-                <strong className="text-gray-900 dark:text-white">Built by a creator, for creators.</strong> I generated 50M+ monthly views across 9 platforms. I built RECALL because I needed it myself.
-              </p>
-              <p className="text-xs text-gray-500 dark:text-gray-400 italic">
-                "You listen to hundreds of hours of podcast. The best line was in episode 47. RECALL knows."
-              </p>
             </div>
           </div>
         </div>
