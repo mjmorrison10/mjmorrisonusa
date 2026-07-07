@@ -18,6 +18,10 @@ const pageMeta = {
     title: 'Flipping & Liquidation | Michael Morrison',
     description: 'Instant cash for your inventory. Online pawn shop model. Cypress, CA local. Fair prices, fast transactions.',
   },
+  '/recall': {
+    title: 'RECALL — Searchable Clip-Memory for Creators | Michael Morrison',
+    description: 'PWA that turns podcast and interview transcripts into a searchable memory layer for short-form creators. Drop in transcripts, search any phrase, get every moment with timecodes. Stack into clip concepts, export shot lists.',
+  },
   '/contact': {
     title: 'Contact Me | Michael Morrison',
     description: 'Get in touch for web development, social media marketing, or inventory liquidation. Let\'s build something together.',
