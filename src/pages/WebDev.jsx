@@ -8,24 +8,6 @@ const SHOW_CONCEPT_PROJECTS = false;
 
 const projects = [
   {
-    title: 'RECALL',
-    subtitle: 'Searchable Clip-Memory for Creators',
-    icon: '🔍',
-    description: 'PWA that turns podcast and interview transcripts into a searchable memory layer for short-form creators. Drop in transcripts (paste or upload audio for Gemini-powered transcription), search any phrase, get every moment it appears across every source with exact timecodes. Stack moments into a clip concept, export a shot list, go cut.',
-    tech: ['Vanilla JS', 'PWA', 'Gemini 1.5 Flash', 'localStorage', 'Service Workers', 'No backend'],
-    liveUrl: 'https://mjmorrison10.github.io/recall/',
-    githubUrl: 'https://github.com/mjmorrison10/recall',
-    stats: ['iOS install via PWA', 'BYO Gemini key', 'Works offline', 'Audio transcription built in'],
-    badge: 'New',
-    screenshots: [],
-    caseStudy: {
-      problem: 'Short-form creators consume 10+ hours of long-form content per week and lose track of the best lines. Existing tools like Filmot have frozen transcript indexes (no new content since YouTube anti-crawling in 2024) and no private library — they search the whole internet, not what YOU watched.',
-      solution: 'Built a single-file PWA (later split into index.html + style.css + app.js) with client-side state in localStorage. BYO Gemini API key model — no backend, no serverless function, no key in the repo. Prompt-engineered Gemini to output [HH:MM:SS] lines that feed the existing parser. Ships with installable PWA on iPhone via Share → Add to Home Screen.',
-      result: 'Working product with 9 clean commits: freeze fix, PWA scaffold, icon redesign, copy fix, audio transcription, how-to page, library export/import, CSS/JS split. Total cost per user: ~$0.009/hour of audio transcribed. Zero server costs.',
-      time: 'Single session, 9 commits',
-    },
-  },
-  {
     title: 'CurveRunner',
     subtitle: 'Motorcycle Navigation PWA',
     icon: '🏍️',

@@ -19,8 +19,8 @@ const pageMeta = {
     description: 'Instant cash for your inventory. Online pawn shop model. Cypress, CA local. Fair prices, fast transactions.',
   },
   '/recall': {
-    title: 'RECALL — Searchable Clip-Memory for Creators | Michael Morrison',
-    description: 'PWA that turns podcast and interview transcripts into a searchable memory layer for short-form creators. Drop in transcripts, search any phrase, get every moment with timecodes. Stack into clip concepts, export shot lists.',
+    title: 'RECALL — Free Clip-Memory Tool for Short-Form Creators | Michael Morrison',
+    description: 'Never lose a great moment again. Free PWA that turns every podcast and interview you watch into a searchable memory layer. Find any phrase, get every moment across every source with timecodes. Built by a creator who generated 50M+ monthly views.',
   },
   '/contact': {
     title: 'Contact Me | Michael Morrison',
