@@ -69,7 +69,7 @@ export default function Home() {
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
             <span className="block text-gray-900 dark:text-white">Michael Morrison</span>
             <span className="block mt-2 bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
-              Web Developer & Growth Strategist
+              AI Apps &amp; Growth Strategist
             </span>
           </h1>
 
@@ -133,6 +133,39 @@ export default function Home() {
           <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
+        </div>
+      </section>
+
+      {/* Start Here — Free 30-minute AI audit */}
+      <section className="py-14 bg-gradient-to-br from-blue-50 via-white to-cyan-50 dark:from-blue-950/40 dark:via-gray-950 dark:to-cyan-950/40">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white dark:bg-gray-900 rounded-2xl p-6 sm:p-10 border border-blue-200 dark:border-blue-800 shadow-xl text-center relative overflow-hidden">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-600 text-white text-xs font-bold shadow-lg shadow-blue-600/30">
+                🎯 START HERE
+              </div>
+            </div>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4 mt-4">
+              Not sure what to build?<br />
+              <span className="text-blue-600 dark:text-blue-400">Start with a free 30-min AI audit.</span>
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-6 text-lg">
+              I listen to what you're trying to do, tell you honestly whether an AI app would help, and give you a rough cost estimate. No commitment, no pitch — even if the answer is "you don't need an app."
+            </p>
+            <Link
+              to="/webdev#audit"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-bold text-lg transition-colors shadow-lg shadow-blue-600/25"
+            >
+              Book Free Audit →
+            </Link>
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-6 text-xs text-gray-500 dark:text-gray-400">
+              <span>⏱️ 30 minutes</span>
+              <span>·</span>
+              <span>💸 No commitment</span>
+              <span>·</span>
+              <span>🔒 NDA available</span>
+            </div>
+          </div>
         </div>
       </section>
 

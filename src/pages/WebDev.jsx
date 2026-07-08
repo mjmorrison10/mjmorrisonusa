@@ -351,7 +351,7 @@ export default function WebDev() {
       </section>
 
       {/* Free Audit CTA — before pricing */}
-      <section className="py-12 bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20">
+      <section id="audit" className="py-12 bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 scroll-mt-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white dark:bg-gray-900 rounded-2xl p-6 sm:p-8 border border-blue-200 dark:border-blue-800 shadow-lg text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-bold mb-4">
