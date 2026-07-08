@@ -134,7 +134,7 @@ const processSteps = [
 const pricingTiers = [
   {
     name: 'AI Tool / Feature',
-    price: '$2,500+',
+    price: 'Starts at $2,500',
     description: 'Single-purpose AI tool or feature that plugs into your existing workflow.',
     examples: [
       'AI transcript search for your content library',
@@ -142,13 +142,15 @@ const pricingTiers = [
       'Auto-tagging or categorization tool',
       'Lead-enrichment or scoring AI',
     ],
-    timeline: '1 week',
+    timeline: '~1 week',
     popular: false,
-    cta: 'Start a tool',
+    cta: 'Get a quote',
+    roi: 'Pays for itself when it saves you 5+ hours/week — most clients see payback within 60 days.',
+    payment: '50% deposit, 50% on delivery. Monthly installments available on request.',
   },
   {
     name: 'AI-Powered Web App',
-    price: '$7,500+',
+    price: 'Starts at $7,500',
     description: 'Full web app with AI features. Includes auth, data persistence, and a real product surface.',
     examples: [
       'RECALL-style clip-memory tool',
@@ -159,10 +161,12 @@ const pricingTiers = [
     timeline: '2-4 weeks',
     popular: true,
     cta: 'Build an app',
+    roi: 'Pays for itself when it replaces a $200-500/mo SaaS subscription OR when it generates measurable time savings across your team.',
+    payment: '50% deposit, 25% at MVP delivery, 25% at final delivery. Monthly installments available.',
   },
   {
     name: 'Custom AI Platform',
-    price: '$15,000+',
+    price: 'Starts at $15,000',
     description: 'Multi-feature AI platform with auth, billing, admin dashboard, and ongoing iteration support.',
     examples: [
       'Full SaaS product with subscription billing',
@@ -172,17 +176,31 @@ const pricingTiers = [
     timeline: '4-8 weeks',
     popular: false,
     cta: 'Plan a platform',
+    roi: 'Pays for itself when it generates recurring revenue, replaces enterprise SaaS spend ($1k+/mo), or unlocks a new business line.',
+    payment: '33% deposit, 33% at MVP, 34% at launch. Monthly installments available.',
   },
 ];
 
 const faqItems = [
   {
-    question: 'What AI models do you use?',
-    answer: 'Google Gemini (1.5 Flash / Pro), OpenAI GPT-4 family, Claude, Whisper for transcription, plus specialized models when the use case calls for it. I pick the cheapest model that does the job — Gemini Flash for most things, GPT-4 only when reasoning matters.',
+    question: 'Not sure what to build — can we just talk first?',
+    answer: 'Yes. Free 30-minute call. I listen to what you\'re trying to do, tell you honestly whether an AI app would help, and give you a rough cost estimate. No commitment. If it\'s not a fit, I\'ll point you somewhere that is.',
   },
   {
-    question: 'How long does an AI app take to build?',
-    answer: 'AI Tool / Feature: 1 week. AI-Powered Web App: 2-4 weeks. Custom Platform: 4-8 weeks. RECALL was built in a single session as proof that I can ship production-grade AI apps fast when the scope is right.',
+    question: 'Can I pay in milestones instead of all upfront?',
+    answer: 'Yes. Standard schedule is 50% deposit, 50% on delivery. Larger builds can be 33/33/34 across three milestones. Monthly installments available on request for builds $5k+. I keep your deposit refundable until week 2 if it turns out we\'re not a fit.',
+  },
+  {
+    question: 'What if I don\'t like what you build?',
+    answer: 'I iterate until you\'re happy. Two revision rounds are included in every project; more if needed. You own everything from day one, so even in the worst case you keep a working MVP and the option to hand it off to someone else.',
+  },
+  {
+    question: 'How is this different from hiring a dev agency?',
+    answer: 'Speed, cost, and AI fluency. Agencies charge $150-300/hr with project minimums of $15-30k and timelines of 2-6 months. I ship in days-to-weeks for $2.5-15k. I also pick AI models and prompt-engineer them — most agencies treat AI as a checkbox feature, not the core capability.',
+  },
+  {
+    question: 'What AI models do you use?',
+    answer: 'Google Gemini (1.5 Flash / Pro), OpenAI GPT-4 family, Claude, Whisper for transcription, plus specialized models when the use case calls for it. I pick the cheapest model that does the job — Gemini Flash for most things, GPT-4 only when reasoning matters.',
   },
   {
     question: 'Do I own the code?',
@@ -199,10 +217,6 @@ const faqItems = [
   {
     question: 'How do you handle AI costs?',
     answer: 'BYO API key model whenever possible (you own the key, pay Gemini/OpenAI directly — I never see your bill). For managed apps, costs are passed through at cost — no markup. Typical: ~$0.009 per hour of audio transcribed, ~$0.01-0.05 per AI search query.',
-  },
-  {
-    question: 'What\'s the typical ROI?',
-    answer: 'Depends on what the app replaces. RECALL\'s value prop is "save the 30+ minutes you spend every week scrubbing for clips" — easy to measure. Most clients see payback within 60-90 days based on time saved or revenue enabled.',
   },
   {
     question: 'Do you sign NDAs?',
@@ -336,6 +350,26 @@ export default function WebDev() {
         </div>
       </section>
 
+      {/* Free Audit CTA — before pricing */}
+      <section className="py-12 bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white dark:bg-gray-900 rounded-2xl p-6 sm:p-8 border border-blue-200 dark:border-blue-800 shadow-lg text-center">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-bold mb-4">
+              🎯 START HERE
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-3">
+              Not sure what AI app would change your business?
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-5">
+              Book a free 30-minute call. I listen to what you're trying to do, tell you honestly whether an AI app would help, and give you a rough cost estimate. No commitment, no pitch.
+            </p>
+            <a href="#contact" className="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors shadow-lg shadow-blue-600/25">
+              Book Free Audit →
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing */}
       <section className="py-20 bg-gray-50 dark:bg-gray-950">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -344,7 +378,7 @@ export default function WebDev() {
               Pricing
             </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Three tiers. Pick what fits. Custom quotes for anything outside the box.
+              Three tiers. Pick what fits. Custom quotes for anything outside the box. All prices include milestone-based payment — never pay everything upfront.
             </p>
           </div>
 
@@ -377,7 +411,14 @@ export default function WebDev() {
                     ))}
                   </ul>
                 </div>
-                <div className="text-xs text-gray-500 dark:text-gray-400 mb-5">⏱️ Timeline: {tier.timeline}</div>
+                <div className="mb-4 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-200 dark:border-green-800">
+                  <div className="text-xs font-bold text-green-700 dark:text-green-400 uppercase tracking-wider mb-1">💰 Pays for itself when</div>
+                  <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">{tier.roi}</p>
+                </div>
+                <div className="text-xs text-gray-500 dark:text-gray-400 mb-5 space-y-1">
+                  <div>⏱️ Timeline: {tier.timeline}</div>
+                  <div>💳 {tier.payment}</div>
+                </div>
                 <a
                   href="#contact"
                   className={`block text-center px-5 py-3 rounded-lg font-semibold transition-colors ${

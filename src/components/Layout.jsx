@@ -7,7 +7,6 @@ const navLinks = [
   { path: '/', label: 'Home' },
   { path: '/webdev', label: 'AI Apps' },
   { path: '/smma', label: 'SMMA' },
-  { path: '/flipping', label: 'Flipping' },
   { path: '/contact', label: 'Contact' },
 ];
 
@@ -137,6 +136,13 @@ export default function Layout({ children }) {
               <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">
                 Cypress, CA
               </p>
+            </div>
+            <div className="flex items-center gap-4 text-xs text-gray-400 dark:text-gray-500">
+              <Link to="/flipping" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                Flipping & Liquidation
+              </Link>
+              <span>·</span>
+              <a href="https://mjmorrisonusa.com" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" target="_blank" rel="noopener">mjmorrisonusa.com</a>
             </div>
             <div className="text-center md:text-right">
               <p className="text-xs text-gray-400 dark:text-gray-500 italic">
