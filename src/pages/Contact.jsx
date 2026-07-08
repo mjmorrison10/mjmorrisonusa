@@ -132,7 +132,7 @@ export default function Contact() {
                   className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                 >
                   <option value="">Select a service...</option>
-                  <option value="Web Development">Web Development</option>
+                  <option value="AI App Build">AI App Build</option>
                   <option value="Social Media Marketing">Social Media Marketing</option>
                   <option value="Inventory Liquidation">Inventory Liquidation</option>
                   <option value="Other">Other</option>

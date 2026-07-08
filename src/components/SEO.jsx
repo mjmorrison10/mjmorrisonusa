@@ -3,12 +3,12 @@ import { useLocation } from 'react-router-dom';
 
 const pageMeta = {
   '/': {
-    title: 'Michael Morrison | Web Developer & Growth Strategist',
-    description: 'Web Developer, Social Media Marketer, and Entrepreneur. 314K followers built. 50M+ monthly views. Cypress, CA based.',
+    title: 'Michael Morrison | AI Apps & Social Media Growth Strategist',
+    description: 'AI app builder + social media growth strategist. 314K followers built. 50M+ monthly views. RECALL is the proof. Cypress, CA based.',
   },
   '/webdev': {
-    title: 'Web Development | Michael Morrison',
-    description: 'Custom websites built in 48 hours. React, JavaScript, Tailwind. Self-taught, battle-tested, and always shipping.',
+    title: 'AI Apps for Business | Michael Morrison',
+    description: 'AI-powered web apps for creators and small businesses — clip finders, content tools, workflow automation, niche SaaS. Production-ready in days. RECALL is the proof. You own the code, no lock-in.',
   },
   '/smma': {
     title: 'Social Media Marketing | Michael Morrison',

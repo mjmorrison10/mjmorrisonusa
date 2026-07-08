@@ -5,7 +5,7 @@ import PageTransition from './PageTransition';
 
 const navLinks = [
   { path: '/', label: 'Home' },
-  { path: '/webdev', label: 'Web Dev' },
+  { path: '/webdev', label: 'AI Apps' },
   { path: '/smma', label: 'SMMA' },
   { path: '/flipping', label: 'Flipping' },
   { path: '/contact', label: 'Contact' },

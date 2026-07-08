@@ -4,9 +4,9 @@ import ContactFormMini from '../components/ContactFormMini';
 
 const services = [
   {
-    icon: '💻',
-    title: 'Web Development',
-    description: 'I build websites that make you money while you sleep. Revenue-focused, conversion-optimized, ready in 48 hours.',
+    icon: '🤖',
+    title: 'AI Apps',
+    description: 'I build AI-powered web apps that solve real business problems — clip finders, content tools, workflow automation. Production-ready in days, not months.',
     link: '/webdev',
     color: 'from-blue-600 to-cyan-500',
   },
@@ -196,13 +196,13 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
-              <div className="text-3xl mb-3">💻</div>
-              <h3 className="font-bold text-gray-900 dark:text-white mb-2">Web Development</h3>
+              <div className="text-3xl mb-3">🤖</div>
+              <h3 className="font-bold text-gray-900 dark:text-white mb-2">AI Apps</h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                I build revenue-generating websites for businesses. Fast, conversion-optimized, and built to make you money.
+                AI-powered web apps for creators and small businesses — clip finders, content tools, workflow automation, niche SaaS.
               </p>
               <div className="text-xs font-medium text-blue-600 dark:text-blue-400">
-                Revenue: Project-based ($500-$3,500+)
+                Revenue: Project-based ($2,500-$15,000+) + retainers
               </div>
             </div>
 
@@ -244,9 +244,9 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {/* Web Development Trends */}
+            {/* AI App Trends */}
             <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">💻 Web Development Trends</h3>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">🤖 AI App Trends</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <span className="flex-shrink-0 w-6 h-6 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center text-xs font-bold text-green-600 dark:text-green-400">↑</span>
@@ -307,9 +307,9 @@ export default function Home() {
               <h3 className="text-xl font-bold text-white mb-4">📊 Market Opportunity</h3>
               <div className="grid sm:grid-cols-3 gap-6">
                 <div>
-                  <div className="text-3xl font-bold text-white mb-1">$4.2B</div>
-                  <div className="text-sm text-blue-100">Web Development Market</div>
-                  <div className="text-xs text-blue-200">Growing 8.5% annually</div>
+                  <div className="text-3xl font-bold text-white mb-1">$15.7B</div>
+                  <div className="text-sm text-blue-100">AI Apps & Automation Market</div>
+                  <div className="text-xs text-blue-200">Growing 26% annually</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-white mb-1">$15.4B</div>
