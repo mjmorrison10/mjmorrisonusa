@@ -7,6 +7,7 @@ import WebDev from './pages/WebDev';
 import SMMA from './pages/SMMA';
 import Flipping from './pages/Flipping';
 import Recall from './pages/Recall';
+import Blast from './pages/Blast';
 import Contact from './pages/Contact';
 import Admin from './pages/Admin';
 import NotFound from './pages/NotFound';
@@ -23,6 +24,7 @@ function App() {
             <Route path="/smma" element={<SMMA />} />
             <Route path="/flipping" element={<Flipping />} />
             <Route path="/recall" element={<Recall />} />
+            <Route path="/blast" element={<Blast />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="*" element={<NotFound />} />

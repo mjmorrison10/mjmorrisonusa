@@ -6,7 +6,7 @@ const services = [
   {
     icon: '🤖',
     title: 'AI Apps',
-    description: 'I build AI-powered web apps that solve real business problems — clip finders, content tools, workflow automation. Production-ready in days, not months.',
+    description: 'I build AI-powered web apps for coaches, podcasters, and creators in the personal-development space — clip finders, content tools, workflow automation. Production-ready in days, not months.',
     link: '/webdev',
     color: 'from-blue-600 to-cyan-500',
   },
@@ -85,7 +85,7 @@ export default function Home() {
               🔄 <strong>For flippers:</strong> I buy your inventory for cash
             </span>
             <span className="px-4 py-2 bg-purple-50 dark:bg-purple-900/20 rounded-full text-sm text-purple-700 dark:text-purple-300">
-              📱 <strong>For creators:</strong> I grow your audience
+              📱 <strong>For coaches &amp; creators:</strong> AI tools + audience growth
             </span>
           </div>
 
@@ -232,7 +232,7 @@ export default function Home() {
               <div className="text-3xl mb-3">🤖</div>
               <h3 className="font-bold text-gray-900 dark:text-white mb-2">AI Apps</h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                AI-powered web apps for creators and small businesses — clip finders, content tools, workflow automation, niche SaaS.
+                AI-powered web apps for coaches, podcasters, and creators in the personal-development space — clip finders, content tools, workflow automation, niche SaaS.
               </p>
               <div className="text-xs font-medium text-blue-600 dark:text-blue-400">
                 Revenue: Project-based ($2,500-$15,000+) + retainers

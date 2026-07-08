@@ -69,7 +69,7 @@ export default function Recall() {
             </p>
 
             <p className="text-base text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8">
-              Built for short-form creators who consume 10+ hours of long-form content a week and want every great moment to actually be usable — not forgotten.
+              Built for podcasters, coaches, and personal-development creators who consume 10+ hours of long-form content a week and want every great moment to actually be usable — not forgotten.
             </p>
           </div>
 

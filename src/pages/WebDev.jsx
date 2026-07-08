@@ -91,7 +91,7 @@ const whatIBuild = [
   {
     icon: '🎯',
     title: 'Niche-specific apps',
-    body: 'Apps built for a particular industry or workflow that general tools don\'t serve well. I pick use cases from creator + SMB pain points and ship working tools.',
+    body: 'Apps built for a particular industry or workflow that general tools don\'t serve well. I pick use cases from creator and personal-development-brand pain points and ship working tools.',
   },
   {
     icon: '🔁',
@@ -140,7 +140,7 @@ const pricingTiers = [
       'AI transcript search for your content library',
       'AI-powered clip finder for long-form video',
       'Auto-tagging or categorization tool',
-      'Lead-enrichment or scoring AI',
+      'Client-onboarding AI assistant for coaching programs',
     ],
     timeline: '~1 week',
     popular: false,
@@ -155,7 +155,7 @@ const pricingTiers = [
     examples: [
       'RECALL-style clip-memory tool',
       'Custom AI dashboard for your business',
-      'Internal tool that replaces a SaaS subscription',
+      'Membership/community platform for a coaching brand',
       'Client-facing AI feature for your customers',
     ],
     timeline: '2-4 weeks',
@@ -252,7 +252,7 @@ export default function WebDev() {
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-8">
-            I build AI-powered web apps for creators and small businesses — clip finders, content tools, workflow automation, niche SaaS. Production-ready in days, not months. You own the code. No lock-in.
+            I build AI-powered web apps for coaches, podcasters, and creators in the personal-development space — clip finders, content tools, workflow automation, niche SaaS. Production-ready in days, not months. You own the code. No lock-in.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a
