@@ -19,7 +19,7 @@ const products = [
     name: 'HOOKLAB',
     icon: '🎯',
     jtbd: 'Underwrites the open. Evidence-based hook selection — proof, not vibes.',
-    status: 'Early access',
+    status: 'Free tool',
     link: '/hooklab',
     gradient: 'from-purple-600 to-violet-500',
     border: 'border-purple-200 dark:border-purple-800 hover:border-purple-400 dark:hover:border-purple-600',
@@ -41,7 +41,9 @@ const products = [
 
 // The stack shown as a connected 3-card row. `compact` drops the section
 // header so the component can be embedded inside a page that already has one.
-export default function ProductStack({ heading = 'The Creator Ops Stack', compact = false }) {
+// `recallLink` lets a page deep-link the RECALL card (Home sends visitors
+// straight to the live demo; catalog pages keep the page top).
+export default function ProductStack({ heading = 'The Creator Ops Stack', compact = false, recallLink = '/recall' }) {
   return (
     <section className={compact ? '' : 'py-16 bg-gray-50 dark:bg-gray-950'}>
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,7 +62,7 @@ export default function ProductStack({ heading = 'The Creator Ops Stack', compac
           {products.map((product, i) => (
             <div key={product.name} className="flex items-center gap-4 md:flex-1">
               <Link
-                to={product.link}
+                to={product.name === 'RECALL' ? recallLink : product.link}
                 className={`group flex-1 h-full bg-white dark:bg-gray-900 rounded-2xl p-6 border ${product.border} transition-all duration-300 hover:shadow-xl hover:-translate-y-1`}
               >
                 <div className="flex items-center justify-between mb-3">

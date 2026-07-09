@@ -256,18 +256,18 @@ export default function WebDev() {
             I build AI-powered web apps for coaches, podcasters, and creators in the personal-development space — clip finders, content tools, workflow automation, niche SaaS. Production-ready in days, not months. You own the code. No lock-in.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors shadow-lg shadow-blue-600/25"
             >
               Tell me what app would change your business →
-            </a>
-            <a
-              href="#portfolio"
+            </Link>
+            <button
+              onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
               className="px-6 py-3 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-900 dark:text-white rounded-lg font-semibold transition-colors border border-gray-200 dark:border-gray-700"
             >
               See what I've built ↓
-            </a>
+            </button>
           </div>
         </div>
       </section>
@@ -297,7 +297,7 @@ export default function WebDev() {
       </section>
 
       {/* Portfolio */}
-      <section id="portfolio" className="py-20 bg-gray-50 dark:bg-gray-950">
+      <section id="portfolio" className="py-20 bg-gray-50 dark:bg-gray-950 scroll-mt-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -372,9 +372,9 @@ export default function WebDev() {
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-5">
               Book a free 30-minute call. I listen to what you're trying to do, tell you honestly whether an AI app would help, and give you a rough cost estimate. No commitment, no pitch.
             </p>
-            <a href="#contact" className="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors shadow-lg shadow-blue-600/25">
+            <Link to="/contact" className="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors shadow-lg shadow-blue-600/25">
               Book Free Audit →
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -428,8 +428,8 @@ export default function WebDev() {
                   <div>⏱️ Timeline: {tier.timeline}</div>
                   <div>💳 {tier.payment}</div>
                 </div>
-                <a
-                  href="#contact"
+                <Link
+                  to="/contact"
                   className={`block text-center px-5 py-3 rounded-lg font-semibold transition-colors ${
                     tier.popular
                       ? 'bg-blue-600 hover:bg-blue-700 text-white'
@@ -437,7 +437,7 @@ export default function WebDev() {
                   }`}
                 >
                   {tier.cta}
-                </a>
+                </Link>
               </div>
             ))}
           </div>

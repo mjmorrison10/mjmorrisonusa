@@ -1,12 +1,15 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import EmailCapture from '../components/EmailCapture';
 import ProductStack from '../components/ProductStack';
+
+const LIVE_URL = 'https://mjmorrison10.github.io/Hooklabs/';
 
 const proof = [
   { value: '~95', label: 'hook structures in the bank' },
   { value: 'Offline', label: 'works with no API key' },
   { value: 'Your ledger', label: 'winners tracked on your device' },
-  { value: 'Early access', label: 'waitlist open now' },
+  { value: 'Free', label: 'live right now — no signup' },
 ];
 
 const benefits = [
@@ -43,15 +46,17 @@ const benefits = [
 ];
 
 export default function Hooklab() {
+  const [iframeLoaded, setIframeLoaded] = useState(false);
+
   return (
     <div className="relative">
-      {/* HERO — value prop + waitlist form above the fold */}
+      {/* HERO — value prop + live CTAs above the fold */}
       <section className="relative pt-16 pb-12 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-white to-violet-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950" />
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-xs font-bold mb-5">
-              🛠️ EARLY ACCESS · BUILT BY MICHAEL MORRISON
+              🎯 FREE TOOL · LIVE · BUILT BY MICHAEL MORRISON
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-5 leading-[1.05]">
@@ -71,22 +76,85 @@ export default function Hooklab() {
               {' '}and{' '}
               <Link to="/blast" className="text-purple-600 dark:text-purple-400 hover:underline font-medium">BLAST</Link>: RECALL finds it, HOOKLAB underwrites the open, BLAST gets it out the door.
             </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href={LIVE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white rounded-xl font-bold text-lg transition-all shadow-lg shadow-purple-500/25"
+              >
+                Open HOOKLAB — Free →
+              </a>
+              <button
+                onClick={() => document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })}
+                className="px-8 py-4 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-900 dark:text-white rounded-xl font-semibold transition-all border border-gray-200 dark:border-gray-700"
+              >
+                or try it right here ↓
+              </button>
+            </div>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
+              No signup, no card. Your ledger stays in your browser.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* LIVE DEMO */}
+      <section id="demo" className="py-12 bg-gray-50 dark:bg-gray-950 scroll-mt-24">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <div className="text-purple-600 dark:text-purple-400 text-xs font-bold uppercase tracking-wider mb-1">Live</div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-3">
+              Try it right here
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              HOOKLAB running live. Describe your video, underwrite the hooks, log your outcomes. Everything stays in this browser.
+            </p>
           </div>
 
-          {/* Waitlist form, prominent above the fold */}
-          <div className="max-w-xl mx-auto bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-6 sm:p-8 shadow-2xl shadow-purple-500/10 border border-gray-700">
-            <div className="text-center mb-5">
-              <div className="text-purple-400 text-xs font-bold uppercase tracking-wider mb-1">Early Access</div>
-              <h2 className="text-white text-2xl font-bold mb-1">Get early access</h2>
-              <p className="text-white/70 text-sm">Drop your email. I'll reach out personally when HOOKLAB early access opens.</p>
+          <div className="relative bg-gradient-to-br from-purple-600 to-violet-600 rounded-2xl p-1 shadow-2xl shadow-purple-500/20">
+            <div className="bg-white dark:bg-gray-900 rounded-xl overflow-hidden">
+              {/* Browser chrome */}
+              <div className="flex items-center gap-2 px-4 py-3 bg-gray-100 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+                <div className="flex gap-1.5">
+                  <div className="w-3 h-3 rounded-full bg-red-400" />
+                  <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                  <div className="w-3 h-3 rounded-full bg-green-400" />
+                </div>
+                <div className="flex-1 bg-white dark:bg-gray-700 rounded px-3 py-1 text-xs text-gray-600 dark:text-gray-300 truncate font-mono">
+                  {LIVE_URL}
+                </div>
+                <a
+                  href={LIVE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-purple-600 dark:text-purple-400 hover:underline"
+                >
+                  Open fullscreen ↗
+                </a>
+              </div>
+
+              {/* Iframe */}
+              <div className="relative bg-gray-50 dark:bg-gray-900" style={{ paddingBottom: '70%' }}>
+                {!iframeLoaded && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="inline-block w-8 h-8 border-4 border-purple-500 border-t-transparent rounded-full animate-spin mb-3" />
+                      <div className="text-sm text-gray-500 dark:text-gray-400">Loading HOOKLAB…</div>
+                    </div>
+                  </div>
+                )}
+                <iframe
+                  src={LIVE_URL}
+                  title="HOOKLAB — Live Demo"
+                  onLoad={() => setIframeLoaded(true)}
+                  className="absolute inset-0 w-full h-full border-0"
+                  loading="lazy"
+                  sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-downloads"
+                />
+              </div>
             </div>
-            <EmailCapture
-              source="hooklab-hero"
-              buttonLabel="Get early access →"
-              successTitle="You're on the list."
-              successBody="I'll email you personally when HOOKLAB early access opens. Meanwhile, RECALL is free — start building your library."
-              accent="purple"
-            />
           </div>
         </div>
       </section>
@@ -158,35 +226,44 @@ export default function Hooklab() {
         </div>
       </section>
 
-      {/* CLOSING CTA — second waitlist capture */}
+      {/* CLOSING — open the tool + soft updates capture */}
       <section className="py-20 bg-gradient-to-br from-purple-600 via-violet-600 to-fuchsia-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Know the odds before you post.
             </h2>
-            <p className="text-white/90 max-w-2xl mx-auto text-lg mb-2">
-              HOOKLAB is opening early access. Join the list and I'll personally reach out when it's ready to test.
+            <p className="text-white/90 max-w-2xl mx-auto text-lg mb-6">
+              HOOKLAB is free and live right now — no signup, no card, your data stays on your device.
             </p>
-            <p className="text-white/70 text-sm">
-              No spam, no filler emails — just a heads-up when it's ready.
-            </p>
+            <a
+              href={LIVE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-4 bg-white text-purple-700 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors"
+            >
+              Open HOOKLAB — Free →
+            </a>
           </div>
 
           <div className="max-w-xl mx-auto bg-black/20 backdrop-blur rounded-2xl p-6 sm:p-8 border border-white/10">
+            <div className="text-center mb-4">
+              <h3 className="text-white text-lg font-bold mb-1">Want updates when new patterns drop?</h3>
+              <p className="text-white/70 text-sm">Occasional emails when the pattern bank grows or new stack features ship. No spam.</p>
+            </div>
             <EmailCapture
-              source="hooklab-closing"
-              buttonLabel="Get early access →"
-              successTitle="You're on the list."
-              successBody="I'll email you personally when HOOKLAB early access opens."
+              source="hooklab-updates"
+              buttonLabel="Get updates →"
+              successTitle="You're in."
+              successBody="I'll email you when new patterns or features land. Meanwhile — HOOKLAB is live, go underwrite something."
               accent="purple"
             />
           </div>
 
           <p className="text-center text-white/70 text-xs mt-6">
-            Want the free one first?{' '}
+            Want the clip-finder too?{' '}
             <Link to="/recall" className="underline font-semibold">
-              RECALL is live today
+              RECALL is free as well
             </Link>
             .
           </p>

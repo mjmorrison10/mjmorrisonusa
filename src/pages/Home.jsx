@@ -50,7 +50,7 @@ export default function Home() {
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232563eb' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
         }} />
 
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 text-center">
           {/* Profile Picture */}
           <div className="mb-8">
             <img loading="lazy"
@@ -111,7 +111,7 @@ export default function Home() {
           {/* Capacity note */}
           <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 bg-blue-50 dark:bg-blue-900/20 rounded-full">
             <span className="text-sm text-blue-700 dark:text-blue-300 font-medium">
-              I take on a small, limited number of web projects at a time so every client gets real attention
+              I take on a small, limited number of AI projects at a time so every client gets real attention
             </span>
           </div>
 
@@ -141,7 +141,7 @@ export default function Home() {
       </section>
 
       {/* Creator Ops Stack — the differentiator, front and center */}
-      <ProductStack />
+      <ProductStack recallLink="/recall#demo" />
 
       {/* Services Section */}
       <section
@@ -191,7 +191,7 @@ export default function Home() {
       {/* Start Here — Free 30-minute AI audit */}
       <section className="py-14 bg-gradient-to-br from-blue-50 via-white to-cyan-50 dark:from-blue-950/40 dark:via-gray-950 dark:to-cyan-950/40">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white dark:bg-gray-900 rounded-2xl p-6 sm:p-10 border border-blue-200 dark:border-blue-800 shadow-xl text-center relative overflow-hidden">
+          <div className="bg-white dark:bg-gray-900 rounded-2xl p-6 sm:p-10 border border-blue-200 dark:border-blue-800 shadow-xl text-center relative">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-600 text-white text-xs font-bold shadow-lg shadow-blue-600/30">
                 🎯 START HERE

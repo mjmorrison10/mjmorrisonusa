@@ -12,7 +12,7 @@ const pageMeta = {
   },
   '/hooklab': {
     title: 'HOOKLAB — Evidence-Based Hook Underwriting | Michael Morrison',
-    description: 'Not an AI hook generator — a hook underwriting engine. Proven structures, your winners, market comps, ranked by proof. Early access waitlist open.',
+    description: 'Not an AI hook generator — a hook underwriting engine. Proven structures, your winners, market comps, ranked by proof. Free and live now.',
   },
   '/webdev': {
     title: 'AI Apps for Business | Michael Morrison',
