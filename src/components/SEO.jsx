@@ -3,8 +3,16 @@ import { useLocation } from 'react-router-dom';
 
 const pageMeta = {
   '/': {
-    title: 'Michael Morrison | AI Apps & Social Media Growth Strategist',
-    description: 'AI app builder + social media growth strategist. 314K followers built. 50M+ monthly views. RECALL is the proof. Cypress, CA based.',
+    title: 'Michael Morrison | Creator Operations Systems & AI Apps',
+    description: 'Creator operations systems — RECALL finds it, HOOKLAB underwrites the open, BLAST gets it out the door. AI apps for coaches & creators. 314K followers built, 50M+ monthly views. Cypress, CA based.',
+  },
+  '/products': {
+    title: 'The Creator Ops Stack — RECALL · HOOKLAB · BLAST | Michael Morrison',
+    description: 'Creator operations systems — RECALL finds it, HOOKLAB underwrites the open, BLAST gets it out the door. Three products, one pipeline for short-form creators.',
+  },
+  '/hooklab': {
+    title: 'HOOKLAB — Evidence-Based Hook Underwriting | Michael Morrison',
+    description: 'Not an AI hook generator — a hook underwriting engine. Proven structures, your winners, market comps, ranked by proof. Early access waitlist open.',
   },
   '/webdev': {
     title: 'AI Apps for Business | Michael Morrison',
@@ -21,6 +29,10 @@ const pageMeta = {
   '/recall': {
     title: 'RECALL — Free Clip-Memory Tool for Short-Form Creators | Michael Morrison',
     description: 'Never lose a great moment again. Free PWA that turns every podcast and interview you watch into a searchable memory layer. Find any phrase, get every moment across every source with timecodes. Built by a creator who generated 50M+ monthly views.',
+  },
+  '/blast': {
+    title: 'BLAST — Posting Command Center for Creators | Michael Morrison',
+    description: 'Cut once, post everywhere. Captions adapted per platform, posting session tracked across 8 platforms, optional 9:16 reformat in your browser. Waitlist open.',
   },
   '/contact': {
     title: 'Contact Me | Michael Morrison',

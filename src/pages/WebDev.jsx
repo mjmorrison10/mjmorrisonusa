@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import ProjectCard from '../components/ProjectCard';
 import ContactFormMini from '../components/ContactFormMini';
 
@@ -310,6 +311,14 @@ export default function WebDev() {
           <div className="grid lg:grid-cols-2 gap-6 items-start">
             <div className="lg:col-span-2 lg:max-w-2xl lg:mx-auto">
               <ProjectCard project={projects[0]} featured={true} />
+              <p className="text-center text-sm text-gray-500 dark:text-gray-400 mt-4">
+                RECALL is one third of my creator ops stack —{' '}
+                <Link to="/hooklab" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">HOOKLAB</Link>
+                {' '}underwrites the open,{' '}
+                <Link to="/blast" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">BLAST</Link>
+                {' '}gets it out the door.{' '}
+                <Link to="/products" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">See the stack →</Link>
+              </p>
             </div>
             <ProjectCard project={projects[1]} />
             <ProjectCard project={projects[2]} />

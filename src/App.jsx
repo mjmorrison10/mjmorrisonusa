@@ -8,6 +8,8 @@ import SMMA from './pages/SMMA';
 import Flipping from './pages/Flipping';
 import Recall from './pages/Recall';
 import Blast from './pages/Blast';
+import Hooklab from './pages/Hooklab';
+import Products from './pages/Products';
 import Contact from './pages/Contact';
 import Admin from './pages/Admin';
 import NotFound from './pages/NotFound';
@@ -23,8 +25,10 @@ function App() {
             <Route path="/webdev" element={<WebDev />} />
             <Route path="/smma" element={<SMMA />} />
             <Route path="/flipping" element={<Flipping />} />
+            <Route path="/products" element={<Products />} />
             <Route path="/recall" element={<Recall />} />
             <Route path="/blast" element={<Blast />} />
+            <Route path="/hooklab" element={<Hooklab />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="*" element={<NotFound />} />

@@ -115,7 +115,7 @@ export default function SMMA() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 text-xs font-bold mb-4">
-              ⭐ FEATURED PRODUCT · FREE TOOL
+              ⭐ FEATURED — THE CREATOR OPS STACK
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Built this for creators like you.
@@ -162,6 +162,14 @@ export default function SMMA() {
               >
                 Get RECALL — Free →
               </Link>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
+                RECALL is step one.{' '}
+                <Link to="/hooklab" className="text-purple-600 dark:text-purple-400 hover:underline font-medium">HOOKLAB</Link>
+                {' '}underwrites the open ·{' '}
+                <Link to="/blast" className="text-orange-600 dark:text-orange-400 hover:underline font-medium">BLAST</Link>
+                {' '}gets it out the door.{' '}
+                <Link to="/products" className="text-cyan-600 dark:text-cyan-400 hover:underline font-medium">See the stack →</Link>
+              </p>
             </div>
 
             {/* Right: proof card */}

@@ -5,6 +5,7 @@ import PageTransition from './PageTransition';
 
 const navLinks = [
   { path: '/', label: 'Home' },
+  { path: '/products', label: 'Products' },
   { path: '/webdev', label: 'AI Apps' },
   { path: '/smma', label: 'SMMA' },
   { path: '/contact', label: 'Contact' },
@@ -137,7 +138,13 @@ export default function Layout({ children }) {
                 Cypress, CA
               </p>
             </div>
-            <div className="flex items-center gap-4 text-xs text-gray-400 dark:text-gray-500">
+            <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs text-gray-400 dark:text-gray-500">
+              <Link to="/recall" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">RECALL</Link>
+              <span>·</span>
+              <Link to="/hooklab" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">HOOKLAB</Link>
+              <span>·</span>
+              <Link to="/blast" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">BLAST</Link>
+              <span>·</span>
               <Link to="/flipping" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
                 Flipping & Liquidation
               </Link>
