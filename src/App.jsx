@@ -1,6 +1,7 @@
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import Layout from './components/Layout';
+import ScrollToTop from './components/ScrollToTop';
 import SEO from './components/SEO';
 import Home from './pages/Home';
 import WebDev from './pages/WebDev';
@@ -18,6 +19,7 @@ function App() {
   return (
     <ThemeProvider>
       <Router>
+        <ScrollToTop />
         <SEO />
         <Layout>
           <Routes>

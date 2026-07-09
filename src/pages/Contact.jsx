@@ -52,7 +52,7 @@ export default function Contact() {
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               Let's Build Something
-              <span className="block bg-gradient-to-r from-blue-600 to-purple-500 bg-clip-text text-transparent">
+              <span className="block pb-2 bg-gradient-to-r from-blue-600 to-purple-500 bg-clip-text text-transparent">
                 Together
               </span>
             </h1>

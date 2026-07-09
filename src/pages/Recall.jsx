@@ -103,7 +103,7 @@ export default function Recall() {
       </section>
 
       {/* LIVE DEMO */}
-      <section id="demo" className="py-12 bg-gray-50 dark:bg-gray-950">
+      <section id="demo" className="py-12 bg-gray-50 dark:bg-gray-950 scroll-mt-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <div className="text-cyan-600 dark:text-cyan-400 text-xs font-bold uppercase tracking-wider mb-1">Step 2</div>
