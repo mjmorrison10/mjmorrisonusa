@@ -68,17 +68,17 @@ export default function Products() {
       <section className="py-20 bg-gradient-to-br from-cyan-600 via-purple-600 to-orange-600">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Start with the free one.
+            Start with the free ones.
           </h2>
           <p className="text-white/90 max-w-xl mx-auto mb-8 text-lg">
-            RECALL is free and ready today. HOOKLAB and BLAST are opening access now — grab your spot.
+            RECALL and HOOKLAB are free today. BLAST is opening access now — grab your spot.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link to="/recall" className="px-6 py-3 bg-white text-gray-900 rounded-xl font-bold hover:bg-gray-100 transition-colors">
               Get RECALL — Free →
             </Link>
             <Link to="/hooklab" className="px-6 py-3 bg-black/20 backdrop-blur text-white rounded-xl font-bold border border-white/20 hover:bg-black/30 transition-colors">
-              HOOKLAB early access
+              HOOKLAB — Free
             </Link>
             <Link to="/blast" className="px-6 py-3 bg-black/20 backdrop-blur text-white rounded-xl font-bold border border-white/20 hover:bg-black/30 transition-colors">
               BLAST waitlist
