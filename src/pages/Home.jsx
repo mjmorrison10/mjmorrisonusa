@@ -7,7 +7,7 @@ const services = [
   {
     icon: '🧰',
     title: 'Creator Ops Stack',
-    description: 'Three products, one pipeline. RECALL finds it, HOOKLAB underwrites the open, BLAST gets it out the door.',
+    description: 'Four products, one pipeline. RECALL finds it, HOOKLAB underwrites the open, BLAST gets it out the door, PULSE closes the loop.',
     link: '/products',
     color: 'from-cyan-600 to-purple-600',
   },
@@ -78,12 +78,12 @@ export default function Home() {
           </p>
 
           <p className="text-base sm:text-lg font-semibold text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mb-8">
-            RECALL finds it. HOOKLAB underwrites the open. BLAST gets it out the door.
+            RECALL finds it. HOOKLAB underwrites the open. BLAST gets it out the door. PULSE closes the loop.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-10">
             <span className="px-4 py-2 bg-cyan-50 dark:bg-cyan-900/20 rounded-full text-sm text-cyan-700 dark:text-cyan-300">
-              🎬 <strong>For creators:</strong> the ops stack — RECALL · HOOKLAB · BLAST
+              🎬 <strong>For creators:</strong> the ops stack — RECALL · HOOKLAB · BLAST · PULSE
             </span>
             <span className="px-4 py-2 bg-blue-50 dark:bg-blue-900/20 rounded-full text-sm text-blue-700 dark:text-blue-300">
               💻 <strong>For businesses:</strong> AI apps that pay for themselves

@@ -4,15 +4,15 @@ import { useLocation } from 'react-router-dom';
 const pageMeta = {
   '/': {
     title: 'Michael Morrison | Creator Operations Systems & AI Apps',
-    description: 'Creator operations systems — RECALL finds it, HOOKLAB underwrites the open, BLAST gets it out the door. AI apps for coaches & creators. 314K followers built, 50M+ monthly views. Cypress, CA based.',
+    description: 'Creator operations systems — RECALL finds it, HOOKLAB underwrites the open, BLAST gets it out the door, PULSE closes the loop. AI apps for coaches & creators. 314K followers built, 50M+ monthly views. Cypress, CA based.',
   },
   '/products': {
-    title: 'The Creator Ops Stack — RECALL · HOOKLAB · BLAST | Michael Morrison',
-    description: 'Creator operations systems — RECALL finds it, HOOKLAB underwrites the open, BLAST gets it out the door. Three products, one pipeline for short-form creators.',
+    title: 'The Creator Ops Stack — RECALL · HOOKLAB · BLAST · PULSE | Michael Morrison',
+    description: 'Creator operations systems — RECALL finds it, HOOKLAB underwrites the open, BLAST gets it out the door, PULSE closes the loop. Four products, one pipeline for short-form creators.',
   },
   '/workflow': {
-    title: 'The Creator Workflow — RECALL → HOOKLAB → BLAST | Michael Morrison',
-    description: 'The exact step-by-step loop for turning a long-form podcast into short-form clips: export the audio, mine hooks in RECALL, underwrite the open in HOOKLAB, ship everywhere with BLAST — then feed winners back so the next pass is smarter.',
+    title: 'The Creator Workflow — RECALL → HOOKLAB → BLAST → PULSE | Michael Morrison',
+    description: 'The exact step-by-step loop for turning a long-form podcast into short-form clips: mine hooks in RECALL, underwrite the open in HOOKLAB, ship everywhere with BLAST, track view velocity in PULSE — then feed winners back so the next pass is smarter.',
   },
   '/hooklab': {
     title: 'HOOKLAB — Evidence-Based Hook Underwriting | Michael Morrison',

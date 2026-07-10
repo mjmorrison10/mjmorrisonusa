@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-// The three products, in pipeline order. Accent colors match each product's
+// The four products, in pipeline order. Accent colors match each product's
 // own brand (RECALL cyan, HOOKLAB purple #7C5CFF, BLAST orange). Links point to
 // the internal portfolio pages, never external product URLs.
 const products = [
@@ -50,7 +50,7 @@ const products = [
   },
 ];
 
-// The stack shown as a connected 3-card row. `compact` drops the section
+// The stack shown as a connected 4-card row. `compact` drops the section
 // header so the component can be embedded inside a page that already has one.
 // `recallLink` lets a page deep-link the RECALL card (Home sends visitors
 // straight to the live demo; catalog pages keep the page top).
