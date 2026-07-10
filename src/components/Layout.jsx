@@ -148,6 +148,8 @@ export default function Layout({ children }) {
               <span>·</span>
               <Link to="/blast" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">BLAST</Link>
               <span>·</span>
+              <Link to="/pulse" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">PULSE</Link>
+              <span>·</span>
               <Link to="/flipping" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
                 Flipping & Liquidation
               </Link>
