@@ -61,7 +61,7 @@ export default function EmailCapture({
   return (
     <form onSubmit={handleSubmit} className="max-w-lg mx-auto space-y-3">
       <input type="hidden" name="source" value={source} />
-      <input type="hidden" name="_subject" value={`RECALL signup — ${source}`} />
+      <input type="hidden" name="_subject" value={`Creator stack signup — ${source}`} />
       <div className="grid sm:grid-cols-2 gap-3">
         <input
           type="text"

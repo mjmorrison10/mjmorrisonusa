@@ -1,7 +1,8 @@
 import { useState } from 'react';
 
-// Formspree endpoint — replace YOUR_FORM_ID with the real form ID after
-// creating a free form at https://formspree.io tied to michael@mjmorrisonusa.com
+// Formspree endpoint (live), tied to michael@mjmorrisonusa.com. Shared across
+// the contact + email-capture forms. See LAUNCH.md to split funnels / pipe to
+// an ESP.
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xeebpvej';
 
 export default function ContactFormMini({ service = '' }) {

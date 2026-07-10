@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import ProductStack from '../components/ProductStack';
+import EmailCapture from '../components/EmailCapture';
 
 // PULSE is temporarily hosted inside the blast repo (see blast/pulse). Flip
 // this back to /pulse/ once it moves to its own repo.
@@ -121,6 +122,20 @@ export default function Pulse() {
             <Link to="/workflow" className="px-6 py-3 bg-black/20 backdrop-blur text-white rounded-xl font-bold border border-white/20 hover:bg-black/30 transition-colors">
               See the full workflow
             </Link>
+          </div>
+
+          <div className="max-w-xl mx-auto mt-12 bg-black/20 backdrop-blur rounded-2xl p-6 sm:p-8 border border-white/10">
+            <div className="text-center mb-4">
+              <h3 className="text-white text-lg font-bold mb-1">Get the stack + the weekly rebuild numbers</h3>
+              <p className="text-white/70 text-sm">I'm rebuilding my own audience from zero using these tools, and sending the real analytics each week. Grab the stack and follow along.</p>
+            </div>
+            <EmailCapture
+              source="pulse-cta"
+              buttonLabel="Send me the stack →"
+              successTitle="You're in."
+              successBody="Check your inbox. PULSE is live, and the weekly numbers are coming."
+              accent="purple"
+            />
           </div>
         </div>
       </section>
