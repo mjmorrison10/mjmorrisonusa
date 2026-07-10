@@ -12,16 +12,16 @@ export default function Products() {
             🧰 THE CREATOR OPS STACK
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-5 leading-[1.05]">
-            Three tools.{' '}
+            Four tools.{' '}
             <span className="bg-gradient-to-r from-cyan-600 via-purple-600 to-orange-600 bg-clip-text text-transparent">
               One pipeline.
             </span>
           </h1>
           <p className="text-xl text-gray-700 dark:text-gray-300 mb-4 max-w-2xl mx-auto leading-relaxed">
-            RECALL finds it. HOOKLAB underwrites the open. BLAST gets it out the door.
+            RECALL finds it. HOOKLAB underwrites the open. BLAST gets it out the door. PULSE closes the loop.
           </p>
           <p className="text-base text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Short-form creators lose leverage in three places: they can't find the moment they know they saw, they guess at the opening line, and they drown re-posting the same clip across every platform. Each product kills one of those failure modes.
+            Short-form creators lose leverage in four places: they can't find the moment they know they saw, they guess at the opening line, they drown re-posting the same clip across every platform, and they never learn which posts actually worked. Each product kills one of those failure modes.
           </p>
         </div>
       </section>
@@ -35,7 +35,7 @@ export default function Products() {
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">How they chain</h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              One workflow, start to finish — not three disconnected apps.
+              One workflow, start to finish — not four disconnected apps.
             </p>
           </div>
           <div className="space-y-4">
@@ -57,8 +57,39 @@ export default function Products() {
               <div className="text-2xl">⚡</div>
               <div>
                 <h3 className="font-bold text-gray-900 dark:text-white mb-1">3. BLAST gets it out the door</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Write the caption once, adapt it per platform, and track exactly where the clip has — and hasn't — gone across 8 platforms.</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Write the caption once, adapt it per platform, and track exactly where the clip has — and hasn't — gone across 9 platforms.</p>
               </div>
+            </div>
+            <div className="flex items-start gap-4 bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+              <div className="text-2xl">📈</div>
+              <div>
+                <h3 className="font-bold text-gray-900 dark:text-white mb-1">4. PULSE closes the loop</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Track each post's first hours — 1h, 2h, 6h checkpoints with YouTube stats pulled automatically — and log the winners back to your HOOKLAB ledger, so the next clip starts smarter instead of from scratch.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* One suite, shared */}
+      <section className="py-16 bg-gray-50 dark:bg-gray-950">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">One suite, not four silos</h2>
+            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              The four apps run in your browser and share the same device, so they behave like one system.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-4">
+            <div className="bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+              <div className="text-2xl mb-3">🔑</div>
+              <h3 className="font-bold text-gray-900 dark:text-white mb-1">One key, all four apps</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Enter your API key in any one app and the others pick it up automatically. No copying it into four settings screens.</p>
+            </div>
+            <div className="bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+              <div className="text-2xl mb-3">💾</div>
+              <h3 className="font-bold text-gray-900 dark:text-white mb-1">One file backs up everything</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400">One export saves the whole stack, including your RECALL clip library, in a single file. Import it on a new device and all four apps come back exactly as they were.</p>
             </div>
           </div>
         </div>
@@ -71,14 +102,17 @@ export default function Products() {
             Start with the free ones.
           </h2>
           <p className="text-white/90 max-w-xl mx-auto mb-8 text-lg">
-            RECALL and HOOKLAB are free today. BLAST is opening access now — grab your spot.
+            RECALL, HOOKLAB, and PULSE are free today. BLAST is opening access now — grab your spot.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3">
             <Link to="/recall" className="px-6 py-3 bg-white text-gray-900 rounded-xl font-bold hover:bg-gray-100 transition-colors">
               Get RECALL — Free →
             </Link>
             <Link to="/hooklab" className="px-6 py-3 bg-black/20 backdrop-blur text-white rounded-xl font-bold border border-white/20 hover:bg-black/30 transition-colors">
               HOOKLAB — Free
+            </Link>
+            <Link to="/pulse" className="px-6 py-3 bg-black/20 backdrop-blur text-white rounded-xl font-bold border border-white/20 hover:bg-black/30 transition-colors">
+              PULSE — Free
             </Link>
             <Link to="/blast" className="px-6 py-3 bg-black/20 backdrop-blur text-white rounded-xl font-bold border border-white/20 hover:bg-black/30 transition-colors">
               BLAST waitlist

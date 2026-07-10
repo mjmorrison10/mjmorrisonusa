@@ -199,6 +199,9 @@ export default function Workflow() {
             <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
               Every winner you log in HOOKLAB becomes ledger-proof that RECALL reads back on your next Top Clips pass. The more you ship, the more the whole stack ranks by <em>your</em> evidence — not generic patterns.
             </p>
+            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mt-3">
+              And because all four run in the same browser, one API key works across the whole stack, and a single backup file saves everything — RECALL library included — to restore anywhere.
+            </p>
           </div>
         </div>
       </section>
