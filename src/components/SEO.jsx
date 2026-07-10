@@ -10,6 +10,10 @@ const pageMeta = {
     title: 'The Creator Ops Stack — RECALL · HOOKLAB · BLAST | Michael Morrison',
     description: 'Creator operations systems — RECALL finds it, HOOKLAB underwrites the open, BLAST gets it out the door. Three products, one pipeline for short-form creators.',
   },
+  '/workflow': {
+    title: 'The Creator Workflow — RECALL → HOOKLAB → BLAST | Michael Morrison',
+    description: 'The exact step-by-step loop for turning a long-form podcast into short-form clips: export the audio, mine hooks in RECALL, underwrite the open in HOOKLAB, ship everywhere with BLAST — then feed winners back so the next pass is smarter.',
+  },
   '/hooklab': {
     title: 'HOOKLAB — Evidence-Based Hook Underwriting | Michael Morrison',
     description: 'Not an AI hook generator — a hook underwriting engine. Proven structures, your winners, market comps, ranked by proof. Free and live now.',

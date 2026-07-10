@@ -11,6 +11,7 @@ import Recall from './pages/Recall';
 import Blast from './pages/Blast';
 import Hooklab from './pages/Hooklab';
 import Products from './pages/Products';
+import Workflow from './pages/Workflow';
 import Contact from './pages/Contact';
 import Admin from './pages/Admin';
 import NotFound from './pages/NotFound';
@@ -28,6 +29,7 @@ function App() {
             <Route path="/smma" element={<SMMA />} />
             <Route path="/flipping" element={<Flipping />} />
             <Route path="/products" element={<Products />} />
+            <Route path="/workflow" element={<Workflow />} />
             <Route path="/recall" element={<Recall />} />
             <Route path="/blast" element={<Blast />} />
             <Route path="/hooklab" element={<Hooklab />} />
