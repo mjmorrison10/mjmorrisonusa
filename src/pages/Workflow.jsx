@@ -5,7 +5,7 @@ import ProductStack from '../components/ProductStack';
 // the internal waitlist page instead.
 const RECALL_URL = 'https://mjmorrison10.github.io/recall/';
 const HOOKLAB_URL = 'https://mjmorrison10.github.io/Hooklabs/';
-const PULSE_URL = 'https://mjmorrison10.github.io/pulse/';
+const PULSE_URL = 'https://mjmorrison10.github.io/blast/pulse/';
 
 // The end-to-end workflow, grounded in the real editing loop: download a
 // podcast, export audio, transcribe, mine hooks, underwrite the open, ship,
