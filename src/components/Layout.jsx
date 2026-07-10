@@ -6,6 +6,7 @@ import PageTransition from './PageTransition';
 const navLinks = [
   { path: '/', label: 'Home' },
   { path: '/products', label: 'Products' },
+  { path: '/workflow', label: 'Workflow' },
   { path: '/webdev', label: 'AI Apps' },
   { path: '/smma', label: 'SMMA' },
   { path: '/contact', label: 'Contact' },
@@ -139,6 +140,8 @@ export default function Layout({ children }) {
               </p>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs text-gray-400 dark:text-gray-500">
+              <Link to="/workflow" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">Workflow</Link>
+              <span>·</span>
               <Link to="/recall" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">RECALL</Link>
               <span>·</span>
               <Link to="/hooklab" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">HOOKLAB</Link>
