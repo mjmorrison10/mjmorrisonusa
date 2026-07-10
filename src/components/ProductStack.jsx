@@ -29,13 +29,24 @@ const products = [
   {
     name: 'BLAST',
     icon: '⚡',
-    jtbd: 'Gets it out the door. Posting command center across 8 platforms.',
+    jtbd: 'Gets it out the door. Posting command center across 9 platforms.',
     status: 'Waitlist open',
     link: '/blast',
     gradient: 'from-orange-600 to-pink-500',
     border: 'border-orange-200 dark:border-orange-800 hover:border-orange-400 dark:hover:border-orange-600',
     chip: 'bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300',
     cta: 'text-orange-600 dark:text-orange-400',
+  },
+  {
+    name: 'PULSE',
+    icon: '📈',
+    jtbd: 'Closes the loop. Tracks each clip\'s view velocity and logs the winners back to HOOKLAB.',
+    status: 'New',
+    link: '/pulse',
+    gradient: 'from-pink-600 to-rose-500',
+    border: 'border-pink-200 dark:border-pink-800 hover:border-pink-400 dark:hover:border-pink-600',
+    chip: 'bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300',
+    cta: 'text-pink-600 dark:text-pink-400',
   },
 ];
 
@@ -53,7 +64,7 @@ export default function ProductStack({ heading = 'The Creator Ops Stack', compac
               {heading}
             </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
-              Creator operations systems — RECALL finds it, HOOKLAB underwrites the open, BLAST gets it out the door.
+              Creator operations systems — RECALL finds it, HOOKLAB underwrites the open, BLAST gets it out the door, PULSE closes the loop.
             </p>
           </div>
         )}

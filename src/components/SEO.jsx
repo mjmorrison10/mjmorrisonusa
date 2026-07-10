@@ -36,7 +36,11 @@ const pageMeta = {
   },
   '/blast': {
     title: 'BLAST — Posting Command Center for Creators | Michael Morrison',
-    description: 'Cut once, post everywhere. Captions adapted per platform, posting session tracked across 8 platforms, optional 9:16 reformat in your browser. Waitlist open.',
+    description: 'Cut once, post everywhere. Captions adapted per platform, posting session tracked across 9 platforms, optional 9:16 reformat in your browser. Waitlist open.',
+  },
+  '/pulse': {
+    title: 'PULSE — Clip Analytics That Close the Loop | Michael Morrison',
+    description: 'The end of the manual Excel sheet. PULSE tracks each clip\'s view velocity at 1h/2h/6h, pulls YouTube stats automatically, and logs winners straight back to your HOOKLAB ledger. Free and browser-based.',
   },
   '/contact': {
     title: 'Contact Me | Michael Morrison',

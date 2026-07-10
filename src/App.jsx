@@ -9,6 +9,7 @@ import SMMA from './pages/SMMA';
 import Flipping from './pages/Flipping';
 import Recall from './pages/Recall';
 import Blast from './pages/Blast';
+import Pulse from './pages/Pulse';
 import Hooklab from './pages/Hooklab';
 import Products from './pages/Products';
 import Workflow from './pages/Workflow';
@@ -32,6 +33,7 @@ function App() {
             <Route path="/workflow" element={<Workflow />} />
             <Route path="/recall" element={<Recall />} />
             <Route path="/blast" element={<Blast />} />
+            <Route path="/pulse" element={<Pulse />} />
             <Route path="/hooklab" element={<Hooklab />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/admin" element={<Admin />} />

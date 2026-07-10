@@ -5,6 +5,7 @@ import ProductStack from '../components/ProductStack';
 // the internal waitlist page instead.
 const RECALL_URL = 'https://mjmorrison10.github.io/recall/';
 const HOOKLAB_URL = 'https://mjmorrison10.github.io/Hooklabs/';
+const PULSE_URL = 'https://mjmorrison10.github.io/pulse/';
 
 // The end-to-end workflow, grounded in the real editing loop: download a
 // podcast, export audio, transcribe, mine hooks, underwrite the open, ship,
@@ -88,6 +89,25 @@ const phases = [
       },
     ],
   },
+  {
+    key: 'pulse',
+    label: 'PULSE — close the loop',
+    tool: { name: 'PULSE', href: PULSE_URL, cta: 'Open PULSE ↗' },
+    badge: 'bg-pink-100 dark:bg-pink-900/40 text-pink-700 dark:text-pink-300',
+    ring: 'border-pink-200 dark:border-pink-800',
+    steps: [
+      {
+        icon: '📈',
+        title: 'Track the velocity, not just the total',
+        body: 'PULSE imports what you posted from BLAST and checks in at 1h, 2h, and 6h. YouTube updates itself; everything else is a two-second manual log. The slope in the first two hours is the signal.',
+      },
+      {
+        icon: '🔁',
+        title: 'Log the winner back to HOOKLAB',
+        body: 'Mark each clip Winner, Meh, or Dead and PULSE writes it into your HOOKLAB ledger. Now the next scout in RECALL and the next hook you underwrite are backed by what actually worked, not a hunch. The loop is closed.',
+      },
+    ],
+  },
 ];
 
 export default function Workflow() {
@@ -108,7 +128,7 @@ export default function Workflow() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-5 leading-[1.05]">
             One clip, start to finish with{' '}
             <span className="bg-gradient-to-r from-cyan-600 via-purple-600 to-orange-600 bg-clip-text text-transparent">
-              RECALL → HOOKLAB → BLAST
+              RECALL → HOOKLAB → BLAST → PULSE
             </span>
           </h1>
           <p className="text-xl text-gray-700 dark:text-gray-300 mb-4 max-w-2xl mx-auto leading-relaxed">
@@ -129,7 +149,7 @@ export default function Workflow() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">The workflow, step by step</h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Four phases, one continuous loop — not three disconnected apps.
+              Five phases, one continuous loop — not four disconnected apps.
             </p>
           </div>
 
