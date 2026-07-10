@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import ProductStack from '../components/ProductStack';
+import EmailCapture from '../components/EmailCapture';
 
 export default function Products() {
   return (
@@ -117,6 +118,20 @@ export default function Products() {
             <Link to="/blast" className="px-6 py-3 bg-black/20 backdrop-blur text-white rounded-xl font-bold border border-white/20 hover:bg-black/30 transition-colors">
               BLAST waitlist
             </Link>
+          </div>
+
+          <div className="max-w-xl mx-auto mt-12 bg-black/20 backdrop-blur rounded-2xl p-6 sm:p-8 border border-white/10">
+            <div className="text-center mb-4">
+              <h3 className="text-white text-lg font-bold mb-1">Want all four in one email?</h3>
+              <p className="text-white/70 text-sm">I'll send the whole stack plus the weekly numbers from rebuilding my own audience from zero with it. No spam.</p>
+            </div>
+            <EmailCapture
+              source="products-cta"
+              buttonLabel="Send me the stack →"
+              successTitle="You're in."
+              successBody="Check your inbox. All four apps are free and live, and the weekly rebuild numbers are on the way."
+              accent="cyan"
+            />
           </div>
         </div>
       </section>
