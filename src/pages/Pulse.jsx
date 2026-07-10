@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 import ProductStack from '../components/ProductStack';
 
-const LIVE_URL = 'https://mjmorrison10.github.io/pulse/';
+// PULSE is temporarily hosted inside the blast repo (see blast/pulse). Flip
+// this back to /pulse/ once it moves to its own repo.
+const LIVE_URL = 'https://mjmorrison10.github.io/blast/pulse/';
 
 const features = [
   {
