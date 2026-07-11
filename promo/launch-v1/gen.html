@@ -1,0 +1,207 @@
+<meta charset="utf-8">
+<style>
+  :root{
+    --bg:#090B0F; --ink:#F6F8FB; --muted:#9AA7B6; --faint:#5C6672;
+    --recall:#22D3EE; --hooklab:#8B6DFF; --blast:#FB8B3C; --pulse:#E85BB0;
+    --warn:#FF6B57;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{background:#000}
+  .stage{position:relative;overflow:hidden;background:
+      radial-gradient(120% 80% at 50% -10%, rgba(139,109,255,.10), transparent 60%),
+      radial-gradient(90% 60% at 110% 110%, rgba(232,91,176,.10), transparent 55%),
+      var(--bg);
+    color:var(--ink);font-family:'Liberation Sans','DejaVu Sans',sans-serif;
+    display:flex;flex-direction:column}
+  .stage.story{width:1080px;height:1920px;padding:96px 90px}
+  .stage.feed{width:1080px;height:1350px;padding:84px 84px}
+  .mono{font-family:'DejaVu Sans Mono',monospace}
+  .glow{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55;pointer-events:none}
+
+  /* brand stack bar */
+  .stackbar{display:flex;align-items:center;gap:14px;font-family:'DejaVu Sans Mono',monospace;
+    font-size:24px;letter-spacing:.14em;font-weight:bold}
+  .stackbar .lab{color:var(--faint);letter-spacing:.22em;font-size:20px}
+  .pill{padding:7px 16px;border-radius:999px;font-size:22px}
+  .p-recall{color:#062b31;background:var(--recall)} .p-hooklab{color:#120a35;background:var(--hooklab)}
+  .p-blast{color:#2a1403;background:var(--blast)} .p-pulse{color:#2c0a20;background:var(--pulse)}
+
+  h1{font-family:'DejaVu Sans','Liberation Sans',sans-serif;font-weight:bold;line-height:1.02;
+    letter-spacing:-.015em}
+  .kick{font-family:'DejaVu Sans Mono',monospace;letter-spacing:.28em;font-size:26px;color:var(--muted);
+    text-transform:uppercase;font-weight:bold}
+  .sub{color:var(--muted);line-height:1.32;font-weight:400}
+  .hl-cy{color:var(--recall)} .hl-hl{color:var(--hooklab)} .hl-bl{color:var(--blast)}
+  .hl-pu{color:var(--pulse)} .hl-wn{color:var(--warn)}
+  .grad{background:linear-gradient(100deg,var(--recall),var(--hooklab) 40%,var(--blast) 72%,var(--pulse));
+    -webkit-background-clip:text;background-clip:text;color:transparent}
+
+  .headshot{border-radius:50%;object-fit:cover;border:4px solid rgba(255,255,255,.14)}
+  .foot{margin-top:auto;display:flex;flex-direction:column;gap:20px}
+  .footrow{display:flex;align-items:center;justify-content:space-between}
+  .site{font-family:'DejaVu Sans Mono',monospace;font-weight:bold;letter-spacing:.04em}
+  .freetag{font-family:'DejaVu Sans Mono',monospace;font-weight:bold;background:var(--recall);color:#052b31;
+    padding:8px 18px;border-radius:10px;letter-spacing:.1em}
+
+  /* story chrome */
+  .dots{display:flex;gap:10px;margin-bottom:60px}
+  .dot{height:7px;flex:1;border-radius:4px;background:rgba(255,255,255,.16)}
+  .dot.on{background:var(--ink)}
+  .tap{font-family:'DejaVu Sans Mono',monospace;color:var(--muted);font-size:30px;letter-spacing:.06em;
+    display:flex;align-items:center;gap:12px}
+  .sticker{align-self:flex-start;background:var(--ink);color:#0a0c10;font-family:'DejaVu Sans Mono',monospace;
+    font-weight:bold;font-size:34px;letter-spacing:.04em;padding:20px 30px;border-radius:16px;
+    display:inline-flex;align-items:center;gap:14px}
+  .burst{position:absolute;font-family:'DejaVu Sans Mono',monospace;font-weight:bold;color:#052b31;
+    background:var(--recall);border-radius:50%;display:flex;align-items:center;justify-content:center;
+    transform:rotate(-12deg)}
+
+  /* app tiles for solution frame */
+  .tiles{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin:20px 0 8px}
+  .tile{border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.10);position:relative;
+    height:520px;background:#0d1016}
+  .tile img{width:100%;height:100%;object-fit:cover;object-position:top}
+  .tile .tlab{position:absolute;left:0;right:0;bottom:0;padding:16px 20px;font-family:'DejaVu Sans Mono',monospace;
+    font-weight:bold;font-size:30px;letter-spacing:.08em;background:linear-gradient(transparent,rgba(6,8,11,.92))}
+  .collage{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;opacity:.10;
+    filter:blur(7px) grayscale(.35)}
+  .collage img{width:100%;height:100%;object-fit:cover;object-position:top}
+  .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,11,15,.80),rgba(9,11,15,.90))}
+</style>
+<div id="root"></div>
+<script>
+const A = 'assets/';
+// helper builders
+const stackbar = (lab='THE STACK') => `<div class="stackbar"><span class="lab">${lab}</span>
+  <span class="pill p-recall">RECALL</span><span class="pill p-hooklab">HOOKLAB</span>
+  <span class="pill p-blast">BLAST</span><span class="pill p-pulse">PULSE</span></div>`;
+const dots = (n) => `<div class="dots">${[1,2,3,4,5,6].map(i=>`<span class="dot ${i<=n?'on':''}"></span>`).join('')}</div>`;
+
+const FR = {
+  // ============ FEED CARDS (1080x1350) ============
+  'feed-linkedin': {cls:'feed', html:`
+    <div class="glow" style="width:520px;height:520px;background:var(--hooklab);top:-160px;right:-120px"></div>
+    ${stackbar()}
+    <div style="display:flex;align-items:center;gap:26px;margin-top:70px">
+      <img class="headshot" src="${A}headshot.webp" style="width:132px;height:132px">
+      <div class="mono" style="font-size:26px;line-height:1.4"><b>Michael Morrison</b><br>
+        <span style="color:var(--muted)">Creator ops systems · 314K built · 50M+ views</span></div>
+    </div>
+    <h1 style="font-size:104px;margin-top:54px">314K followers.<br>50M monthly views.<br>
+      <span class="hl-wn">Gone in an afternoon.</span></h1>
+    <p class="sub" style="font-size:42px;margin-top:40px">So I rebuilt my whole system as four free apps I actually own.</p>
+    <div class="foot">
+      <div class="footrow"><span class="site" style="font-size:34px">mjmorrisonusa.com</span>
+        <span class="freetag" style="font-size:30px">ALL FREE</span></div>
+    </div>`},
+
+  'feed-facebook': {cls:'feed', html:`
+    <div class="glow" style="width:560px;height:560px;background:var(--warn);top:-200px;left:-160px;opacity:.35"></div>
+    ${stackbar()}
+    <div style="margin-top:110px">
+      <div class="kick">A true story</div>
+      <h1 style="font-size:112px;margin-top:34px">I lost <span class="hl-wn">314,000</span> followers in one afternoon.</h1>
+      <p class="sub" style="font-size:44px;margin-top:44px">No warning. No appeal. Here is what I built next.</p>
+    </div>
+    <div class="foot">
+      <img class="headshot" src="${A}headshot.webp" style="width:96px;height:96px">
+      <div class="footrow"><span class="site" style="font-size:34px">mjmorrisonusa.com</span>
+        <span class="freetag" style="font-size:30px">4 FREE APPS</span></div>
+    </div>`},
+
+  'feed-instagram': {cls:'feed', html:`
+    <div class="collage"><img src="${A}app-recall.png"><img src="${A}app-hooklab.png">
+      <img src="${A}app-blast.png"><img src="${A}app-pulse.png"></div>
+    <div class="scrim"></div>
+    <div class="glow" style="width:620px;height:620px;background:var(--pulse);bottom:-220px;right:-160px"></div>
+    <div style="position:relative">${stackbar()}</div>
+    <div style="position:relative;margin-top:120px">
+      <h1 style="font-size:92px">THE PLATFORM CAN TAKE YOUR AUDIENCE.</h1>
+      <h1 class="grad" style="font-size:110px;margin-top:34px">IT CAN'T TAKE YOUR SYSTEM.</h1>
+    </div>
+    <div class="foot" style="position:relative">
+      <div class="footrow"><span class="site" style="font-size:34px">4 free apps · link in bio</span>
+        <span class="freetag" style="font-size:30px">FREE</span></div>
+    </div>`},
+
+  'feed-threads': {cls:'feed', html:`
+    <div class="glow" style="width:480px;height:480px;background:var(--recall);top:-140px;right:-120px;opacity:.35"></div>
+    ${stackbar()}
+    <div style="margin-top:150px">
+      <h1 style="font-size:118px;line-height:1.05">Four free apps.<br>
+        <span class="hl-cy">Your data stays yours.</span><br>Nobody can switch them off.</h1>
+    </div>
+    <div class="foot">
+      <p class="sub" style="font-size:40px">The workflow that built 314K followers. Now software I own.</p>
+      <div class="footrow"><span class="site" style="font-size:36px">mjmorrisonusa.com</span></div>
+    </div>`},
+
+  // ============ STORY FRAMES (1080x1920) ============
+  'story-1': {cls:'story', html:`
+    ${dots(1)}
+    <div class="glow" style="width:560px;height:560px;background:var(--warn);top:120px;right:-180px;opacity:.4"></div>
+    <div class="kick">The stack · a true story</div>
+    <h1 style="font-size:132px;margin-top:60px">GONE IN ONE <span class="hl-wn">AFTERNOON</span></h1>
+    <p class="sub" style="font-size:50px;margin-top:50px">314K followers erased. No warning. No appeal.</p>
+    <div class="foot">
+      <img class="headshot" src="${A}headshot.webp" style="width:120px;height:120px">
+      <div class="tap">tap to keep watching  ›</div>
+    </div>`},
+
+  'story-2': {cls:'story', html:`
+    ${dots(2)}
+    <div class="glow" style="width:520px;height:520px;background:var(--blast);bottom:200px;left:-180px;opacity:.32"></div>
+    <div class="kick">The pain</div>
+    <h1 style="font-size:126px;margin-top:60px">YOU DON'T <span class="hl-bl">OWN</span> YOUR AUDIENCE</h1>
+    <p class="sub" style="font-size:50px;margin-top:50px">You rent it. And the landlord can evict you between lunch and dinner.</p>
+    <div class="foot"><div class="sticker">Ever lost an account?</div></div>`},
+
+  'story-3': {cls:'story', html:`
+    ${dots(3)}
+    <div class="glow" style="width:520px;height:520px;background:#2a2f3a;top:200px;right:-160px;opacity:.6"></div>
+    <div class="kick">And it got worse</div>
+    <h1 style="font-size:124px;margin-top:60px">IT TOOK MY WHOLE <span class="hl-pu">WORKSHOP</span></h1>
+    <p class="sub" style="font-size:50px;margin-top:50px">My best hooks, my saved lines, all my data. Inside the dead account.</p>
+    <div class="foot"><div class="mono" style="font-size:34px;color:var(--faint)">hooks · lines · cadence · data → gone</div></div>`},
+
+  'story-4': {cls:'story', html:`
+    ${dots(4)}
+    <div class="glow" style="width:640px;height:400px;background:var(--hooklab);top:60px;left:50%;transform:translateX(-50%);opacity:.28"></div>
+    <div class="kick">The fix</div>
+    <h1 style="font-size:112px;margin-top:44px">SO I BUILT MY OWN <span class="grad">STACK</span></h1>
+    <div class="tiles">
+      <div class="tile"><img src="${A}app-recall.png"><div class="tlab" style="color:var(--recall)">RECALL</div></div>
+      <div class="tile"><img src="${A}app-hooklab.png"><div class="tlab" style="color:var(--hooklab)">HOOKLAB</div></div>
+      <div class="tile"><img src="${A}app-blast.png"><div class="tlab" style="color:var(--blast)">BLAST</div></div>
+      <div class="tile"><img src="${A}app-pulse.png"><div class="tlab" style="color:var(--pulse)">PULSE</div></div>
+    </div>
+    <div class="foot"><div class="mono" style="font-size:36px;color:var(--muted)">Runs in your browser. Data stays on your device.</div></div>`},
+
+  'story-5': {cls:'story', html:`
+    ${dots(5)}
+    <div class="glow" style="width:600px;height:600px;background:var(--pulse);top:80px;right:-200px"></div>
+    <div class="burst" style="width:220px;height:220px;font-size:66px;top:120px;left:70px;background:var(--recall)">FREE</div>
+    <div class="kick" style="margin-top:60px">The proof</div>
+    <h1 style="font-size:150px;margin-top:60px">314K.<br>50M <span class="hl-cy">VIEWS</span>.<br>ALL FREE.</h1>
+    <div class="foot"><p class="sub" style="font-size:48px">The same system that built the numbers. Now software I own.</p></div>`},
+
+  'story-6': {cls:'story', html:`
+    ${dots(6)}
+    <div class="glow" style="width:680px;height:420px;background:var(--hooklab);top:80px;left:50%;transform:translateX(-50%);opacity:.3"></div>
+    <div class="kick">Your move</div>
+    <h1 style="font-size:124px;margin-top:44px">REBUILD ON <span class="grad">LAND YOU OWN</span></h1>
+    <p class="sub" style="font-size:50px;margin-top:46px">Grab all four free. I am rebuilding in public. Come with me.</p>
+    <div style="margin-top:56px">${stackbar('')}</div>
+    <div class="foot">
+      <img class="headshot" src="${A}headshot.webp" style="width:120px;height:120px">
+      <div class="sticker" style="background:linear-gradient(100deg,var(--recall),var(--pulse));color:#0a0c10">
+        Get the stack  →  mjmorrisonusa.com</div>
+    </div>`},
+};
+
+const id = new URLSearchParams(location.search).get('f') || 'feed-linkedin';
+const f = FR[id];
+const root = document.getElementById('root');
+root.className = 'stage ' + f.cls;
+root.innerHTML = f.html;
+</script>
