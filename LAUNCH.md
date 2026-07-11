@@ -23,19 +23,26 @@ repeatable content format identified.**
 Promoting into a site with no analytics and no email list wastes your best
 one-time assets (launch day, the loss story). Knock these out before posting:
 
-1. **Analytics (10 min).** Create a free GoatCounter account (goatcounter.com).
-   Then tell me your site code (or find/replace `MJMCODE`) and I'll flip on the
-   commented `<script>` block already placed in every app's `index.html` and the
-   site's `index.html`. Add events later for "app opened" and "API key added"
-   (activation) — without activation you can't tell tourists from users.
-2. **Email list with a spine (10 min).** Formspree currently just forwards form
-   fills to your inbox — there's no list, no welcome email, no way to launch to
-   these people later. Create a Buttondown or ConvertKit account, point the
-   forms at it (change `FORMSPREE_ENDPOINT` in `EmailCapture.jsx` /
-   `ContactFormMini.jsx` / `Contact.jsx`, or connect Formspree → ESP), and write
-   ONE welcome email that delivers the stack links + a reply hook ("what show
-   are you running? I'll tell you how I'd set up your pipeline"). The BLAST
-   waitlist is only an asset if you can email it on launch day.
+1. **Analytics — DONE.** GoatCounter is live on all four apps + the site
+   (`mjmorrisonusa.goatcounter.com`). Add events later for "app opened" and
+   "API key added" (activation) — without activation you can't tell tourists
+   from users.
+2. **Email list — DONE (wiring), 2 dashboard steps left.** The newsletter
+   captures now POST to your Brevo list (`EmailCapture.jsx`); service/contact
+   inquiries stay on Formspree (funnels separated). Verified: Brevo returns
+   `{"success":true}` to the exact payload. Two things only you can do in the
+   Brevo dashboard:
+   - **Set the welcome email.** Brevo → your form's confirmation email, OR an
+     Automation ("contact added to list → send welcome"). Deliver the stack
+     links + a reply hook ("what show are you running? I'll tell you how I'd
+     set up your pipeline"). No em dashes in the email copy.
+   - **Check the opt-in setting.** If the form is double opt-in (Brevo default),
+     subscribers get a "confirm your subscription" email first — that's fine and
+     good practice. Single opt-in adds them immediately.
+   - Optional: add a `SOURCE` custom text attribute if you want per-page signup
+     attribution stored on each contact (GoatCounter already shows page
+     traffic, so this is a nice-to-have). Also: delete the
+     `stackwiringcheck@example.com` test contact if it shows up.
 3. **Booking + payment links (for the outreach kit).** Create a free Calendly
    and a Stripe payment link, then find/replace across the `outreach` repo:
    `{{CALENDLY_URL}}` and `{{PAYMENT_LINK}}` appear in `templatesemail.md`,

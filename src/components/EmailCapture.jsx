@@ -1,9 +1,13 @@
 import { useState } from 'react';
 
-// Formspree endpoint for the email list. Same pattern as ContactFormMini —
-// owner can swap to ConvertKit / Mailchimp / Buttondown later by changing
-// just this URL. Free tool = RECALL itself, delivered immediately on submit.
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xeebpvej';
+// Brevo (Sendinblue) hosted form endpoint for the newsletter list. Public form
+// URL — no API key, safe in this open-source client. The serve endpoint is
+// cross-origin and returns an opaque response, so we POST with mode:'no-cors' +
+// urlencoded (a CORS "simple" request); the request always reaches Brevo, and
+// we treat a resolved fetch as success. Service/contact inquiries stay on
+// Formspree (see ContactFormMini.jsx) — this keeps the two funnels separate.
+const BREVO_ENDPOINT =
+  'https://41867ea0.sibforms.com/serve/MUIFADTHAAL-0g_lol9TuoysJ8w5BFGe8U73k1ShmZtVKf9Whtqkb14HVnN9ZS6ucXK_Gu8Z8KeaBmWrb9Kc3ZyVg-wZ0Wl4gphKyQoC2WBCJI54geLHHNiFyzqpoZzbVxfEFS2cfPZs5g-N-2yvhZx_3d5fjeMOQ78rOZGUDFDZ098J9thZ51WoVCu2fq86Xgrz0aa5WJGm5Q6U9w==';
 
 export default function EmailCapture({
   source = 'recall',
@@ -18,13 +22,22 @@ export default function EmailCapture({
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('sending');
+    // Brevo form fields: EMAIL (required), email_address_check (honeypot, must
+    // stay empty), locale, html_type. FIRSTNAME is a Brevo default attribute.
+    const body = new URLSearchParams({
+      EMAIL: data.email,
+      FIRSTNAME: data.name,
+      email_address_check: '',
+      locale: 'en',
+      html_type: 'simple',
+    });
     try {
-      const res = await fetch(FORMSPREE_ENDPOINT, {
+      await fetch(BREVO_ENDPOINT, {
         method: 'POST',
-        headers: { Accept: 'application/json' },
-        body: new FormData(e.target),
+        mode: 'no-cors',
+        body,
       });
-      setStatus(res.ok ? 'success' : 'error');
+      setStatus('success');
     } catch {
       setStatus('error');
     }
@@ -59,9 +72,7 @@ export default function EmailCapture({
   }
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-lg mx-auto space-y-3">
-      <input type="hidden" name="source" value={source} />
-      <input type="hidden" name="_subject" value={`Creator stack signup — ${source}`} />
+    <form onSubmit={handleSubmit} data-source={source} className="max-w-lg mx-auto space-y-3">
       <div className="grid sm:grid-cols-2 gap-3">
         <input
           type="text"
