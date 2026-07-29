@@ -46,11 +46,6 @@ const pageMeta = {
     title: 'Contact Me | Michael Morrison',
     description: 'Get in touch for web development, social media marketing, or inventory liquidation. Let\'s build something together.',
   },
-  '/admin': {
-    title: 'Admin | Michael Morrison',
-    description: 'Private site administration.',
-    noindex: true,
-  },
 };
 
 export default function SEO() {
@@ -66,11 +61,11 @@ export default function SEO() {
       metaDesc.setAttribute('content', meta.description);
     }
 
-    // Keep private/utility pages out of search results.
+    // Keep any page marked noindex out of search results.
     // Note: this is a HashRouter SPA, so all routes share one physical
     // document (index.html) as far as a non-JS crawler is concerned — this
-    // dynamic update only helps with crawlers that render JavaScript.
-    // The token-gated nature of /admin is the real access control here.
+    // dynamic update only helps with crawlers that render JavaScript. Never
+    // treat it as access control; it is a search-visibility hint only.
     let robotsMeta = document.querySelector('meta[name="robots"]');
     if (robotsMeta) {
       robotsMeta.setAttribute('content', meta.noindex ? 'noindex, nofollow' : 'index, follow');

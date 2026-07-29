@@ -14,7 +14,6 @@ import Hooklab from './pages/Hooklab';
 import Products from './pages/Products';
 import Workflow from './pages/Workflow';
 import Contact from './pages/Contact';
-import Admin from './pages/Admin';
 import NotFound from './pages/NotFound';
 
 function App() {
@@ -36,7 +35,6 @@ function App() {
             <Route path="/pulse" element={<Pulse />} />
             <Route path="/hooklab" element={<Hooklab />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/admin" element={<Admin />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
